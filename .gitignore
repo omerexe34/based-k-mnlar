@@ -1,0 +1,8 @@
+venv/
+.env
+__pycache__/
+*.pyc
+.pytest_cache/
+freerider_backup.sql
+*.shadow_backup
+.DS_Store
