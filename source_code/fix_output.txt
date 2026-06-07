@@ -1,0 +1,22 @@
+﻿Found 7 onerror occurrences
+
+--- Match 1 at pos 97325 ---
+'                 <img id="top-avatar" src="" class="w-full h-full object-cover" onerror="this.src=\'https://cdn.freeridertr.com.tr/profil%20resmi/unnamed.jpg\'">\n                        </div>\n                    </div>\n                </div>\n            </div>\n\n            <div class="flex-1 relative overflow-hidden bg-zinc-950 z-0">\n                <div id="screen-map" class="a'
+
+--- Match 2 at pos 289413 ---
+"        reader.onload = (e) => resolve(e.target.result);\n                reader.onerror = () => resolve(null);\n                reader.readAsDataURL(file);\n            });\n        }\n\n        const supaUrl = '{{ supabase_url }}';\n        const supaKey = '{{ supabase_key }}';\n        // DUZELTME #4: window.supabase CDN'den gecikmeli yuklenebilir.\n        // Direkt createClient() c"
+
+--- Match 3 at pos 451228 ---
+"                  if(ld) ld.remove();\n                };\n                reader.onerror = () => {\n                    alert('Video okunamadi, lutfen tekrar deneyin.');\n                    clearReelFile();\n                };\n                reader.readAsDataURL(file);\n            }\n        }\n\n        async function compressImage(file, maxSize, quality) {\n            return new P"
+
+--- Match 4 at pos 451736 ---
+"          reader.onload = e => resolve(e.target.result);\n                reader.onerror = () => resolve(null);\n                reader.readAsDataURL(file);\n            });\n        }\n\n        async function submitReel() {\n            if(!currentUser) return;\n\n            // Video hen├╝z FileReader ile okunuyorsa bekle\n            if(reelFileType === 'video' && !reelFileData) {\n   "
+
+--- Match 5 at pos 539629 ---
+'="${escapeHtml(r.media_url)}" class="w-full h-full object-cover" loading="lazy" onerror="this.parentElement.innerHTML=\'<div style=\\\\\'width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:24px;color:#555\\\\\'>­şô©</div>\'">\n                            <div style="position:absolute;bottom:4px;left:4px;font-size:10px;color:rgba(255,255,255,0.8);font-wei'
+
+--- Match 6 at pos 567470 ---
+'lid \' + borderColor + \';object-fit:cover;box-shadow:0 2px 8px rgba(0,0,0,0.4);" onerror="this.src=\\\'https://cdn.freeridertr.com.tr/profil%20resmi/unnamed.jpg\\\'"></div>\';\n                    var icon = L.divIcon({ html: iconHtml, className: \'\', iconSize: [48,48], iconAnchor: [24,24] });\n                    var mk = L.marker([u.stats.riding_lat, u.stats.riding_lng], {icon: icon})'
+
+--- Match 7 at pos 693126 ---
+'t-xl">­şÄÑ</span>` : `<img src="${r.media_url}" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML=\'­şô©\'">`}\n                        </div>\n                        <div class="flex-1 min-w-0">\n                            <div class="text-zinc-300 text-xs font-medium truncate">${r.caption || \'(A├ğ─▒klama yok)\'}</div>\n                            <div class="text-pi'

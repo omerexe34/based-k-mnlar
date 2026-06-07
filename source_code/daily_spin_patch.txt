@@ -1,0 +1,243 @@
+================================================================
+daily_spin_patch.txt
+routes_api_data.py içindeki daily_spin action bloğunun
+ESKİ KOD ve YENİ KOD versiyonu.
+NOT: Mevcut backend kodu zaten doğru çalışmaktadır.
+Asıl sorun frontend (html_template.py) tarafındaydı.
+Bu patch referans amaçlıdır + küçük iyileştirmeler içerir.
+================================================================
+
+-------- ESKİ KOD (routes_api_data.py, ~satır 2605-2701) --------
+
+            # =======================================================
+            # ÇARK SİSTEMİ 
+            # =======================================================
+            elif action == 'daily_spin':
+                u_res = supabase.table('users').select('xp, stats').eq('username', current_username).execute()
+                if not u_res.data:
+                    return jsonify({'status': 'error'})
+
+                user_data = u_res.data[0]
+                stats = user_data.get('stats', {})\
+                prem_tier = int(stats.get('premium_tier', 0))
+
+                today_str = datetime.datetime.now().strftime("%Y-%m-%d")
+                max_spins = 2 if prem_tier >= 2 else 1
+
+                last_spin_date = stats.get('last_spin_date', '')
+                spin_count = stats.get('spin_count', 0)
+
+                if last_spin_date != today_str:
+                    spin_count = 0
+                    stats['last_spin_date'] = today_str
+
+                if spin_count >= max_spins:
+                    return jsonify({'status': 'error', 'message': f'Bugünlük çark hakkın bitti! (Maksimum {max_spins} hak)'})
+
+                prizes = [
+                    {"id": "xp_100", "name": "100 XP", "weight": 60, "type": "xp", "val": 100},
+                    {"id": "xp_200", "name": "200 XP", "weight": 40, "type": "xp", "val": 200},
+                    {"id": "xp_300", "name": "300 XP", "weight": 40, "type": "xp", "val": 300},
+                    {"id": "xp_500", "name": "500 XP", "weight": 10, "type": "xp", "val": 500},
+                    {"id": "xp_1000", "name": "1000 XP", "weight": 5, "type": "xp", "val": 1000},
+                    {"id": "xp_10000", "name": "10000 XP", "weight": 0.01, "type": "xp", "val": 10000},
+                    {"id": "xp_100000", "name": "100000 XP", "weight": 0.001, "type": "xp", "val": 100000},
+                    {"id": "prem_ult_30", "name": "1 Ay Ultra+", "weight": 0.5, "type": "prem", "tier": 3, "days": 30},
+                    {"id": "prem_dlx_30", "name": "1 Ay Deluxe", "weight": 1, "type": "prem", "tier": 2, "days": 30},
+                    {"id": "prem_std_30", "name": "1 Ay Standart", "weight": 0.5, "type": "prem", "tier": 1, "days": 30},
+                    {"id": "prem_ult_7", "name": "1 Hft Ultra+", "weight": 1, "type": "prem", "tier": 3, "days": 7},
+                    {"id": "prem_dlx_7", "name": "1 Hft Deluxe", "weight": 1, "type": "prem", "tier": 2, "days": 7},
+                    {"id": "prem_std_7", "name": "1 Hft Standart", "weight": 5, "type": "prem", "tier": 1, "days": 7},
+                    {"id": "prem_ult_1", "name": "1 Gün Ultra+", "weight": 5, "type": "prem", "tier": 3, "days": 1},
+                    {"id": "prem_dlx_1", "name": "1 Gün Deluxe", "weight": 5, "type": "prem", "tier": 2, "days": 1},
+                ]
+                eligible_prizes = [p for p in prizes if p.get("weight", 0) > 0]
+                weights = [p["weight"] for p in eligible_prizes]
+                won_prize = random.choices(eligible_prizes, weights=weights, k=1)[0]
+
+                stats['spin_count'] = spin_count + 1
+
+                if won_prize["type"] == "xp":
+                    new_xp = user_data.get('xp', 0) + won_prize["val"]
+                    stats['monthly_xp'] = stats.get('monthly_xp', 0) + won_prize["val"]
+                    stats['weekly_xp'] = stats.get('weekly_xp', 0) + won_prize["val"]
+                    supabase.table('users').update({"xp": new_xp, "stats": stats}).eq('username', current_username).execute()
+                    _sync_score_columns(current_username, stats)
+                elif won_prize["type"] == "prem":
+                    current_tier = int(stats.get('premium_tier', 0))
+                    if won_prize["tier"] < current_tier:
+                        fallback_xp = 500 * won_prize["days"]
+                        new_xp = user_data.get('xp', 0) + fallback_xp
+                        stats['monthly_xp'] = stats.get('monthly_xp', 0) + fallback_xp
+                        stats['weekly_xp'] = stats.get('weekly_xp', 0) + fallback_xp
+                        supabase.table('users').update({"xp": new_xp, "stats": stats}).eq('username', current_username).execute()
+                        _sync_score_columns(current_username, stats)
+                        won_prize['name'] = f"Zaten daha üst üyeliğin var! ({fallback_xp} XP eklendi)"
+                    
+                    elif won_prize["tier"] == current_tier:
+                        current_exp_str = stats.get('premium_expire_date', '')
+                        try:
+                            current_exp_dt = datetime.datetime.strptime(current_exp_str, "%Y-%m-%d")
+                            if current_exp_dt < datetime.datetime.now():
+                                current_exp_dt = datetime.datetime.now()
+                        except:
+                            current_exp_dt = datetime.datetime.now()
+                            
+                        new_exp_dt = current_exp_dt + datetime.timedelta(days=won_prize["days"])
+                        stats['premium_expire_date'] = new_exp_dt.strftime("%Y-%m-%d")
+                        stats['expiry_ts'] = int(new_exp_dt.timestamp())
+                        supabase.table('users').update({"stats": stats}).eq('username', current_username).execute()
+                        _sync_membership_columns(current_username, stats)
+                        
+                    elif won_prize["tier"] > current_tier:
+                        stats['premium_tier'] = won_prize["tier"]
+                        if 'premium_color' not in stats or not stats['premium_color']:
+                            stats['premium_color'] = 'std-blue'
+                        exp_dt = datetime.datetime.now() + datetime.timedelta(days=won_prize["days"])
+                        stats['premium_expire_date'] = exp_dt.strftime("%Y-%m-%d")
+                        stats['expiry_ts'] = int(exp_dt.timestamp())
+                        supabase.table('users').update({"stats": stats}).eq('username', current_username).execute()
+                        _sync_membership_columns(current_username, stats)
+
+                return jsonify({'status': 'ok', 'prize_name': won_prize['name'], 'prize_id': won_prize['id']})
+
+-------- YENİ KOD (iyileştirmeler + rozet ödülü desteği) --------
+
+            # =======================================================
+            # ÇARK SİSTEMİ
+            # =======================================================
+            elif action == 'daily_spin':
+                u_res = supabase.table('users').select('xp, stats').eq('username', current_username).execute()
+                if not u_res.data:
+                    return jsonify({'status': 'error', 'message': 'Kullanıcı bulunamadı.'})
+
+                user_data = u_res.data[0]
+                stats = user_data.get('stats', {}) or {}
+                if isinstance(stats, str):
+                    try:
+                        import json as _json
+                        stats = _json.loads(stats)
+                    except Exception:
+                        stats = {}
+
+                prem_tier = int(stats.get('premium_tier', 0))
+                today_str = datetime.datetime.now().strftime("%Y-%m-%d")
+
+                # Premium üyeye günde 2 hak, ücretsiz üyeye 1 hak
+                max_spins = 2 if prem_tier >= 2 else 1
+
+                last_spin_date = stats.get('last_spin_date', '')
+                spin_count = int(stats.get('spin_count', 0))
+
+                # Gün değiştiyse sayacı sıfırla
+                if last_spin_date != today_str:
+                    spin_count = 0
+
+                # Bugün zaten hakkını kullandı mı?
+                if spin_count >= max_spins:
+                    return jsonify({
+                        'status': 'error',
+                        'message': f'Bugünlük çark hakkın bitti! Yarın tekrar dene. (Maksimum {max_spins} hak/gün)'
+                    })
+
+                # Ödül havuzu — id'ler frontend WHEEL_PRIZES ile eşleşmeli
+                prizes = [
+                    {"id": "xp_100",    "name": "100 XP",        "weight": 60,    "type": "xp",   "val": 100},
+                    {"id": "xp_200",    "name": "200 XP",        "weight": 40,    "type": "xp",   "val": 200},
+                    {"id": "xp_300",    "name": "300 XP",        "weight": 40,    "type": "xp",   "val": 300},
+                    {"id": "xp_500",    "name": "500 XP",        "weight": 10,    "type": "xp",   "val": 500},
+                    {"id": "xp_1000",   "name": "1000 XP",       "weight": 5,     "type": "xp",   "val": 1000},
+                    {"id": "xp_10000",  "name": "10.000 XP",     "weight": 0.01,  "type": "xp",   "val": 10000},
+                    {"id": "xp_100000", "name": "100.000 XP",    "weight": 0.001, "type": "xp",   "val": 100000},
+                    {"id": "prem_ult_30",  "name": "1 Ay Ultra+",    "weight": 0.5, "type": "prem", "tier": 3, "days": 30},
+                    {"id": "prem_dlx_30",  "name": "1 Ay Deluxe",    "weight": 1,   "type": "prem", "tier": 2, "days": 30},
+                    {"id": "prem_std_30",  "name": "1 Ay Standart",  "weight": 0.5, "type": "prem", "tier": 1, "days": 30},
+                    {"id": "prem_ult_7",   "name": "1 Hft Ultra+",   "weight": 1,   "type": "prem", "tier": 3, "days": 7},
+                    {"id": "prem_dlx_7",   "name": "1 Hft Deluxe",   "weight": 1,   "type": "prem", "tier": 2, "days": 7},
+                    {"id": "prem_std_7",   "name": "1 Hft Standart", "weight": 5,   "type": "prem", "tier": 1, "days": 7},
+                    {"id": "prem_ult_1",   "name": "1 Gün Ultra+",   "weight": 5,   "type": "prem", "tier": 3, "days": 1},
+                    {"id": "prem_dlx_1",   "name": "1 Gün Deluxe",   "weight": 5,   "type": "prem", "tier": 2, "days": 1},
+                    {"id": "rozet_sarki",  "name": "🎵 Şarkıcı Rozeti", "weight": 2, "type": "rozet", "rozet_id": "spin_winner"},
+                ]
+
+                # weight=0 olan ödülleri havuzdan çıkar (ZeroDivisionError önleme)
+                eligible_prizes = [p for p in prizes if p.get("weight", 0) > 0]
+                weights = [p["weight"] for p in eligible_prizes]
+                won_prize = random.choices(eligible_prizes, weights=weights, k=1)[0]
+
+                # Sayaç ve tarih güncelle
+                stats['spin_count'] = spin_count + 1
+                stats['last_spin_date'] = today_str
+
+                # Ödülü uygula
+                if won_prize["type"] == "xp":
+                    xp_gain = won_prize["val"]
+                    new_xp = user_data.get('xp', 0) + xp_gain
+                    stats['monthly_xp'] = stats.get('monthly_xp', 0) + xp_gain
+                    stats['weekly_xp']  = stats.get('weekly_xp',  0) + xp_gain
+                    supabase.table('users').update({"xp": new_xp, "stats": stats}).eq('username', current_username).execute()
+                    _sync_score_columns(current_username, stats)
+
+                elif won_prize["type"] == "rozet":
+                    # Kullanıcının rozetler listesine ekle
+                    rozetler = stats.get('badges', []) or []
+                    rozet_id = won_prize.get("rozet_id", "spin_winner")
+                    if rozet_id not in rozetler:
+                        rozetler.append(rozet_id)
+                    stats['badges'] = rozetler
+                    supabase.table('users').update({"stats": stats}).eq('username', current_username).execute()
+
+                elif won_prize["type"] == "prem":
+                    current_tier = int(stats.get('premium_tier', 0))
+
+                    if won_prize["tier"] < current_tier:
+                        # Zaten daha üst bir üyeliği var → telafi XP
+                        fallback_xp = 500 * won_prize["days"]
+                        new_xp = user_data.get('xp', 0) + fallback_xp
+                        stats['monthly_xp'] = stats.get('monthly_xp', 0) + fallback_xp
+                        stats['weekly_xp']  = stats.get('weekly_xp',  0) + fallback_xp
+                        supabase.table('users').update({"xp": new_xp, "stats": stats}).eq('username', current_username).execute()
+                        _sync_score_columns(current_username, stats)
+                        won_prize = dict(won_prize)
+                        won_prize['name'] = f"Zaten daha üst üyeliğin var! ({fallback_xp} XP eklendi)"
+
+                    elif won_prize["tier"] == current_tier:
+                        # Aynı seviye → süresini uzat
+                        current_exp_str = stats.get('premium_expire_date', '')
+                        try:
+                            current_exp_dt = datetime.datetime.strptime(current_exp_str, "%Y-%m-%d")
+                            if current_exp_dt < datetime.datetime.now():
+                                current_exp_dt = datetime.datetime.now()
+                        except Exception:
+                            current_exp_dt = datetime.datetime.now()
+                        new_exp_dt = current_exp_dt + datetime.timedelta(days=won_prize["days"])
+                        stats['premium_expire_date'] = new_exp_dt.strftime("%Y-%m-%d")
+                        stats['expiry_ts'] = int(new_exp_dt.timestamp())
+                        supabase.table('users').update({"stats": stats}).eq('username', current_username).execute()
+                        _sync_membership_columns(current_username, stats)
+
+                    elif won_prize["tier"] > current_tier:
+                        # Daha üst üyelik → seviye yükselt, bugünden başlat
+                        stats['premium_tier'] = won_prize["tier"]
+                        if not stats.get('premium_color'):
+                            stats['premium_color'] = 'std-blue'
+                        exp_dt = datetime.datetime.now() + datetime.timedelta(days=won_prize["days"])
+                        stats['premium_expire_date'] = exp_dt.strftime("%Y-%m-%d")
+                        stats['expiry_ts'] = int(exp_dt.timestamp())
+                        supabase.table('users').update({"stats": stats}).eq('username', current_username).execute()
+                        _sync_membership_columns(current_username, stats)
+
+                logger.info("Çark: %s → %s", current_username, won_prize.get('name'))
+                return jsonify({
+                    'status':     'ok',
+                    'prize_name': won_prize['name'],
+                    'prize_id':   won_prize['id'],
+                    'spins_left': max(0, max_spins - stats['spin_count']),
+                })
+
+================================================================
+UYGULAMA TALİMATI:
+routes_api_data.py içinde "elif action == 'daily_spin':" ile
+başlayan ve "return jsonify({'status': 'ok', 'prize_name':..."
+ile biten bloğu yukarıdaki YENİ KOD ile değiştir.
+================================================================

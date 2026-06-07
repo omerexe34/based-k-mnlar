@@ -1,0 +1,126 @@
+--- Line 1674 ---
+                            if new_views in milestones:
+                                send_push_to_user(
+                                    target_user,
+                                    title=f"👀 Profilin {new_views} kez görüntülendi!",
+                                    body=f"{current_username} ve diğerleri profilini inceledi. Harika içerik paylaşmaya devam et! 🔥",
+--- Line 1887 ---
+                            if new_like_count in [5, 10, 25, 50, 100]:
+                                send_push_to_user(
+                                    m_owner,
+                                    title=f"👍 '{m_name}' {new_like_count} beğeni aldı!",
+                                    body=f"{current_username} ve diğerleri rampanı seviyor 🏔️",
+--- Line 1894 ---
+                            elif new_like_count == 1:
+                                send_push_to_user(
+                                    m_owner,
+                                    title=f"👍 {current_username} rampanı beğendi!",
+                                    body=f"'{m_name}' haritasındaki noktana ilk beğeni geldi!",
+--- Line 2202 ---
+                    try:
+                        send_push_to_user(
+                            receiver,
+                            title=f"💬 {current_username} sana mesaj attı",
+                            body=notif_body,
+--- Line 2303 ---
+                            try:
+                                send_push_to_user(
+                                    market_owner,
+                                    title=f"🛒 İlanın {new_mv} kez görüntülendi!",
+                                    body=f"'{market_title}' ilanın ilgi görüyor. Fiyatı gözden geçir! 💰",
+--- Line 2386 ---
+                            if ev_creator and ev_creator != current_username:
+                                send_push_to_user(
+                                    ev_creator,
+                                    title=f"🎉 {current_username} etkinliğine katıldı!",
+                                    body=f"'{ev_title_j}' etkinliğinde yeni katılımcı var!",
+--- Line 2419 ---
+                            supabase.table('admin_logs').insert(log_entry).execute()
+                            send_push_to_user('Admin', title=f"🚨 Kullanıcı Banlı", body=f"{current_username}, {target_ban} adlı kullanıcıyı banladı.", url="/")
+                        except Exception as _exc:
+                            logger.warning(f'Hata: {_exc}')
+                    
+--- Line 2711 ---
+                        try:
+                            send_push_to_user(
+                                msg_author,
+                                title=f"{emoji} {current_username} mesajına tepki verdi!",
+                                body="Chat'teki mesajına bir tepki geldi",
+--- Line 2740 ---
+                        if m_res.data and m_res.data[0]['addedBy'] != current_username:
+                            send_push_to_user(m_res.data[0]['addedBy'],
+                                title=f"💬 {current_username} rampanı yorumladı!",
+                                body=text[:80], url="/")
+                    elif target_type == 'event':
+--- Line 2746 ---
+                        if e_res.data and e_res.data[0]['creator'] != current_username:
+                            send_push_to_user(e_res.data[0]['creator'],
+                                title=f"💬 {current_username} etkinliğini yorumladı!",
+                                body=text[:80], url="/")
+                except Exception as _exc:
+--- Line 2953 ---
+                        try:
+                            send_push_to_user(
+                                reel_owner,
+                                title=f"❤️ {current_username} reelini beğendi!",
+                                body="Reeline yeni bir beğeni geldi 🔥",
+--- Line 3490 ---
+                        if reel_owner_r and reel_owner_r != current_username:
+                            send_push_to_user(
+                                reel_owner_r,
+                                title=f"💬 {current_username} reelini yorumladı!",
+                                body=text_r[:80],
+--- Line 3685 ---
+                    try:
+                        send_push_to_user(
+                            'Admin',
+                            f"{sev_icon} Moderasyon: {msg_user} bildirildi!",
+                            f"{current_username}: {reason[:60]} | İçerik: {msg_text_raw[:40]}...",
+--- Line 1579 ---
+                            try:
+                                broadcast_push(
+                                    title=f"🚴 {current_username} sürüşe çıktı!",
+                                    body="Canlı haritada takip et — kim bilir ne bulur! 🏔️",
+                                    exclude_user=current_username,
+--- Line 1850 ---
+                        marker_name = data.get('name', 'Yeni Nokta')
+                        broadcast_push(
+                            title=f"📍 Yeni Rampa Eklendi!",
+                            body=f"{current_username} haritaya '{marker_name}' ekledi",
+                            exclude_user=current_username,
+--- Line 2076 ---
+                        msg_preview = data.get('text', '')[:60]
+                        broadcast_push(
+                            title=f"💬 {current_username} yazdı",
+                            body=msg_preview,
+                            exclude_user=current_username,
+--- Line 2256 ---
+                        price_str = f" - {item_price} TL" if item_price else ""
+                        broadcast_push(
+                            title=f"🛒 Yeni İlan: {item_title}",
+                            body=f"{current_username} yeni bir ilan yayınladı{price_str}",
+                            exclude_user=current_username,
+--- Line 2352 ---
+                    ev_date = data.get('datetime', '')[:10]
+                    broadcast_push(
+                        title=f"📅 Yeni Buluşma: {ev_title}",
+                        body=f"{current_username} bir buluşma oluşturdu! Tarih: {ev_date}",
+                        exclude_user=current_username,
+--- Line 2431 ---
+                        news_body  = data.get('content', data.get('body', ''))[:80] if (data.get('content') or data.get('body')) else "FreeriderTR'de yeni bir haber yayınlandı!"
+                        broadcast_push(
+                            title=f"📰 {news_title}",
+                            body=news_body,
+                            url="/"
+--- Line 2685 ---
+                        m_name = data.get('marker_name','Bir rampa')
+                        broadcast_push(title=f"⚠️ Tehlike: {m_name}", body=f"{current_username}: {reason[:60]}", url="/")
+                    except Exception as e:
+                        print(f"⚠️ Tehlike bildirimi push hatası: {e}")
+
+--- Line 2789 ---
+                    story_preview = f"'{story_text[:40]}'" if story_text else "Yeni bir fotoğraf paylaştı"
+                    broadcast_push(
+                        title=f"📸 {current_username} story paylaştı!",
+                        body=f"{story_preview} — 24 saat içinde kayboluyor!",
+                        exclude_user=current_username,

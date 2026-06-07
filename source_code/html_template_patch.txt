@@ -1,0 +1,119 @@
+================================================================
+BÖLÜM 1 — REELS OTOMATİK OYNATMA DÜZELTMESİ
+================================================================
+Dosya: html_template.py
+Satır: ~7244-7245  (renderReelCard fonksiyonu içinde)
+
+Sorun: video elementi HTML'sinde `autoplay` attribute var.
+Düzeltme: `autoplay` kaldırılıyor. Oynatmayı zaten IntersectionObserver
+         (_setupFeedObserver) yönetiyor; sayfa yüklendiğinde Reels
+         sekmesi kapalıyken hiçbir video başlatılmamalı.
+
+-------- ESKİ KOD --------
+            if(reel.media_type === 'video') {
+                mediaHtml = `<video src="${escapeHtml(reel.media_url)}" class="w-full h-full object-contain" playsinline loop autoplay style="max-height:100%;"></video>`;
+
+-------- YENİ KOD --------
+            if(reel.media_type === 'video') {
+                mediaHtml = `<video src="${escapeHtml(reel.media_url)}" class="w-full h-full object-contain" playsinline loop preload="none" style="max-height:100%;"></video>`;
+
+================================================================
+BÖLÜM 2 — switchTab: Reels sekmesi açılınca loadReels her seferinde temiz başlasın
+================================================================
+Dosya: html_template.py
+Satır: ~10833  (switchTab setTimeout bloğu içinde)
+
+Sorun: switchTab(9) çağrıldığında `loadReels(false)` yazıyor.
+       false = önbellekten kullan, yani observer yeniden kurulmuyor
+       ve bazı durumlarda video arka planda çalışmaya devam ediyor.
+       true = her sekme geçişinde medyayı durdur, observer temiz kur.
+
+-------- ESKİ KOD --------
+                if(idx === 9) loadReels(false);
+
+-------- YENİ KOD --------
+                if(idx === 9) { stopAllMedia(); loadReels(true); }
+
+================================================================
+BÖLÜM 3 — switchTab: Reels dışı sekmelere geçince tüm medya dur
+================================================================
+Dosya: html_template.py
+Satır: ~10736  (switchTab fonksiyonunun başı)
+
+Sorun: stopAllMedia() zaten çağrılıyor ama bu yeterli olmayabilir;
+       çünkü loadReels(false) çağrısı bazı durumlarda observer'ı
+       yeniden kurup video başlatıyor.
+       Ek güvence: Reels'ten çıkıldığında feed videoları zorla durdurulsun.
+
+-------- ESKİ KOD --------
+        function switchTab(idx, skipHistory = false) {
+            stopAllMedia(); // Hayalet ses önleme — tüm medyayı durdur
+
+-------- YENİ KOD --------
+        function switchTab(idx, skipHistory = false) {
+            // Hayalet ses önleme — tüm medyayı durdur, observer bağlantısını kes
+            stopAllMedia();
+            document.querySelectorAll('#reels-feed video').forEach(v => { try { v.pause(); v.currentTime = 0; } catch(_){} });
+            if(idx !== 9 && typeof _feedObserver !== 'undefined' && _feedObserver) {
+                _feedObserver.disconnect();
+                _feedObserver = null;
+            }
+
+================================================================
+BÖLÜM 4 — ÇARK ANİMASYON/FRONTEND DÜZELTMESİ
+================================================================
+Dosya: html_template.py
+Satır: ~11880-11885  (initWheel3D fonksiyonu)
+
+Sorun: initWheel3D, _wheelAngle ve _wheelSpinning gibi değişkenleri
+       kullanıyor ama bunlar let/var ile tanımlanmıyor — sadece
+       fonksiyon içinde implicit global olarak kullanılıyor.
+       Bu bazı tarayıcılarda "not defined" hatasına yol açar.
+       Ayrıca çark canvas'ı canvas elementi bulunamazsa sessizce
+       dönsün ama hata log'u yazılsın.
+
+-------- ESKİ KOD --------
+        function initWheel3D() {
+            const canvas = document.getElementById('wheel-canvas-3d');
+            if(!canvas) return;
+            _winnerIndex = -1;
+            _drawWheel3D(canvas, _wheelAngle);
+        }
+
+-------- YENİ KOD --------
+        // Çark global state — açıkça tanımla (implicit global hatalarını önler)
+        if(typeof window._wheelAngle    === 'undefined') window._wheelAngle    = 0;
+        if(typeof window._wheelSpinning === 'undefined') window._wheelSpinning = false;
+        if(typeof window._winnerIndex   === 'undefined') window._winnerIndex   = -1;
+
+        function initWheel3D() {
+            const canvas = document.getElementById('wheel-canvas-3d');
+            if(!canvas) { console.warn('[Çark] wheel-canvas-3d bulunamadı.'); return; }
+            window._winnerIndex   = -1;
+            window._wheelSpinning = false;
+            _drawWheel3D(canvas, window._wheelAngle);
+        }
+
+================================================================
+BÖLÜM 5 — spinWheelAction: global değişken referansları düzelt
+================================================================
+Dosya: html_template.py
+Satır: ~12033-12036  (spinWheelAction fonksiyonunun başı)
+
+Sorun: _wheelSpinning ve _wheelAngle window. prefix olmadan kullanılıyor.
+       initWheel3D yukarıda window.* olarak tanımlandıktan sonra
+       spinWheelAction'daki referanslar da window.* olmalı.
+
+-------- ESKİ KOD --------
+        async function spinWheelAction() {
+            const btn = document.getElementById('spin-btn');
+            if(btn.disabled || _wheelSpinning) return;
+            btn.disabled = true;
+            _wheelSpinning = true;
+
+-------- YENİ KOD --------
+        async function spinWheelAction() {
+            const btn = document.getElementById('spin-btn');
+            if(!btn || btn.disabled || window._wheelSpinning) return;
+            btn.disabled = true;
+            window._wheelSpinning = true;
