@@ -165,188 +165,23 @@ const BADGE_DEFINITIONS = [
             { id: 'badge_admin_yarismasampiyonu', name: 'Yarışma Şampiyonu', icon: '🏆', xp: 30000 },
             { id: 'badge_admin_cekilistalihlisi', name: 'Çekiliş Talihlisi', icon: '🎁', xp: 15000 },
             { id: 'badge_admin_topluluklideri', name: 'Topluluk Katkıcısı', icon: '🤝', xp: 15000 },
-            { id: 'badge_admin_dogrulanmis', name: 'Doğrulanmış Üye', icon: '✔️', xp: 0 },
-            { id: 'badge_admin_bagisci', name: 'Altın Destekçi', icon: '💳', xp: 0 },
-            { id: 'badge_admin_reels', name: 'Reels Fenomeni', icon: '🎬', xp: 15000 },
-            { id: 'badge_admin_ozelvip', name: 'Özel VIP Davetli', icon: '🎟️', xp: 0 }
+            { id: 'badge_admin_dogrulanmis', name: 'Doğrulanmış Üye', icon: '✔️', xp: 0 }
         ];
-const MISSIONS = [
-            { id: 'görev_gunluk_6', title: 'Başlangıç Keşif #1', desc: 'Bugün haritada 5 farklı konuma bak.', type: 'login_count', target: 5, xp: 630, badge: 'badge_gunluk_6', icon: '🗺️' },
-            { id: 'görev_gunluk_7', title: 'Başlangıç Yorumcu #2', desc: 'Bugün 3 farklı Reels videosuna yorum yap.', type: 'total_messages', target: 3, xp: 660, badge: 'badge_gunluk_7', icon: '💬' },
-            { id: 'görev_gunluk_8', title: 'Başlangıç Pazar Ziyareti #3', desc: 'Bugün pazardaki ilanları 10 kez incele.', type: 'profile_views', target: 10, xp: 690, badge: 'badge_gunluk_8', icon: '🛒' },
-            { id: 'görev_gunluk_9', title: 'Başlangıç Dostluk #4', desc: 'Bugün DM üzerinden 5 mesaj gönder.', type: 'total_messages', target: 5, xp: 720, badge: 'badge_gunluk_9', icon: '🤝' },
-            { id: 'görev_gunluk_10', title: 'Başlangıç Bisikletçi #5', desc: 'Bugün garajına 1 yeni parça ekle/güncelle.', type: 'market', target: 1, xp: 750, badge: 'badge_gunluk_10', icon: '🚲' },
-            
-            { id: 'görev_haftalik_11', title: 'Usta Sosyalleşme #1', desc: 'Bu hafta sohbet grubunda 30 mesaja ulaş.', type: 'total_messages', target: 30, xp: 3600, badge: 'badge_haftalik_11', icon: '🗣️' },
-            { id: 'görev_haftalik_12', title: 'Haftalık Tüccar #2', desc: 'Bu hafta 5 yeni ilan yayınla.', type: 'market', target: 5, xp: 3900, badge: 'badge_haftalik_12', icon: '📦' },
-            { id: 'görev_haftalik_13', title: 'Haftalık İçerik Üreticisi #3', desc: 'Bu hafta 2 yeni Reels videosu yükle.', type: 'market', target: 2, xp: 4200, badge: 'badge_haftalik_13', icon: '🎬' },
 
-            { id: 'görev_gunluk_1', title: 'Başlangıç Giriş Görevi #1', desc: 'Bugün toplam 2 gün boyunca uygulamaya giriş yap.', type: 'login_count', target: 2, xp: 660, badge: 'badge_gunluk_1', icon: '🎉' },
-            { id: 'görev_gunluk_2', title: 'Başlangıç Popülerlik Görevi #2', desc: 'Bugün toplam 4 defa profilin görüntülensin.', type: 'profile_views', target: 4, xp: 720, badge: 'badge_gunluk_2', icon: '👀' },
-            { id: 'görev_gunluk_3', title: 'Başlangıç Esnaf Görevi #3', desc: 'Bugün toplam 6 adet pazar ilanı oluştur.', type: 'market', target: 6, xp: 780, badge: 'badge_gunluk_3', icon: '🛒' },
-            { id: 'görev_gunluk_4', title: 'Başlangıç Sohbet Görevi #4', desc: 'Bugün toplam 8 defa gruba mesaj gönder.', type: 'total_messages', target: 8, xp: 840, badge: 'badge_gunluk_4', icon: '💬' },
-            { id: 'görev_gunluk_5', title: 'Başlangıç Giriş Görevi #5', desc: 'Bugün toplam 10 gün boyunca uygulamaya giriş yap.', type: 'login_count', target: 10, xp: 900, badge: 'badge_gunluk_5', icon: '🎉' },
-            { id: 'görev_haftalik_1', title: 'Usta Giriş Görevi #1', desc: 'Bu hafta toplam 20 gün boyunca uygulamaya giriş yap.', type: 'login_count', target: 20, xp: 4800, badge: 'badge_haftalik_1', icon: '🎉' },
-            { id: 'görev_haftalik_2', title: 'Usta Popülerlik Görevi #2', desc: 'Bu hafta toplam 40 defa profilin görüntülensin.', type: 'profile_views', target: 40, xp: 5100, badge: 'badge_haftalik_2', icon: '👀' },
-            { id: 'görev_haftalik_3', title: 'Usta Esnaf Görevi #3', desc: 'Bu hafta toplam 60 adet pazar ilanı oluştur.', type: 'market', target: 60, xp: 5400, badge: 'badge_haftalik_3', icon: '🛒' },
-            { id: 'görev_haftalik_4', title: 'Usta Sohbet Görevi #4', desc: 'Bu hafta toplam 80 defa gruba mesaj gönder.', type: 'total_messages', target: 80, xp: 5700, badge: 'badge_haftalik_4', icon: '💬' },
-            { id: 'görev_haftalik_5', title: 'Usta Giriş Görevi #5', desc: 'Bu hafta toplam 100 gün boyunca uygulamaya giriş yap.', type: 'login_count', target: 100, xp: 6000, badge: 'badge_haftalik_5', icon: '🎉' },
-            { id: 'görev_haftalik_6', title: 'Usta Popülerlik Görevi #6', desc: 'Bu hafta toplam 120 defa profilin görüntülensin.', type: 'profile_views', target: 120, xp: 6300, badge: 'badge_haftalik_6', icon: '👀' },
-            { id: 'görev_haftalik_7', title: 'Usta Esnaf Görevi #7', desc: 'Bu hafta toplam 140 adet pazar ilanı oluştur.', type: 'market', target: 140, xp: 6600, badge: 'badge_haftalik_7', icon: '🛒' },
-            { id: 'görev_haftalik_8', title: 'Usta Sohbet Görevi #8', desc: 'Bu hafta toplam 160 defa gruba mesaj gönder.', type: 'total_messages', target: 160, xp: 6900, badge: 'badge_haftalik_8', icon: '💬' },
-            { id: 'görev_haftalik_9', title: 'Usta Giriş Görevi #9', desc: 'Bu hafta toplam 180 gün boyunca uygulamaya giriş yap.', type: 'login_count', target: 180, xp: 7200, badge: 'badge_haftalik_9', icon: '🎉' },
-            { id: 'görev_haftalik_10', title: 'Usta Popülerlik Görevi #10', desc: 'Bu hafta toplam 200 defa profilin görüntülensin.', type: 'profile_views', target: 200, xp: 7500, badge: 'badge_haftalik_10', icon: '👀' },
-            { id: 'görev_mega_1', title: 'Efsane Giriş Ustası #1', desc: 'Toplam 50 gün boyunca uygulamaya giriş yap. Zorlu görev!', type: 'login_count', target: 50, xp: 9300, badge: 'badge_mega_1', icon: '🎉' },
-            { id: 'görev_mega_2', title: 'Efsane Popülerlik Ustası #2', desc: 'Toplam 100 defa profilin görüntülensin. Zorlu görev!', type: 'profile_views', target: 100, xp: 9600, badge: 'badge_mega_2', icon: '👀' },
-            { id: 'görev_mega_3', title: 'Efsane Esnaf Ustası #3', desc: 'Toplam 150 adet pazar ilanı oluştur. Zorlu görev!', type: 'market', target: 150, xp: 9900, badge: 'badge_mega_3', icon: '🛒' },
-            { id: 'görev_mega_4', title: 'Efsane Sohbet Ustası #4', desc: 'Toplam 200 defa gruba mesaj gönder. Zorlu görev!', type: 'total_messages', target: 200, xp: 10200, badge: 'badge_mega_4', icon: '💬' },
-            { id: 'görev_mega_5', title: 'Efsane Giriş Ustası #5', desc: 'Toplam 250 gün boyunca uygulamaya giriş yap. Zorlu görev!', type: 'login_count', target: 250, xp: 10500, badge: 'badge_mega_5', icon: '🎉' },
-            { id: 'görev_mega_6', title: 'Efsane Popülerlik Ustası #6', desc: 'Toplam 300 defa profilin görüntülensin. Zorlu görev!', type: 'profile_views', target: 300, xp: 10800, badge: 'badge_mega_6', icon: '👀' },
-            { id: 'görev_mega_7', title: 'Efsane Esnaf Ustası #7', desc: 'Toplam 350 adet pazar ilanı oluştur. Zorlu görev!', type: 'market', target: 350, xp: 11100, badge: 'badge_mega_7', icon: '🛒' },
-            { id: 'görev_mega_8', title: 'Efsane Sohbet Ustası #8', desc: 'Toplam 400 defa gruba mesaj gönder. Zorlu görev!', type: 'total_messages', target: 400, xp: 11400, badge: 'badge_mega_8', icon: '💬' },
-            { id: 'görev_mega_9', title: 'Efsane Giriş Ustası #9', desc: 'Toplam 450 gün boyunca uygulamaya giriş yap. Zorlu görev!', type: 'login_count', target: 450, xp: 11700, badge: 'badge_mega_9', icon: '🎉' },
-            { id: 'görev_mega_10', title: 'Efsane Popülerlik Ustası #10', desc: 'Toplam 500 defa profilin görüntülensin. Zorlu görev!', type: 'profile_views', target: 500, xp: 12000, badge: 'badge_mega_10', icon: '👀' },
-            { id: 'görev_mega_11', title: 'Efsane Esnaf Ustası #11', desc: 'Toplam 550 adet pazar ilanı oluştur. Zorlu görev!', type: 'market', target: 550, xp: 12300, badge: 'badge_mega_11', icon: '🛒' },
-            { id: 'görev_mega_12', title: 'Efsane Sohbet Ustası #12', desc: 'Toplam 600 defa gruba mesaj gönder. Zorlu görev!', type: 'total_messages', target: 600, xp: 12600, badge: 'badge_mega_12', icon: '💬' },
-            { id: 'görev_mega_13', title: 'Efsane Giriş Ustası #13', desc: 'Toplam 650 gün boyunca uygulamaya giriş yap. Zorlu görev!', type: 'login_count', target: 650, xp: 12900, badge: 'badge_mega_13', icon: '🎉' },
-            { id: 'görev_mega_14', title: 'Efsane Popülerlik Ustası #14', desc: 'Toplam 700 defa profilin görüntülensin. Zorlu görev!', type: 'profile_views', target: 700, xp: 13200, badge: 'badge_mega_14', icon: '👀' },
-            { id: 'görev_mega_15', title: 'Efsane Esnaf Ustası #15', desc: 'Toplam 750 adet pazar ilanı oluştur. Zorlu görev!', type: 'market', target: 750, xp: 13500, badge: 'badge_mega_15', icon: '🛒' },
-            { id: 'görev_mega_16', title: 'Efsane Sohbet Ustası #16', desc: 'Toplam 800 defa gruba mesaj gönder. Zorlu görev!', type: 'total_messages', target: 800, xp: 13800, badge: 'badge_mega_16', icon: '💬' },
-            { id: 'görev_mega_17', title: 'Efsane Giriş Ustası #17', desc: 'Toplam 850 gün boyunca uygulamaya giriş yap. Zorlu görev!', type: 'login_count', target: 850, xp: 14100, badge: 'badge_mega_17', icon: '🎉' },
-            { id: 'görev_mega_18', title: 'Efsane Popülerlik Ustası #18', desc: 'Toplam 900 defa profilin görüntülensin. Zorlu görev!', type: 'profile_views', target: 900, xp: 14400, badge: 'badge_mega_18', icon: '👀' },
-            { id: 'görev_mega_19', title: 'Efsane Esnaf Ustası #19', desc: 'Toplam 950 adet pazar ilanı oluştur. Zorlu görev!', type: 'market', target: 950, xp: 14700, badge: 'badge_mega_19', icon: '🛒' },
-            { id: 'görev_mega_20', title: 'Efsane Sohbet Ustası #20', desc: 'Toplam 1000 defa gruba mesaj gönder. Zorlu görev!', type: 'total_messages', target: 1000, xp: 15000, badge: 'badge_mega_20', icon: '💬' },
-            { id: 'görev_mega_21', title: 'Efsane Giriş Ustası #21', desc: 'Toplam 1050 gün boyunca uygulamaya giriş yap. Zorlu görev!', type: 'login_count', target: 1050, xp: 15300, badge: 'badge_mega_21', icon: '🎉' },
-            { id: 'görev_mega_22', title: 'Efsane Popülerlik Ustası #22', desc: 'Toplam 1100 defa profilin görüntülensin. Zorlu görev!', type: 'profile_views', target: 1100, xp: 15600, badge: 'badge_mega_22', icon: '👀' },
-            { id: 'görev_mega_23', title: 'Efsane Esnaf Ustası #23', desc: 'Toplam 1150 adet pazar ilanı oluştur. Zorlu görev!', type: 'market', target: 1150, xp: 15900, badge: 'badge_mega_23', icon: '🛒' },
-            { id: 'görev_mega_24', title: 'Efsane Sohbet Ustası #24', desc: 'Toplam 1200 defa gruba mesaj gönder. Zorlu görev!', type: 'total_messages', target: 1200, xp: 16200, badge: 'badge_mega_24', icon: '💬' },
-            { id: 'görev_mega_25', title: 'Efsane Giriş Ustası #25', desc: 'Toplam 1250 gün boyunca uygulamaya giriş yap. Zorlu görev!', type: 'login_count', target: 1250, xp: 16500, badge: 'badge_mega_25', icon: '🎉' },
-            { id: 'görev_mega_26', title: 'Efsane Popülerlik Ustası #26', desc: 'Toplam 1300 defa profilin görüntülensin. Zorlu görev!', type: 'profile_views', target: 1300, xp: 16800, badge: 'badge_mega_26', icon: '👀' },
-            { id: 'görev_mega_27', title: 'Efsane Esnaf Ustası #27', desc: 'Toplam 1350 adet pazar ilanı oluştur. Zorlu görev!', type: 'market', target: 1350, xp: 17100, badge: 'badge_mega_27', icon: '🛒' },
-            { id: 'görev_mega_28', title: 'Efsane Sohbet Ustası #28', desc: 'Toplam 1400 defa gruba mesaj gönder. Zorlu görev!', type: 'total_messages', target: 1400, xp: 17400, badge: 'badge_mega_28', icon: '💬' },
-            { id: 'görev_mega_29', title: 'Efsane Giriş Ustası #29', desc: 'Toplam 1450 gün boyunca uygulamaya giriş yap. Zorlu görev!', type: 'login_count', target: 1450, xp: 17700, badge: 'badge_mega_29', icon: '🎉' },
-            { id: 'görev_mega_30', title: 'Efsane Popülerlik Ustası #30', desc: 'Toplam 1500 defa profilin görüntülensin. Zorlu görev!', type: 'profile_views', target: 1500, xp: 18000, badge: 'badge_mega_30', icon: '👀' },
-            { id: 'görev_mega_31', title: 'Efsane Esnaf Ustası #31', desc: 'Toplam 1550 adet pazar ilanı oluştur. Zorlu görev!', type: 'market', target: 1550, xp: 18300, badge: 'badge_mega_31', icon: '🛒' },
-            { id: 'görev_mega_32', title: 'Efsane Sohbet Ustası #32', desc: 'Toplam 1600 defa gruba mesaj gönder. Zorlu görev!', type: 'total_messages', target: 1600, xp: 18600, badge: 'badge_mega_32', icon: '💬' },
-            { id: 'görev_mega_33', title: 'Efsane Giriş Ustası #33', desc: 'Toplam 1650 gün boyunca uygulamaya giriş yap. Zorlu görev!', type: 'login_count', target: 1650, xp: 18900, badge: 'badge_mega_33', icon: '🎉' },
-            { id: 'görev_mega_34', title: 'Efsane Popülerlik Ustası #34', desc: 'Toplam 1700 defa profilin görüntülensin. Zorlu görev!', type: 'profile_views', target: 1700, xp: 19200, badge: 'badge_mega_34', icon: '👀' },
-            { id: 'görev_mega_35', title: 'Efsane Esnaf Ustası #35', desc: 'Toplam 1750 adet pazar ilanı oluştur. Zorlu görev!', type: 'market', target: 1750, xp: 19500, badge: 'badge_mega_35', icon: '🛒' },
-            { id: 'görev_mega_36', title: 'Efsane Sohbet Ustası #36', desc: 'Toplam 1800 defa gruba mesaj gönder. Zorlu görev!', type: 'total_messages', target: 1800, xp: 19800, badge: 'badge_mega_36', icon: '💬' },
-            { id: 'görev_mega_37', title: 'Efsane Giriş Ustası #37', desc: 'Toplam 1850 gün boyunca uygulamaya giriş yap. Zorlu görev!', type: 'login_count', target: 1850, xp: 20100, badge: 'badge_mega_37', icon: '🎉' },
-            { id: 'görev_mega_38', title: 'Efsane Popülerlik Ustası #38', desc: 'Toplam 1900 defa profilin görüntülensin. Zorlu görev!', type: 'profile_views', target: 1900, xp: 20400, badge: 'badge_mega_38', icon: '👀' },
-            { id: 'görev_mega_39', title: 'Efsane Esnaf Ustası #39', desc: 'Toplam 1950 adet pazar ilanı oluştur. Zorlu görev!', type: 'market', target: 1950, xp: 20700, badge: 'badge_mega_39', icon: '🛒' },
-            { id: 'görev_mega_40', title: 'Efsane Sohbet Ustası #40', desc: 'Toplam 2000 defa gruba mesaj gönder. Zorlu görev!', type: 'total_messages', target: 2000, xp: 21000, badge: 'badge_mega_40', icon: '💬' },
-            { id: 'görev_mega_41', title: 'Efsane Giriş Ustası #41', desc: 'Toplam 2050 gün boyunca uygulamaya giriş yap. Zorlu görev!', type: 'login_count', target: 2050, xp: 21300, badge: 'badge_mega_41', icon: '🎉' },
-            { id: 'görev_mega_42', title: 'Efsane Popülerlik Ustası #42', desc: 'Toplam 2100 defa profilin görüntülensin. Zorlu görev!', type: 'profile_views', target: 2100, xp: 21600, badge: 'badge_mega_42', icon: '👀' },
-            { id: 'görev_mega_43', title: 'Efsane Esnaf Ustası #43', desc: 'Toplam 2150 adet pazar ilanı oluştur. Zorlu görev!', type: 'market', target: 2150, xp: 21900, badge: 'badge_mega_43', icon: '🛒' },
-            { id: 'görev_mega_44', title: 'Efsane Sohbet Ustası #44', desc: 'Toplam 2200 defa gruba mesaj gönder. Zorlu görev!', type: 'total_messages', target: 2200, xp: 22200, badge: 'badge_mega_44', icon: '💬' },
-            { id: 'görev_mega_45', title: 'Efsane Giriş Ustası #45', desc: 'Toplam 2250 gün boyunca uygulamaya giriş yap. Zorlu görev!', type: 'login_count', target: 2250, xp: 22500, badge: 'badge_mega_45', icon: '🎉' },
-            { id: 'görev_mega_46', title: 'Efsane Popülerlik Ustası #46', desc: 'Toplam 2300 defa profilin görüntülensin. Zorlu görev!', type: 'profile_views', target: 2300, xp: 22800, badge: 'badge_mega_46', icon: '👀' },
-            { id: 'görev_mega_47', title: 'Efsane Esnaf Ustası #47', desc: 'Toplam 2350 adet pazar ilanı oluştur. Zorlu görev!', type: 'market', target: 2350, xp: 23100, badge: 'badge_mega_47', icon: '🛒' },
-            { id: 'görev_mega_48', title: 'Efsane Sohbet Ustası #48', desc: 'Toplam 2400 defa gruba mesaj gönder. Zorlu görev!', type: 'total_messages', target: 2400, xp: 23400, badge: 'badge_mega_48', icon: '💬' },
-            { id: 'görev_mega_49', title: 'Efsane Giriş Ustası #49', desc: 'Toplam 2450 gün boyunca uygulamaya giriş yap. Zorlu görev!', type: 'login_count', target: 2450, xp: 23700, badge: 'badge_mega_49', icon: '🎉' },
-            { id: 'görev_mega_50', title: 'Efsane Popülerlik Ustası #50', desc: 'Toplam 2500 defa profilin görüntülensin. Zorlu görev!', type: 'profile_views', target: 2500, xp: 24000, badge: 'badge_mega_50', icon: '👀' },
-            { id: 'görev_mega_51', title: 'Efsane Esnaf Ustası #51', desc: 'Toplam 2550 adet pazar ilanı oluştur. Zorlu görev!', type: 'market', target: 2550, xp: 24300, badge: 'badge_mega_51', icon: '🛒' },
-            { id: 'görev_mega_52', title: 'Efsane Sohbet Ustası #52', desc: 'Toplam 2600 defa gruba mesaj gönder. Zorlu görev!', type: 'total_messages', target: 2600, xp: 24600, badge: 'badge_mega_52', icon: '💬' },
-            { id: 'görev_mega_53', title: 'Efsane Giriş Ustası #53', desc: 'Toplam 2650 gün boyunca uygulamaya giriş yap. Zorlu görev!', type: 'login_count', target: 2650, xp: 24900, badge: 'badge_mega_53', icon: '🎉' },
-            { id: 'görev_mega_54', title: 'Efsane Popülerlik Ustası #54', desc: 'Toplam 2700 defa profilin görüntülensin. Zorlu görev!', type: 'profile_views', target: 2700, xp: 25200, badge: 'badge_mega_54', icon: '👀' },
-            { id: 'görev_mega_55', title: 'Efsane Esnaf Ustası #55', desc: 'Toplam 2750 adet pazar ilanı oluştur. Zorlu görev!', type: 'market', target: 2750, xp: 25500, badge: 'badge_mega_55', icon: '🛒' },
-            { id: 'görev_mega_56', title: 'Efsane Sohbet Ustası #56', desc: 'Toplam 2800 defa gruba mesaj gönder. Zorlu görev!', type: 'total_messages', target: 2800, xp: 25800, badge: 'badge_mega_56', icon: '💬' },
-            { id: 'görev_mega_57', title: 'Efsane Giriş Ustası #57', desc: 'Toplam 2850 gün boyunca uygulamaya giriş yap. Zorlu görev!', type: 'login_count', target: 2850, xp: 26100, badge: 'badge_mega_57', icon: '🎉' },
-            { id: 'görev_mega_58', title: 'Efsane Popülerlik Ustası #58', desc: 'Toplam 2900 defa profilin görüntülensin. Zorlu görev!', type: 'profile_views', target: 2900, xp: 26400, badge: 'badge_mega_58', icon: '👀' },
-            { id: 'görev_mega_59', title: 'Efsane Esnaf Ustası #59', desc: 'Toplam 2950 adet pazar ilanı oluştur. Zorlu görev!', type: 'market', target: 2950, xp: 26700, badge: 'badge_mega_59', icon: '🛒' },
-            { id: 'görev_mega_60', title: 'Efsane Sohbet Ustası #60', desc: 'Toplam 3000 defa gruba mesaj gönder. Zorlu görev!', type: 'total_messages', target: 3000, xp: 27000, badge: 'badge_mega_60', icon: '💬' },
-            { id: 'görev_mega_61', title: 'Efsane Giriş Ustası #61', desc: 'Toplam 3050 gün boyunca uygulamaya giriş yap. Zorlu görev!', type: 'login_count', target: 3050, xp: 27300, badge: 'badge_mega_61', icon: '🎉' },
-            { id: 'görev_mega_62', title: 'Efsane Popülerlik Ustası #62', desc: 'Toplam 3100 defa profilin görüntülensin. Zorlu görev!', type: 'profile_views', target: 3100, xp: 27600, badge: 'badge_mega_62', icon: '👀' },
-            { id: 'görev_mega_63', title: 'Efsane Esnaf Ustası #63', desc: 'Toplam 3150 adet pazar ilanı oluştur. Zorlu görev!', type: 'market', target: 3150, xp: 27900, badge: 'badge_mega_63', icon: '🛒' },
-            { id: 'görev_mega_64', title: 'Efsane Sohbet Ustası #64', desc: 'Toplam 3200 defa gruba mesaj gönder. Zorlu görev!', type: 'total_messages', target: 3200, xp: 28200, badge: 'badge_mega_64', icon: '💬' },
-            { id: 'görev_mega_65', title: 'Efsane Giriş Ustası #65', desc: 'Toplam 3250 gün boyunca uygulamaya giriş yap. Zorlu görev!', type: 'login_count', target: 3250, xp: 28500, badge: 'badge_mega_65', icon: '🎉' },
-            { id: 'görev_mega_66', title: 'Efsane Popülerlik Ustası #66', desc: 'Toplam 3300 defa profilin görüntülensin. Zorlu görev!', type: 'profile_views', target: 3300, xp: 28800, badge: 'badge_mega_66', icon: '👀' },
-            { id: 'görev_mega_67', title: 'Efsane Esnaf Ustası #67', desc: 'Toplam 3350 adet pazar ilanı oluştur. Zorlu görev!', type: 'market', target: 3350, xp: 29100, badge: 'badge_mega_67', icon: '🛒' },
-            { id: 'görev_mega_68', title: 'Efsane Sohbet Ustası #68', desc: 'Toplam 3400 defa gruba mesaj gönder. Zorlu görev!', type: 'total_messages', target: 3400, xp: 29400, badge: 'badge_mega_68', icon: '💬' },
-            { id: 'görev_mega_69', title: 'Efsane Giriş Ustası #69', desc: 'Toplam 3450 gün boyunca uygulamaya giriş yap. Zorlu görev!', type: 'login_count', target: 3450, xp: 29700, badge: 'badge_mega_69', icon: '🎉' },
-            { id: 'görev_mega_70', title: 'Efsane Popülerlik Ustası #70', desc: 'Toplam 3500 defa profilin görüntülensin. Zorlu görev!', type: 'profile_views', target: 3500, xp: 30000, badge: 'badge_mega_70', icon: '👀' },
-            { id: 'görev_mega_71', title: 'Efsane Esnaf Ustası #71', desc: 'Toplam 3550 adet pazar ilanı oluştur. Zorlu görev!', type: 'market', target: 3550, xp: 30300, badge: 'badge_mega_71', icon: '🛒' },
-            { id: 'görev_mega_72', title: 'Efsane Sohbet Ustası #72', desc: 'Toplam 3600 defa gruba mesaj gönder. Zorlu görev!', type: 'total_messages', target: 3600, xp: 30600, badge: 'badge_mega_72', icon: '💬' },
-            { id: 'görev_mega_73', title: 'Efsane Giriş Ustası #73', desc: 'Toplam 3650 gün boyunca uygulamaya giriş yap. Zorlu görev!', type: 'login_count', target: 3650, xp: 30900, badge: 'badge_mega_73', icon: '🎉' },
-            { id: 'görev_mega_74', title: 'Efsane Popülerlik Ustası #74', desc: 'Toplam 3700 defa profilin görüntülensin. Zorlu görev!', type: 'profile_views', target: 3700, xp: 31200, badge: 'badge_mega_74', icon: '👀' },
-            { id: 'görev_mega_75', title: 'Efsane Esnaf Ustası #75', desc: 'Toplam 3750 adet pazar ilanı oluştur. Zorlu görev!', type: 'market', target: 3750, xp: 31500, badge: 'badge_mega_75', icon: '🛒' },
-            { id: 'görev_mega_76', title: 'Efsane Sohbet Ustası #76', desc: 'Toplam 3800 defa gruba mesaj gönder. Zorlu görev!', type: 'total_messages', target: 3800, xp: 31800, badge: 'badge_mega_76', icon: '💬' },
-            { id: 'görev_mega_77', title: 'Efsane Giriş Ustası #77', desc: 'Toplam 3850 gün boyunca uygulamaya giriş yap. Zorlu görev!', type: 'login_count', target: 3850, xp: 32100, badge: 'badge_mega_77', icon: '🎉' },
-            { id: 'görev_mega_78', title: 'Efsane Popülerlik Ustası #78', desc: 'Toplam 3900 defa profilin görüntülensin. Zorlu görev!', type: 'profile_views', target: 3900, xp: 32400, badge: 'badge_mega_78', icon: '👀' },
-            { id: 'görev_mega_79', title: 'Efsane Esnaf Ustası #79', desc: 'Toplam 3950 adet pazar ilanı oluştur. Zorlu görev!', type: 'market', target: 3950, xp: 32700, badge: 'badge_mega_79', icon: '🛒' },
-            { id: 'görev_mega_80', title: 'Efsane Sohbet Ustası #80', desc: 'Toplam 4000 defa gruba mesaj gönder. Zorlu görev!', type: 'total_messages', target: 4000, xp: 33000, badge: 'badge_mega_80', icon: '💬' },
-            { id: 'görev_mega_81', title: 'Efsane Giriş Ustası #81', desc: 'Toplam 4050 gün boyunca uygulamaya giriş yap. Zorlu görev!', type: 'login_count', target: 4050, xp: 33300, badge: 'badge_mega_81', icon: '🎉' },
-            { id: 'görev_mega_82', title: 'Efsane Popülerlik Ustası #82', desc: 'Toplam 4100 defa profilin görüntülensin. Zorlu görev!', type: 'profile_views', target: 4100, xp: 33600, badge: 'badge_mega_82', icon: '👀' },
-            { id: 'görev_mega_83', title: 'Efsane Esnaf Ustası #83', desc: 'Toplam 4150 adet pazar ilanı oluştur. Zorlu görev!', type: 'market', target: 4150, xp: 33900, badge: 'badge_mega_83', icon: '🛒' },
-            { id: 'görev_mega_84', title: 'Efsane Sohbet Ustası #84', desc: 'Toplam 4200 defa gruba mesaj gönder. Zorlu görev!', type: 'total_messages', target: 4200, xp: 34200, badge: 'badge_mega_84', icon: '💬' },
-            { id: 'görev_mega_85', title: 'Efsane Giriş Ustası #85', desc: 'Toplam 4250 gün boyunca uygulamaya giriş yap. Zorlu görev!', type: 'login_count', target: 4250, xp: 34500, badge: 'badge_mega_85', icon: '🎉' },
-            { id: 'görev_mega_86', title: 'Efsane Popülerlik Ustası #86', desc: 'Toplam 4300 defa profilin görüntülensin. Zorlu görev!', type: 'profile_views', target: 4300, xp: 34800, badge: 'badge_mega_86', icon: '👀' },
-            { id: 'görev_mega_87', title: 'Efsane Esnaf Ustası #87', desc: 'Toplam 4350 adet pazar ilanı oluştur. Zorlu görev!', type: 'market', target: 4350, xp: 35100, badge: 'badge_mega_87', icon: '🛒' },
-            { id: 'görev_mega_88', title: 'Efsane Sohbet Ustası #88', desc: 'Toplam 4400 defa gruba mesaj gönder. Zorlu görev!', type: 'total_messages', target: 4400, xp: 35400, badge: 'badge_mega_88', icon: '💬' },
-            { id: 'görev_mega_89', title: 'Efsane Giriş Ustası #89', desc: 'Toplam 4450 gün boyunca uygulamaya giriş yap. Zorlu görev!', type: 'login_count', target: 4450, xp: 35700, badge: 'badge_mega_89', icon: '🎉' },
-            { id: 'görev_mega_90', title: 'Efsane Popülerlik Ustası #90', desc: 'Toplam 4500 defa profilin görüntülensin. Zorlu görev!', type: 'profile_views', target: 4500, xp: 36000, badge: 'badge_mega_90', icon: '👀' },
-            { id: 'görev_mega_91', title: 'Efsane Esnaf Ustası #91', desc: 'Toplam 4550 adet pazar ilanı oluştur. Zorlu görev!', type: 'market', target: 4550, xp: 36300, badge: 'badge_mega_91', icon: '🛒' },
-            { id: 'görev_mega_92', title: 'Efsane Sohbet Ustası #92', desc: 'Toplam 4600 defa gruba mesaj gönder. Zorlu görev!', type: 'total_messages', target: 4600, xp: 36600, badge: 'badge_mega_92', icon: '💬' },
-            { id: 'görev_mega_93', title: 'Efsane Giriş Ustası #93', desc: 'Toplam 4650 gün boyunca uygulamaya giriş yap. Zorlu görev!', type: 'login_count', target: 4650, xp: 36900, badge: 'badge_mega_93', icon: '🎉' },
-            { id: 'görev_mega_94', title: 'Efsane Popülerlik Ustası #94', desc: 'Toplam 4700 defa profilin görüntülensin. Zorlu görev!', type: 'profile_views', target: 4700, xp: 37200, badge: 'badge_mega_94', icon: '👀' },
-            { id: 'görev_mega_95', title: 'Efsane Esnaf Ustası #95', desc: 'Toplam 4750 adet pazar ilanı oluştur. Zorlu görev!', type: 'market', target: 4750, xp: 37500, badge: 'badge_mega_95', icon: '🛒' },
-            { id: 'görev_mega_96', title: 'Efsane Sohbet Ustası #96', desc: 'Toplam 4800 defa gruba mesaj gönder. Zorlu görev!', type: 'total_messages', target: 4800, xp: 37800, badge: 'badge_mega_96', icon: '💬' },
-            { id: 'görev_mega_97', title: 'Efsane Giriş Ustası #97', desc: 'Toplam 4850 gün boyunca uygulamaya giriş yap. Zorlu görev!', type: 'login_count', target: 4850, xp: 38100, badge: 'badge_mega_97', icon: '🎉' },
-            { id: 'görev_mega_98', title: 'Efsane Popülerlik Ustası #98', desc: 'Toplam 4900 defa profilin görüntülensin. Zorlu görev!', type: 'profile_views', target: 4900, xp: 38400, badge: 'badge_mega_98', icon: '👀' },
-            { id: 'görev_mega_99', title: 'Efsane Esnaf Ustası #99', desc: 'Toplam 4950 adet pazar ilanı oluştur. Zorlu görev!', type: 'market', target: 4950, xp: 38700, badge: 'badge_mega_99', icon: '🛒' },
-            { id: 'görev_mega_100', title: 'Efsane Sohbet Ustası #100', desc: 'Toplam 5000 defa gruba mesaj gönder. Zorlu görev!', type: 'total_messages', target: 5000, xp: 39000, badge: 'badge_mega_100', icon: '💬' },
-            { id: 'görev_mega_101', title: 'Efsane Giriş Ustası #101', desc: 'Toplam 5050 gün boyunca uygulamaya giriş yap. Zorlu görev!', type: 'login_count', target: 5050, xp: 39300, badge: 'badge_mega_101', icon: '🎉' },
-            { id: 'görev_mega_102', title: 'Efsane Popülerlik Ustası #102', desc: 'Toplam 5100 defa profilin görüntülensin. Zorlu görev!', type: 'profile_views', target: 5100, xp: 39600, badge: 'badge_mega_102', icon: '👀' },
-            { id: 'görev_mega_103', title: 'Efsane Esnaf Ustası #103', desc: 'Toplam 5150 adet pazar ilanı oluştur. Zorlu görev!', type: 'market', target: 5150, xp: 39900, badge: 'badge_mega_103', icon: '🛒' },
-            { id: 'görev_mega_104', title: 'Efsane Sohbet Ustası #104', desc: 'Toplam 5200 defa gruba mesaj gönder. Zorlu görev!', type: 'total_messages', target: 5200, xp: 40200, badge: 'badge_mega_104', icon: '💬' },
-            { id: 'görev_mega_105', title: 'Efsane Giriş Ustası #105', desc: 'Toplam 5250 gün boyunca uygulamaya giriş yap. Zorlu görev!', type: 'login_count', target: 5250, xp: 40500, badge: 'badge_mega_105', icon: '🎉' },
-            { id: 'görev_mega_106', title: 'Efsane Popülerlik Ustası #106', desc: 'Toplam 5300 defa profilin görüntülensin. Zorlu görev!', type: 'profile_views', target: 5300, xp: 40800, badge: 'badge_mega_106', icon: '👀' },
-            { id: 'görev_mega_107', title: 'Efsane Esnaf Ustası #107', desc: 'Toplam 5350 adet pazar ilanı oluştur. Zorlu görev!', type: 'market', target: 5350, xp: 41100, badge: 'badge_mega_107', icon: '🛒' },
-            { id: 'görev_mega_108', title: 'Efsane Sohbet Ustası #108', desc: 'Toplam 5400 defa gruba mesaj gönder. Zorlu görev!', type: 'total_messages', target: 5400, xp: 41400, badge: 'badge_mega_108', icon: '💬' },
-            { id: 'görev_mega_109', title: 'Efsane Giriş Ustası #109', desc: 'Toplam 5450 gün boyunca uygulamaya giriş yap. Zorlu görev!', type: 'login_count', target: 5450, xp: 41700, badge: 'badge_mega_109', icon: '🎉' },
-            { id: 'görev_mega_110', title: 'Efsane Popülerlik Ustası #110', desc: 'Toplam 5500 defa profilin görüntülensin. Zorlu görev!', type: 'profile_views', target: 5500, xp: 42000, badge: 'badge_mega_110', icon: '👀' },
-            { id: 'görev_mega_111', title: 'Efsane Esnaf Ustası #111', desc: 'Toplam 5550 adet pazar ilanı oluştur. Zorlu görev!', type: 'market', target: 5550, xp: 42300, badge: 'badge_mega_111', icon: '🛒' },
-            { id: 'görev_mega_112', title: 'Efsane Sohbet Ustası #112', desc: 'Toplam 5600 defa gruba mesaj gönder. Zorlu görev!', type: 'total_messages', target: 5600, xp: 42600, badge: 'badge_mega_112', icon: '💬' },
-            { id: 'görev_mega_113', title: 'Efsane Giriş Ustası #113', desc: 'Toplam 5650 gün boyunca uygulamaya giriş yap. Zorlu görev!', type: 'login_count', target: 5650, xp: 42900, badge: 'badge_mega_113', icon: '🎉' },
-            { id: 'görev_mega_114', title: 'Efsane Popülerlik Ustası #114', desc: 'Toplam 5700 defa profilin görüntülensin. Zorlu görev!', type: 'profile_views', target: 5700, xp: 43200, badge: 'badge_mega_114', icon: '👀' },
-            { id: 'görev_mega_115', title: 'Efsane Esnaf Ustası #115', desc: 'Toplam 5750 adet pazar ilanı oluştur. Zorlu görev!', type: 'market', target: 5750, xp: 43500, badge: 'badge_mega_115', icon: '🛒' },
-            { id: 'görev_mega_116', title: 'Efsane Sohbet Ustası #116', desc: 'Toplam 5800 defa gruba mesaj gönder. Zorlu görev!', type: 'total_messages', target: 5800, xp: 43800, badge: 'badge_mega_116', icon: '💬' },
-            { id: 'görev_mega_117', title: 'Efsane Giriş Ustası #117', desc: 'Toplam 5850 gün boyunca uygulamaya giriş yap. Zorlu görev!', type: 'login_count', target: 5850, xp: 44100, badge: 'badge_mega_117', icon: '🎉' },
-            { id: 'görev_mega_118', title: 'Efsane Popülerlik Ustası #118', desc: 'Toplam 5900 defa profilin görüntülensin. Zorlu görev!', type: 'profile_views', target: 5900, xp: 44400, badge: 'badge_mega_118', icon: '👀' },
-            { id: 'görev_mega_119', title: 'Efsane Esnaf Ustası #119', desc: 'Toplam 5950 adet pazar ilanı oluştur. Zorlu görev!', type: 'market', target: 5950, xp: 44700, badge: 'badge_mega_119', icon: '🛒' },
-            { id: 'görev_mega_120', title: 'Efsane Sohbet Ustası #120', desc: 'Toplam 6000 defa gruba mesaj gönder. Zorlu görev!', type: 'total_messages', target: 6000, xp: 45000, badge: 'badge_mega_120', icon: '💬' },
-            { id: 'görev_mega_121', title: 'Efsane Giriş Ustası #121', desc: 'Toplam 6050 gün boyunca uygulamaya giriş yap. Zorlu görev!', type: 'login_count', target: 6050, xp: 45300, badge: 'badge_mega_121', icon: '🎉' },
-            { id: 'görev_mega_122', title: 'Efsane Popülerlik Ustası #122', desc: 'Toplam 6100 defa profilin görüntülensin. Zorlu görev!', type: 'profile_views', target: 6100, xp: 45600, badge: 'badge_mega_122', icon: '👀' },
-            { id: 'görev_mega_123', title: 'Efsane Esnaf Ustası #123', desc: 'Toplam 6150 adet pazar ilanı oluştur. Zorlu görev!', type: 'market', target: 6150, xp: 45900, badge: 'badge_mega_123', icon: '🛒' },
-            { id: 'görev_mega_124', title: 'Efsane Sohbet Ustası #124', desc: 'Toplam 6200 defa gruba mesaj gönder. Zorlu görev!', type: 'total_messages', target: 6200, xp: 46200, badge: 'badge_mega_124', icon: '💬' },
-            { id: 'görev_mega_125', title: 'Efsane Giriş Ustası #125', desc: 'Toplam 6250 gün boyunca uygulamaya giriş yap. Zorlu görev!', type: 'login_count', target: 6250, xp: 46500, badge: 'badge_mega_125', icon: '🎉' },
-            { id: 'görev_mega_126', title: 'Efsane Popülerlik Ustası #126', desc: 'Toplam 6300 defa profilin görüntülensin. Zorlu görev!', type: 'profile_views', target: 6300, xp: 46800, badge: 'badge_mega_126', icon: '👀' },
-            { id: 'görev_mega_127', title: 'Efsane Esnaf Ustası #127', desc: 'Toplam 6350 adet pazar ilanı oluştur. Zorlu görev!', type: 'market', target: 6350, xp: 47100, badge: 'badge_mega_127', icon: '🛒' },
-            { id: 'görev_mega_128', title: 'Efsane Sohbet Ustası #128', desc: 'Toplam 6400 defa gruba mesaj gönder. Zorlu görev!', type: 'total_messages', target: 6400, xp: 47400, badge: 'badge_mega_128', icon: '💬' },
-            { id: 'görev_mega_129', title: 'Efsane Giriş Ustası #129', desc: 'Toplam 6450 gün boyunca uygulamaya giriş yap. Zorlu görev!', type: 'login_count', target: 6450, xp: 47700, badge: 'badge_mega_129', icon: '🎉' },
-            { id: 'görev_mega_130', title: 'Efsane Popülerlik Ustası #130', desc: 'Toplam 6500 defa profilin görüntülensin. Zorlu görev!', type: 'profile_views', target: 6500, xp: 48000, badge: 'badge_mega_130', icon: '👀' },
-            { id: 'görev_mega_131', title: 'Efsane Esnaf Ustası #131', desc: 'Toplam 6550 adet pazar ilanı oluştur. Zorlu görev!', type: 'market', target: 6550, xp: 48300, badge: 'badge_mega_131', icon: '🛒' },
-            { id: 'görev_mega_132', title: 'Efsane Sohbet Ustası #132', desc: 'Toplam 6600 defa gruba mesaj gönder. Zorlu görev!', type: 'total_messages', target: 6600, xp: 48600, badge: 'badge_mega_132', icon: '💬' },
-            { id: 'görev_mega_133', title: 'Efsane Giriş Ustası #133', desc: 'Toplam 6650 gün boyunca uygulamaya giriş yap. Zorlu görev!', type: 'login_count', target: 6650, xp: 48900, badge: 'badge_mega_133', icon: '🎉' },
-            { id: 'görev_mega_134', title: 'Efsane Popülerlik Ustası #134', desc: 'Toplam 6700 defa profilin görüntülensin. Zorlu görev!', type: 'profile_views', target: 6700, xp: 49200, badge: 'badge_mega_134', icon: '👀' },
-            { id: 'görev_mega_135', title: 'Efsane Esnaf Ustası #135', desc: 'Toplam 6750 adet pazar ilanı oluştur. Zorlu görev!', type: 'market', target: 6750, xp: 49500, badge: 'badge_mega_135', icon: '🛒' },
-            { id: 'görev_mega_136', title: 'Efsane Sohbet Ustası #136', desc: 'Toplam 6800 defa gruba mesaj gönder. Zorlu görev!', type: 'total_messages', target: 6800, xp: 49800, badge: 'badge_mega_136', icon: '💬' },
-            { id: 'görev_mega_137', title: 'Efsane Giriş Ustası #137', desc: 'Toplam 6850 gün boyunca uygulamaya giriş yap. Zorlu görev!', type: 'login_count', target: 6850, xp: 50100, badge: 'badge_mega_137', icon: '🎉' },
-            { id: 'görev_mega_138', title: 'Efsane Popülerlik Ustası #138', desc: 'Toplam 6900 defa profilin görüntülensin. Zorlu görev!', type: 'profile_views', target: 6900, xp: 50400, badge: 'badge_mega_138', icon: '👀' },
-            { id: 'görev_mega_139', title: 'Efsane Esnaf Ustası #139', desc: 'Toplam 6950 adet pazar ilanı oluştur. Zorlu görev!', type: 'market', target: 6950, xp: 50700, badge: 'badge_mega_139', icon: '🛒' },
-            { id: 'görev_mega_140', title: 'Efsane Sohbet Ustası #140', desc: 'Toplam 7000 defa gruba mesaj gönder. Zorlu görev!', type: 'total_messages', target: 7000, xp: 51000, badge: 'badge_mega_140', icon: '💬' },
-            { id: 'görev_mega_141', title: 'Efsane Giriş Ustası #141', desc: 'Toplam 7050 gün boyunca uygulamaya giriş yap. Zorlu görev!', type: 'login_count', target: 7050, xp: 51300, badge: 'badge_mega_141', icon: '🎉' },
-            { id: 'görev_mega_142', title: 'Efsane Popülerlik Ustası #142', desc: 'Toplam 7100 defa profilin görüntülensin. Zorlu görev!', type: 'profile_views', target: 7100, xp: 51600, badge: 'badge_mega_142', icon: '👀' },
-            { id: 'görev_mega_143', title: 'Efsane Esnaf Ustası #143', desc: 'Toplam 7150 adet pazar ilanı oluştur. Zorlu görev!', type: 'market', target: 7150, xp: 51900, badge: 'badge_mega_143', icon: '🛒' },
-            { id: 'görev_mega_144', title: 'Efsane Sohbet Ustası #144', desc: 'Toplam 7200 defa gruba mesaj gönder. Zorlu görev!', type: 'total_messages', target: 7200, xp: 52200, badge: 'badge_mega_144', icon: '💬' },
-            { id: 'görev_mega_145', title: 'Efsane Giriş Ustası #145', desc: 'Toplam 7250 gün boyunca uygulamaya giriş yap. Zorlu görev!', type: 'login_count', target: 7250, xp: 52500, badge: 'badge_mega_145', icon: '🎉' },
-            { id: 'görev_mega_146', title: 'Efsane Popülerlik Ustası #146', desc: 'Toplam 7300 defa profilin görüntülensin. Zorlu görev!', type: 'profile_views', target: 7300, xp: 52800, badge: 'badge_mega_146', icon: '👀' },
-            { id: 'görev_mega_147', title: 'Efsane Esnaf Ustası #147', desc: 'Toplam 7350 adet pazar ilanı oluştur. Zorlu görev!', type: 'market', target: 7350, xp: 53100, badge: 'badge_mega_147', icon: '🛒' },
-            { id: 'görev_mega_148', title: 'Efsane Sohbet Ustası #148', desc: 'Toplam 7400 defa gruba mesaj gönder. Zorlu görev!', type: 'total_messages', target: 7400, xp: 53400, badge: 'badge_mega_148', icon: '💬' },
-            { id: 'görev_mega_149', title: 'Efsane Giriş Ustası #149', desc: 'Toplam 7450 gün boyunca uygulamaya giriş yap. Zorlu görev!', type: 'login_count', target: 7450, xp: 53700, badge: 'badge_mega_149', icon: '🎉' },
-            { id: 'görev_mega_150', title: 'Efsane Popülerlik Ustası #150', desc: 'Toplam 7500 defa profilin görüntülensin. Zorlu görev!', type: 'profile_views', target: 7500, xp: 54000, badge: 'badge_mega_150', icon: '👀' },
-
+        const MISSIONS = [
+            { id: 'm1', title: 'Başlangıç Giriş #1', desc: 'Arka arkaya 1 gün giriş yap.', type: 'login_streak', target: 1, xp: 150, icon: '🎉' },
+    { id: 'm2', title: 'Düzenli Giriş #2', desc: 'Arka arkaya 7 gün giriş yap.', type: 'login_streak', target: 7, xp: 600, icon: '🎉' },
+    { id: 'm3', title: 'Aylık Müdavim #3', desc: 'Arka arkaya 30 gün giriş yap.', type: 'login_streak', target: 30, xp: 6000, icon: '🎉' },
+    { id: 'm4', title: 'Efsanevi Giriş #4', desc: 'Arka arkaya 100 gün giriş yap.', type: 'login_streak', target: 100, xp: 30000, icon: '🎉' },
+    { id: 'm5', title: 'İlk Merhaba #5', desc: 'Grup sohbetine ilk mesajını gönder.', type: 'total_messages', target: 1, xp: 60, icon: '💬' },
+    { id: 'm6', title: 'Sohbet Kuşu #6', desc: 'Grup sohbetine 50 mesaj gönder.', type: 'total_messages', target: 50, xp: 900, icon: '💬' },
+    { id: 'm7', title: 'Sohbet Ustası #7', desc: 'Grup sohbetine 200 mesaj gönder.', type: 'total_messages', target: 200, xp: 3000, icon: '💬' },
+    { id: 'm8', title: 'İlk Rota #8', desc: 'Haritaya ilk noktanı ekle.', type: 'markers', target: 1, xp: 150, icon: '📍' },
+    { id: 'm9', title: 'Rehber #9', desc: 'Haritaya toplam 10 nokta ekle.', type: 'markers', target: 10, xp: 1500, icon: '📍' },
+    { id: 'm10', title: 'İlk Satış #10', desc: 'Pazara ilk ilanını koy.', type: 'market', target: 1, xp: 150, icon: '🛒' },
+    { id: 'm11', title: 'Esnaf #11', desc: 'Pazara toplam 5 ilan koy.', type: 'market', target: 5, xp: 900, icon: '🛒' },
+    { id: 'm12', title: 'İlk Etkinlik #12', desc: 'İlk etkinliğine katıl veya oluştur.', type: 'events', target: 1, xp: 300, icon: '📅' },
+    { id: 'm13', title: 'Sosyal Kelebek #13', desc: 'Toplam 5 etkinliğe katıl veya oluştur.', type: 'events', target: 5, xp: 1500, icon: '📅' },
 ];
 
 
@@ -1049,6 +884,9 @@ const MISSIONS = [
         }
         navigator.clipboard.writeText(text).then(() => {
             if(typeof showToast==='function') showToast("Tasarım kopyalandı!", "success");
+        }).catch(err => {
+            console.error("Clipboard err:", err);
+            if(typeof showToast==='function') showToast("Kopyalama başarısız oldu.", "error");
         });
     };
 
@@ -2393,7 +2231,7 @@ const MISSIONS = [
                         <input id="login-password" type="password" placeholder="Şifre" class="w-full bg-black/50 border border-zinc-700 rounded-xl px-5 py-4 mb-4 outline-none text-white focus:border-sky-500 focus:bg-black/80 transition-all font-bold" autocomplete="current-password" autocapitalize="none" autocorrect="off">
                         
                         <div class="flex justify-end items-center mb-8 px-1">
-                            <a href="javascript:void(0)" onclick="openForgotPasswordModal()" class="text-xs text-blue-400 hover:text-blue-300 transition hover:underline">Şifremi Unuttum?</a>
+                            <a href="javascript:void(0)" onclick="openAISupportPanel(); setTimeout(() => { document.getElementById('ai-support-input').value = 'Şifremi unuttum'; document.getElementById('ai-support-send-btn').click(); }, 500);" class="text-xs text-blue-400 hover:text-blue-300 transition hover:underline">Şifremi Unuttum?</a>
                         </div>
                         <!-- E-posta ile kayıt olmayan kullanıcılar için AI Destek yönlendirmesi -->
                         <div id="no-email-hint" style="display:none; margin-bottom:20px; margin-top:-15px; text-align:center;">
@@ -2435,6 +2273,11 @@ const MISSIONS = [
                         <input id="reg-username" type="text" placeholder="Kullanıcı Adı" class="w-full bg-black/50 border border-zinc-700 rounded-xl px-5 py-4 mb-3 outline-none text-white focus:border-sky-500 transition-all font-bold" autocapitalize="none" autocorrect="off">
                         <input id="reg-city" type="text" placeholder="Şehir" class="w-full bg-black/50 border border-zinc-700 rounded-xl px-5 py-4 mb-3 outline-none text-white focus:border-sky-500 transition-all font-bold">
                         <input id="reg-password" type="password" placeholder="Şifre" class="w-full bg-black/50 border border-zinc-700 rounded-xl px-5 py-4 mb-3 outline-none text-white focus:border-sky-500 transition-all font-bold" autocapitalize="none" autocorrect="off">
+                        
+                        <input id="reg-secret-word" type="text" placeholder="Özel Kelime/Cümle (Örn: apple 15)" class="w-full bg-black/50 border border-red-500/50 rounded-xl px-5 py-4 mb-1 outline-none text-white focus:border-red-400 transition-all font-bold">
+                        <div class="mb-3 px-1 space-y-1">
+                            <p class="text-[10px] text-red-400/80 leading-tight">⚠️ <b>Şifreni unutursan, bu özel kelimeyi Destek (Yapay Zeka) paneline söyleyerek şifreni anında sıfırlayabilirsin. Kimseyle paylaşma.</b></p>
+                        </div>
                         
                         <input id="reg-email" type="email" placeholder="E-posta (@gmail.com — İsteğe Bağlı)" class="w-full bg-black/50 border border-zinc-700 rounded-xl px-5 py-4 mb-1 outline-none text-white focus:border-sky-500 transition-all font-bold">
                         <div class="mb-3 px-1 space-y-1">
@@ -4008,6 +3851,9 @@ const MISSIONS = [
                 <button onclick="openDangerReport()" class="w-full bg-red-950/40 border border-sky-800/50 hover:bg-sky-900/30 transition text-sky-300 py-2.5 rounded-xl font-bold text-xs mb-2 btn-premium-hover flex items-center justify-center gap-2">
                     <span>⚠️</span> Tehlike Bildir
                 </button>
+                <button onclick="openMarkerReportModal()" class="w-full bg-orange-950/40 border border-orange-800/50 hover:bg-orange-900/30 transition text-orange-300 py-2.5 rounded-xl font-bold text-xs mb-2 btn-premium-hover flex items-center justify-center gap-2">
+                    <span>📍</span> Bu Yer Mevcut Değil
+                </button>
                 <button onclick="openComments('marker', currentMarkerId)" class="w-full bg-zinc-900/80 border border-zinc-700 hover:bg-zinc-800 transition text-zinc-300 py-3 rounded-xl font-bold text-sm mb-3 btn-premium-hover flex items-center justify-center gap-2 mt-1">
                     <span>💬</span> Yorumlar
                 </button>
@@ -4342,27 +4188,40 @@ const MISSIONS = [
                     <div id="admin-tab-reports" class="hidden space-y-3">
                         <div class="flex items-center justify-between">
                             <span class="text-zinc-400 text-xs font-bold uppercase tracking-widest">🛡️ Bekleyen Raporlar</span>
-                            <button onclick="loadAdminReports()" class="text-[10px] text-sky-300 font-bold border border-sky-900/40 px-3 py-1.5 rounded-lg hover:bg-sky-900/20 transition">🔄 Yenile</button>
+                            <div class="flex gap-2">
+                                <button onclick="loadAdminReports()" class="text-[10px] text-sky-300 font-bold border border-sky-900/40 px-3 py-1.5 rounded-lg hover:bg-sky-900/20 transition">Kullanıcı/Mesaj</button>
+                                <button onclick="loadAdminMarkerReports()" class="text-[10px] text-orange-300 font-bold border border-orange-900/40 px-3 py-1.5 rounded-lg hover:bg-orange-900/20 transition">📍 Harita</button>
+                            </div>
                         </div>
-                        <div class="flex gap-2 mb-2">
-                            <select id="admin-report-status" onchange="loadAdminReports()" class="bg-black/60 border border-zinc-700 rounded-lg px-2 py-2 text-white text-[10px] font-bold outline-none">
-                                <option value="pending">⏳ Bekleyen</option>
-                                <option value="all">📋 Tümü</option>
-                                <option value="reviewed">✅ İncelendi</option>
-                                <option value="dismissed">❌ Reddedildi</option>
-                            </select>
-                            <select id="admin-report-severity" onchange="loadAdminReports()" class="bg-black/60 border border-zinc-700 rounded-lg px-2 py-2 text-white text-[10px] font-bold outline-none">
-                                <option value="all">Tüm Şiddetler</option>
-                                <option value="high">🔴 Yüksek</option>
-                                <option value="medium">🟠 Orta</option>
-                                <option value="low">🟡 Düşük</option>
-                            </select>
+                        
+                        <div id="admin-reports-regular-section">
+                            <div class="flex gap-2 mb-2">
+                                <select id="admin-report-status" onchange="loadAdminReports()" class="bg-black/60 border border-zinc-700 rounded-lg px-2 py-2 text-white text-[10px] font-bold outline-none">
+                                    <option value="pending">⏳ Bekleyen</option>
+                                    <option value="all">📋 Tümü</option>
+                                    <option value="reviewed">✅ İncelendi</option>
+                                    <option value="dismissed">❌ Reddedildi</option>
+                                </select>
+                                <select id="admin-report-severity" onchange="loadAdminReports()" class="bg-black/60 border border-zinc-700 rounded-lg px-2 py-2 text-white text-[10px] font-bold outline-none">
+                                    <option value="all">Tüm Şiddetler</option>
+                                    <option value="high">🔴 Yüksek</option>
+                                    <option value="medium">🟠 Orta</option>
+                                    <option value="low">🟡 Düşük</option>
+                                </select>
+                            </div>
+                            <div id="admin-reports-list" class="space-y-2">
+                                <div class="text-zinc-600 text-xs italic font-medium text-center py-4">Yükleniyor...</div>
+                            </div>
+                            <div id="admin-reports-pagination" class="flex justify-center gap-2 mt-2"></div>
                         </div>
-                        <div id="admin-reports-list" class="space-y-2">
-                            <div class="text-zinc-600 text-xs italic font-medium text-center py-4">Yükleniyor...</div>
+
+                        <div id="admin-reports-marker-section" class="hidden">
+                            <div id="admin-marker-reports-list" class="space-y-2">
+                                <div class="text-zinc-600 text-xs italic font-medium text-center py-4">Harita raporları yükleniyor...</div>
+                            </div>
                         </div>
-                        <div id="admin-reports-pagination" class="flex justify-center gap-2 mt-2"></div>
                     </div>
+
 
                     <!-- ===== REELS TAB ===== -->
                     <div id="admin-tab-reels" class="hidden space-y-3">
@@ -4708,6 +4567,7 @@ const MISSIONS = [
             const username = document.getElementById("reg-username").value.trim();
             const city = document.getElementById("reg-city").value.trim();
             const password = document.getElementById("reg-password").value;
+            const secretWord = document.getElementById("reg-secret-word").value.trim();
             const email = document.getElementById("reg-email").value.trim();
             const marketing = document.getElementById("reg-marketing").checked;
             const kvkk = document.getElementById("reg-kvkk").checked;
@@ -4715,7 +4575,7 @@ const MISSIONS = [
             const refCode = document.getElementById("reg-ref-code").value.trim();
             const refReward = document.getElementById("reg-ref-reward").value;
             
-            if(!name || !username || !city || !password) return alert("Lütfen Ad Soyad, Kullanıcı Adı, Şehir ve Şifre alanlarını doldurun!");
+            if(!name || !username || !city || !password || !secretWord) return alert("Lütfen Ad Soyad, Kullanıcı Adı, Şehir, Şifre ve Özel Kelime alanlarını eksiksiz doldurun!");
             
             // Gmail zorunlu değil, ama girilmişse geçerli olmalı
             if(email && !email.toLowerCase().endsWith('@gmail.com')) return alert("Girdiğiniz e-posta @gmail.com uzantılı değil. Lütfen Gmail adresinizi girin ya da alanı boş bırakın.");
@@ -4734,6 +4594,7 @@ const MISSIONS = [
                     username: username,
                     city: city,
                     password: password,
+                    secret_word: secretWord,
                     email: email,
                     marketing: marketing
                 };
@@ -6516,13 +6377,13 @@ const MISSIONS = [
                 const secsAgo = Math.floor(Date.now()/1000) - cm.created_at;
                 const timeStr = secsAgo < 60 ? 'az once' : secsAgo < 3600 ? Math.floor(secsAgo/60)+' dk' : Math.floor(secsAgo/3600)+' saat';
                 c.innerHTML += `<div class="flex gap-3 items-start slide-up-anim">
-                    <img src="${avatar}" class="w-9 h-9 rounded-full object-cover border border-zinc-700 shrink-0 cursor-pointer" onclick="showOtherProfile('${cm.user}')">
+                    <img src="${escapeHtml(avatar)}" class="w-9 h-9 rounded-full object-cover border border-zinc-700 shrink-0 cursor-pointer" onclick="showOtherProfile('${escapeHtml(cm.user)}')">
                     <div class="flex-1 bg-black/40 rounded-2xl px-3 py-2 border border-zinc-800">
                         <div class="flex items-center justify-between">
-                            <span class="text-xs font-bold text-white cursor-pointer hover:text-zinc-300" onclick="showOtherProfile('${cm.user}')">${cm.user}</span>
+                            <span class="text-xs font-bold text-white cursor-pointer hover:text-zinc-300" onclick="showOtherProfile('${escapeHtml(cm.user)}')">${escapeHtml(cm.user)}</span>
                             <span class="text-[9px] text-zinc-600">${timeStr} ${delBtn}</span>
                         </div>
-                        <div class="text-sm text-zinc-300 mt-1 leading-relaxed">${cm.text}</div>
+                        <div class="text-sm text-zinc-300 mt-1 leading-relaxed">${escapeHtml(cm.text)}</div>
                     </div>
                 </div>`;
             });
@@ -6692,6 +6553,48 @@ const MISSIONS = [
             });
             document.getElementById('danger-modal').classList.add('hidden');
             showMissionToast('Tehlike Bildirildi', 0, '⚠️');
+        }
+
+        // ============================================================
+        // MARKER RAPORU (Bu yer mevcut değil)
+        // ============================================================
+        function openMarkerReportModal() {
+            if(!currentUser) { alert('Bildirim yapmak için giriş yapın!'); return; }
+            const modal = document.getElementById('marker-report-modal');
+            if(modal) {
+                document.getElementById('marker-report-reason').value = '';
+                modal.classList.remove('hidden');
+            }
+        }
+
+        function closeMarkerReportModal() {
+            const modal = document.getElementById('marker-report-modal');
+            if(modal) modal.classList.add('hidden');
+        }
+
+        async function submitMarkerReport() {
+            const reason = document.getElementById('marker-report-reason').value.trim() || 'Bu yer mevcut değil';
+            const m = db.markers.find(x=>x.id===currentMarkerId);
+            const markerName = m ? m.name : 'Bilinmeyen yer';
+            const btn = document.getElementById('marker-report-submit-btn');
+            if(btn) { btn.disabled = true; btn.textContent = 'Gönderiliyor...'; }
+            try {
+                const res = await sendAction('report_marker', {
+                    marker_id: currentMarkerId,
+                    marker_name: markerName,
+                    reason: reason
+                });
+                closeMarkerReportModal();
+                if(res && res.status === 'ok') {
+                    showMissionToast('Bildiriminiz Alındı', 0, '📍');
+                } else {
+                    alert(res && res.message ? res.message : 'Bildirim gönderilemedi.');
+                }
+            } catch(e) {
+                alert('Bir hata oluştu, tekrar deneyin.');
+            } finally {
+                if(btn) { btn.disabled = false; btn.textContent = 'Bildir'; }
+            }
         }
 
         // ============================================================
@@ -6971,7 +6874,7 @@ const MISSIONS = [
                             ${imageHtml}
                             <div class="p-6">
                                 <div class="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-400 text-[10px] font-black uppercase tracking-widest rounded-lg mb-3">🔥 Aktif Çekiliş</div>
-                                <h3 class="text-2xl font-black text-white mb-2 leading-tight">${gw.title || ''}</h3>
+                                <h3 class="text-2xl font-black text-white mb-2 leading-tight">${escapeHtml(gw.title || '')}</h3>
                                 <p class="text-zinc-400 text-sm font-medium mb-6 leading-relaxed whitespace-pre-wrap">${gw.desc || ''}</p>
                                 
                                 <div class="flex items-center justify-between mb-6 p-4 bg-black/40 rounded-xl border border-zinc-800">
@@ -6995,7 +6898,7 @@ const MISSIONS = [
                         <div class="bg-zinc-900 border border-purple-500/30 rounded-2xl overflow-hidden shadow-[0_0_20px_rgba(168,85,247,0.15)] text-center p-8 relative">
                             <div class="absolute top-4 right-4 bg-zinc-800 text-zinc-400 text-[10px] font-bold px-2 py-1 rounded">Sona Erdi</div>
                             <div class="text-4xl mb-4 animate-bounce">🏆</div>
-                            <h3 class="text-xl font-black text-white mb-2">${gw.title || 'Çekiliş'} - Sonuçlandı!</h3>
+                            <h3 class="text-xl font-black text-white mb-2">${escapeHtml(gw.title || 'Çekiliş')} - Sonuçlandı!</h3>
                             <div class="text-xs text-zinc-500 mb-6">Toplam ${count} kişi katılmıştı.</div>
                             <div class="p-4 bg-gradient-to-r from-purple-900/40 to-pink-900/40 border border-purple-500/30 rounded-xl inline-block px-8">
                                 <div class="text-[10px] text-purple-300 font-bold uppercase tracking-widest mb-1">KAZANAN</div>
@@ -7595,8 +7498,12 @@ const MISSIONS = [
 
         function copyRefCode() {
             const code = document.getElementById("my-ref-code").value;
-            navigator.clipboard.writeText(code);
-            alert("Referans kodunuz başarıyla kopyalandı! Arkadaşlarınıza gönderebilirsiniz.");
+            navigator.clipboard.writeText(code).then(() => {
+                alert("Referans kodunuz başarıyla kopyalandı! Arkadaşlarınıza gönderebilirsiniz.");
+            }).catch(e => {
+                console.error(e);
+                alert("Kopyalama işlemi desteklenmiyor. Lütfen manuel olarak kopyalayın: " + code);
+            });
         }
 
         async function claimRefReward() {
@@ -7705,8 +7612,8 @@ const MISSIONS = [
                 .replace(/&/g,'&amp;')
                 .replace(/</g,'&lt;')
                 .replace(/>/g,'&gt;')
-                .replace(/"/g,'&quot;')
-                .replace(/'/g,'&#39;');
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#39;');
         }
 
         let _reelMuted = false; // Varsayılan: ses açık
@@ -11057,9 +10964,9 @@ window.closeBadgeCollectionModal = function() {
                     <div class="bg-black/50 p-3 rounded-2xl border border-zinc-800 flex items-center gap-3 mb-3 cursor-pointer hover:bg-zinc-800 hover:border-zinc-600 transition-colors  group" onclick="map.setView([${m.lat}, ${m.lng}], 16); document.getElementById('nearby-routes-modal').classList.add('hidden');">
                         ${img}
                         <div class="overflow-hidden flex-1">
-                            <div class="text-white font-bold text-sm tracking-wide truncate group-hover:text-blue-300 transition-colors">${m.title || m.name || 'İsimsiz Nokta'}</div>
+                            <div class="text-white font-bold text-sm tracking-wide truncate group-hover:text-blue-300 transition-colors">${escapeHtml(m.title) || escapeHtml(m.name) || 'İsimsiz Nokta'}</div>
                             <div class="text-sky-400 text-[10px] font-black uppercase tracking-widest mt-1">${m.distance.toFixed(1)} KM UZAKLIKTA</div>
-                            <div class="text-zinc-500 text-[10px] font-bold uppercase tracking-widest mt-0.5">Seviye: ${m.difficulty || 'Belirtilmemiş'}</div>
+                            <div class="text-zinc-500 text-[10px] font-bold uppercase tracking-widest mt-0.5">Seviye: ${escapeHtml(m.difficulty) || 'Belirtilmemiş'}</div>
                         </div>
                         <div class="text-zinc-400 bg-zinc-900 border border-zinc-700 w-8 h-8 rounded-full flex items-center justify-center shrink-0 group-hover:bg-zinc-700 group-hover:text-white transition-colors">➜</div>
                     </div>`;
@@ -11830,7 +11737,7 @@ window.closeBadgeCollectionModal = function() {
                     
                     <div class="absolute bottom-0 left-0 w-full p-3 flex flex-col justify-end pointer-events-none">
                         <div class="flex justify-between items-start mb-1.5">
-                            <h3 class="text-white font-bold text-xs tracking-wide line-clamp-2 break-words drop-shadow-md leading-snug flex-1 pr-1">${item.title || 'İlan Başlığı Yok'}</h3>
+                            <h3 class="text-white font-bold text-xs tracking-wide line-clamp-2 break-words drop-shadow-md leading-snug flex-1 pr-1">${escapeHtml(item.title || 'İlan Başlığı Yok')}</h3>
                         </div>
                         <div class="flex items-center justify-between mb-2">
                             <div class="bg-black/80 text-green-400 font-black text-xs px-2.5 py-1 rounded-lg border border-zinc-700 shadow-lg backdrop-blur-sm">${item.price} TL</div>
@@ -12964,6 +12871,7 @@ window.closeBadgeCollectionModal = function() {
                     <div class="shrink-0 text-zinc-600 text-xs">›</div>
                 </div>`;
             });
+            if(htmlBuf) container.innerHTML = htmlBuf;
             if(!users || users.length === 0) container.innerHTML = '<div class="text-zinc-600 text-xs italic text-center py-4">Kullanıcı bulunamadı.</div>';
         }
 
@@ -13029,11 +12937,12 @@ window.closeBadgeCollectionModal = function() {
                 if(!logs.length) { container.innerHTML = '<div class="text-zinc-600 text-xs italic text-center py-4">Henüz kayıt yok.</div>'; return; }
                 const actionColors = { ban_user: 'log-ban', delete_reel: 'log-delete', delete_message: 'log-delete', delete_marker: 'log-delete', assign_admin: 'log-assign', revoke_admin: 'log-revoke', notify_main: 'log-notify' };
                 const actionEmojis = { ban_user: '🚨', delete_reel: '🎬', delete_message: '💬', delete_marker: '📍', assign_admin: '✅', revoke_admin: '❌', notify_main: '📢' };
+                let htmlBuf = '';
                 logs.forEach((l, i) => {
                     const colorClass = actionColors[l.action] || 'log-default';
                     const emoji = actionEmojis[l.action] || '🔧';
                     const dt = l.ts ? new Date(l.ts * 1000).toLocaleString('tr-TR') : '—';
-                    container.innerHTML += `
+                    htmlBuf += `
                     <div class="rounded-xl p-3 pl-4 admin-card-enter ${colorClass}" style="background:rgba(0,0,0,0.5);animation-delay:${i*0.03}s">
                         <div class="flex items-center justify-between gap-2">
                             <div class="flex items-center gap-2 min-w-0">
@@ -13047,6 +12956,7 @@ window.closeBadgeCollectionModal = function() {
                         </div>
                     </div>`;
                 });
+                if(htmlBuf) container.innerHTML = htmlBuf;
             } catch(e) {
                 container.innerHTML = '<div class="text-sky-400 text-xs italic text-center py-4">Yüklenirken hata oluştu.</div>';
             }
@@ -13266,9 +13176,10 @@ window.closeBadgeCollectionModal = function() {
                 return;
             }
             if(tab === 'messages') {
+                let htmlBuf = '';
                 data_ua.forEach((m, i) => {
                     const txt = m.text ? String(m.text).substring(0,120) : (m.type || '?');
-                    container.innerHTML += `
+                    htmlBuf += `
                     <div class="rounded-xl p-3 border border-zinc-800/70 flex items-start gap-2 admin-card-enter" style="background:rgba(0,0,0,0.45);animation-delay:${i*0.03}s">
                         <div class="flex-1 min-w-0">
                             <div class="text-zinc-300 text-xs font-medium">${txt}</div>
@@ -13277,20 +13188,24 @@ window.closeBadgeCollectionModal = function() {
                         <button onclick="adminDelMsg('${m.id}', this)" class="shrink-0 w-7 h-7 bg-sky-900/30 border border-red-800/40 rounded-lg text-sky-300 hover:bg-sky-800/50 flex items-center justify-center text-[10px] transition">🗑</button>
                     </div>`;
                 });
+                if(htmlBuf) container.innerHTML = htmlBuf;
             } else if(tab === 'dms') {
+                let htmlBuf = '';
                 data_ua.forEach((m, i) => {
                     const others = (m.participants || []).filter(p => p !== _uaCurrentUser);
                     const txt = m.text ? String(m.text).substring(0,100) : (m.type || '?');
-                    container.innerHTML += `
+                    htmlBuf += `
                     <div class="rounded-xl p-3 border border-zinc-800/70 admin-card-enter" style="background:rgba(0,0,0,0.45);animation-delay:${i*0.03}s">
                         <div class="text-[10px] text-zinc-500 font-bold mb-1">↔ ${others.join(', ') || '?'}</div>
                         <div class="text-zinc-300 text-xs font-medium">${txt}</div>
                     </div>`;
                 });
+                if(htmlBuf) container.innerHTML = htmlBuf;
             } else if(tab === 'reels') {
+                let htmlBuf = '';
                 data_ua.forEach((r, i) => {
                     const isVideo = r.media_type === 'video';
-                    container.innerHTML += `
+                    htmlBuf += `
                     <div class="rounded-xl p-3 border border-zinc-800/70 flex items-center gap-3 admin-card-enter" style="background:rgba(0,0,0,0.45);animation-delay:${i*0.04}s">
                         <div class="w-12 h-12 rounded-lg overflow-hidden shrink-0 bg-zinc-900 border border-zinc-800 flex items-center justify-center">
                             ${isVideo ? `<span class="text-xl">🎥</span>` : `<img src="${r.media_url}" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='📸'">`}
@@ -13302,9 +13217,11 @@ window.closeBadgeCollectionModal = function() {
                         <button onclick="adminDeleteReel('${r.id}','${r.user}',this)" class="shrink-0 w-7 h-7 bg-sky-900/30 border border-red-800/40 rounded-lg text-sky-300 hover:bg-sky-800/50 flex items-center justify-center text-[10px] transition">🗑</button>
                     </div>`;
                 });
+                if(htmlBuf) container.innerHTML = htmlBuf;
             } else if(tab === 'markers') {
+                let htmlBuf = '';
                 data_ua.forEach((m, i) => {
-                    container.innerHTML += `
+                    htmlBuf += `
                     <div class="rounded-xl p-3 border border-zinc-800/70 flex items-center gap-3 admin-card-enter" style="background:rgba(0,0,0,0.45);animation-delay:${i*0.04}s">
                         <div class="w-10 h-10 rounded-lg bg-sky-900/30 border border-red-800/40 flex items-center justify-center text-xl shrink-0">${m.icon_type || '🚴'}</div>
                         <div class="flex-1 min-w-0">
@@ -13314,6 +13231,7 @@ window.closeBadgeCollectionModal = function() {
                         <button onclick="adminDelMarker('${m.id}','${m.name}',this)" class="shrink-0 w-7 h-7 bg-sky-900/30 border border-red-800/40 rounded-lg text-sky-300 hover:bg-sky-800/50 flex items-center justify-center text-[10px] transition">🗑</button>
                     </div>`;
                 });
+                if(htmlBuf) container.innerHTML = htmlBuf;
             }
         }
 
@@ -13719,13 +13637,16 @@ window.closeBadgeCollectionModal = function() {
         // ==============================================================
 
         function openForgotPasswordModal() {
-            const modal = document.getElementById("forgot-password-modal");
-            if (modal) {
-                document.getElementById("fp-step-1").classList.remove("hidden");
-                document.getElementById("fp-step-2").classList.add("hidden");
-                document.getElementById("fp-email").value = "";
-                modal.classList.remove("hidden");
-            }
+            const modal = document.getElementById("login-modal");
+            if (modal) modal.classList.add("hidden");
+            openAISupportPanel();
+            setTimeout(() => { 
+                const inp = document.getElementById('ai-support-input');
+                if(inp) {
+                    inp.value = 'Şifremi unuttum'; 
+                    document.getElementById('ai-support-send-btn').click(); 
+                }
+            }, 600);
         }
 
         function closeForgotPasswordModal() {
@@ -13875,6 +13796,28 @@ window.closeBadgeCollectionModal = function() {
             <div class="grid grid-cols-2 gap-3">
                 <button onclick="document.getElementById('danger-modal').classList.add('hidden')" class="bg-zinc-900 border border-zinc-700 text-zinc-400 py-3 rounded-xl font-bold text-sm">İptal</button>
                 <button onclick="submitDangerReport()" class="bg-sky-800 hover:bg-sky-700 text-white py-3 rounded-xl font-bold text-sm btn-premium-hover">BİLDİR</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MARKER RAPORU MODALI (Bu yer mevcut değil) -->
+    <div id="marker-report-modal" class="hidden fixed inset-0 modal-backdrop flex items-center justify-center z-[9999] px-4">
+        <div class="glass-panel w-full max-w-sm rounded-3xl p-6 border border-orange-900/50 scale-in-anim">
+            <div class="flex items-center justify-between mb-4">
+                <h3 class="text-2xl text-orange-400 teko-font tracking-wide">📍 Bu Yeri Bildir</h3>
+                <button onclick="closeMarkerReportModal()" class="w-8 h-8 bg-zinc-800 rounded-full text-zinc-400 hover:text-white flex items-center justify-center">✕</button>
+            </div>
+            <p class="text-xs text-zinc-400 mb-4">Bu yer artık mevcut değil mi, yanlış konumda mı? Admin'e bildirin, haritadan kaldırılsın.</p>
+            <div class="grid grid-cols-2 gap-2 mb-4">
+                <button onclick="document.getElementById('marker-report-reason').value='Bu yer artık mevcut değil'" class="bg-zinc-900 border border-zinc-700 hover:border-orange-500 transition text-zinc-300 py-2.5 rounded-xl text-xs font-bold">🚫 Mevcut Değil</button>
+                <button onclick="document.getElementById('marker-report-reason').value='Yanlış konum / adres hatalı'" class="bg-zinc-900 border border-zinc-700 hover:border-orange-500 transition text-zinc-300 py-2.5 rounded-xl text-xs font-bold">📌 Yanlış Konum</button>
+                <button onclick="document.getElementById('marker-report-reason').value='Yer kapalı / erişilemiyor'" class="bg-zinc-900 border border-zinc-700 hover:border-orange-500 transition text-zinc-300 py-2.5 rounded-xl text-xs font-bold">🔒 Kapalı</button>
+                <button onclick="document.getElementById('marker-report-reason').value='Yıkıldı / kaldırıldı'" class="bg-zinc-900 border border-zinc-700 hover:border-orange-500 transition text-zinc-300 py-2.5 rounded-xl text-xs font-bold">🏚️ Yıkıldı</button>
+            </div>
+            <textarea id="marker-report-reason" placeholder="Açıklama ekle veya yukarıdan seç..." class="w-full bg-black/60 border border-zinc-700 rounded-xl px-4 py-3 h-16 text-white text-sm outline-none focus:border-orange-400 transition custom-scrollbar mb-4"></textarea>
+            <div class="grid grid-cols-2 gap-3">
+                <button onclick="closeMarkerReportModal()" class="bg-zinc-900 border border-zinc-700 text-zinc-400 py-3 rounded-xl font-bold text-sm">İptal</button>
+                <button id="marker-report-submit-btn" onclick="submitMarkerReport()" class="bg-orange-800 hover:bg-orange-700 text-white py-3 rounded-xl font-bold text-sm btn-premium-hover">Bildir</button>
             </div>
         </div>
     </div>
@@ -14341,6 +14284,9 @@ window.closeBadgeCollectionModal = function() {
 
         let _adminRepPage = 1;
         async function loadAdminReports(page = 1) {
+            document.getElementById('admin-reports-regular-section').classList.remove('hidden');
+            const ms = document.getElementById('admin-reports-marker-section');
+            if(ms) ms.classList.add('hidden');
 
             _adminRepPage = page;
             const status = document.getElementById('admin-report-status') ? document.getElementById('admin-report-status').value : 'pending';
@@ -14403,6 +14349,64 @@ window.closeBadgeCollectionModal = function() {
                 if(data.status === 'ok') { showToast(`✅ Rapor yoksayıldı.`, 'success'); loadAdminReports(_adminRepPage); }
             } catch(e) {}
         }
+
+        async function loadAdminMarkerReports() {
+            document.getElementById('admin-reports-regular-section').classList.add('hidden');
+            const ms = document.getElementById('admin-reports-marker-section');
+            if(ms) ms.classList.remove('hidden');
+
+            const list = document.getElementById('admin-marker-reports-list');
+            if(!list) return;
+            list.innerHTML = '<div class="text-zinc-600 text-xs italic text-center py-4 animate-pulse">Harita raporları yükleniyor...</div>';
+            try {
+                const res = await sendAction('get_marker_reports', {});
+                if(res && res.status === 'ok') {
+                    if(!res.reports || res.reports.length === 0) {
+                        list.innerHTML = '<div class="text-zinc-600 text-xs italic text-center py-4">Bekleyen harita raporu yok.</div>';
+                        return;
+                    }
+                    list.innerHTML = res.reports.map((r, i) => `
+                        <div class="rounded-xl p-4 border border-orange-500/50 admin-card-enter transition-all" style="background:rgba(0,0,0,0.45);animation-delay:${i*0.03}s">
+                            <div class="flex justify-between items-center mb-2">
+                                <div class="flex gap-2 items-center text-[10px] font-bold uppercase tracking-widest text-orange-400">
+                                    <span>📍 MARKER RAPORU</span>
+                                </div>
+                                <span class="text-[9px] text-zinc-500">${new Date(r.created_at).toLocaleString('tr-TR')}</span>
+                            </div>
+                            <div class="text-white text-xs font-bold mb-1">👤 Gönderen: ${r.user}</div>
+                            <div class="text-white text-xs font-bold mb-2">📍 Marker: ${escHtml(r.marker_name || '')} (ID: ${r.marker_id})</div>
+                            <div class="bg-black/60 p-3 rounded-lg border border-zinc-800 text-zinc-300 text-xs mb-3 break-words font-medium">Sebep: ${escHtml(r.reason)}</div>
+                            <div class="flex gap-2">
+                                <button onclick="resolveMarkerReport('${r.id}', '${r.marker_id}', 'delete')" class="flex-1 py-2 bg-red-950/40 border border-red-900/50 text-red-400 text-[10px] font-bold rounded-lg hover:bg-red-900/40 transition">🗑️ Markeri Sil</button>
+                                <button onclick="resolveMarkerReport('${r.id}', '${r.marker_id}', 'dismiss')" class="flex-1 py-2 bg-zinc-800 border border-zinc-700 text-zinc-300 text-[10px] font-bold rounded-lg hover:bg-zinc-700 transition">✅ Raporu Kapat</button>
+                            </div>
+                        </div>
+                    `).join('');
+                } else {
+                    list.innerHTML = `<div class="text-orange-300 text-xs italic text-center py-4">Hata: ${res?res.message:'Bağlantı hatası'}</div>`;
+                }
+            } catch(e) {
+                list.innerHTML = `<div class="text-orange-300 text-xs italic text-center py-4">Bağlantı hatası: ${e.message}</div>`;
+            }
+        }
+
+        async function resolveMarkerReport(reportId, markerId, actionStr) {
+            if (actionStr === 'delete') {
+                if (!confirm("⚠️ Bu markeri silmek istediğinizden emin misiniz?")) return;
+            }
+            try {
+                const res = await sendAction('resolve_marker_report', { report_id: reportId, marker_id: markerId, action_taken: actionStr });
+                if(res.status === 'ok') {
+                    showToast(`✅ İşlem başarılı.`, 'success');
+                    loadAdminMarkerReports();
+                } else {
+                    showToast(`❌ Hata: ${res.message}`, 'error');
+                }
+            } catch(e) {
+                showToast(`❌ Hata: ${e.message}`, 'error');
+            }
+        }
+
 
         async function adminResetPassword(uname) {
             if(!confirm(`⚠️ ${uname} şifresi sıfırlanacak. Onaylıyor musunuz?`)) return;
@@ -15288,6 +15292,7 @@ var _aiSupportHistory = [];
 var _aiSupportPending = false;
 var _aiSupportIdentityVerified = false;
 var _aiSupportTargetUsername = '';
+var _aiSupportResetToken = '';
 
 function openAISupportPanel() {
   document.getElementById('ai-support-overlay').style.display = 'block';
@@ -15380,6 +15385,7 @@ function sendAISupportMessage() {
       if (extra.identity_verified && extra.target_username) {
         _aiSupportIdentityVerified = true;
         _aiSupportTargetUsername = extra.target_username;
+        _aiSupportResetToken = extra.ai_reset_token || '';
         // Şifre belirleme UI'ı göster
         _showPasswordSetUI(extra.target_username);
       }
@@ -15425,7 +15431,7 @@ function submitNewPassword(username) {
   fetch('/api/data', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ action: 'ai_support_set_password', data: { target_username: username, new_password: pw } })
+    body: JSON.stringify({ action: 'ai_support_set_password', data: { target_username: username, new_password: pw, reset_token: _aiSupportResetToken } })
   })
   .then(function(r){ return r.json(); })
   .then(function(d) {
@@ -15531,6 +15537,99 @@ function renderAllBadgesModal() {
     _h += '</div>';
     c.innerHTML = _h;
 }
+
+let maintenanceTimer = null;
+let maintenanceEnd = null;
+
+async function checkMaintenance() {
+    try {
+        const res = await fetch('/api/maintenance');
+        const data = await res.json();
+        
+        const overlay = document.getElementById('maintenance-overlay');
+        const bypass = document.getElementById('maintenance-admin-bypass');
+        
+        if (data.active) {
+            // Check bypass
+            let role = 'User';
+            if (typeof currentUser !== 'undefined' && currentUser && currentUser.role) {
+                role = currentUser.role;
+            } else {
+                try {
+                    const stored = localStorage.getItem('fr_user');
+                    if(stored) role = JSON.parse(stored).role;
+                } catch(e){}
+            }
+            
+            if (role === 'Admin' || role === 'SubAdmin') {
+                if(overlay) overlay.classList.add('hidden');
+                if(bypass) {
+                    bypass.classList.remove('hidden');
+                    // We can also append this to main screen to remind admin
+                    if(!document.getElementById('admin-m-banner')) {
+                        const b = document.createElement('div');
+                        b.id = 'admin-m-banner';
+                        b.className = 'fixed top-0 left-0 w-full bg-red-600 text-white text-[10px] font-bold text-center py-0.5 z-[9999]';
+                        b.innerHTML = '⚠️ SİSTEM BAKIMDA - SADECE ADMİNLER GİREBİLİR';
+                        document.body.appendChild(b);
+                    }
+                }
+                return;
+            }
+            
+            // Show maintenance
+            if(overlay) overlay.classList.remove('hidden');
+            maintenanceEnd = new Date(data.until).getTime();
+            
+            if (!maintenanceTimer) {
+                maintenanceTimer = setInterval(updateMaintenanceCountdown, 1000);
+            }
+            updateMaintenanceCountdown();
+            
+        } else {
+            // Bakım bitti
+            if(overlay) overlay.classList.add('hidden');
+            const b = document.getElementById('admin-m-banner');
+            if(b) b.remove();
+            
+            if (maintenanceTimer) {
+                clearInterval(maintenanceTimer);
+                maintenanceTimer = null;
+            }
+        }
+    } catch(e) {
+        console.error("Maintenance check failed", e);
+    }
+}
+
+function updateMaintenanceCountdown() {
+    if (!maintenanceEnd) return;
+    const now = new Date().getTime();
+    const distance = maintenanceEnd - now;
+    
+    if (distance < 0) {
+        const countdownEl = document.getElementById('maintenance-countdown');
+        if(countdownEl) countdownEl.innerHTML = "00:00:00";
+        // Check again immediately
+        checkMaintenance();
+        return;
+    }
+    
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    const countdownEl = document.getElementById('maintenance-countdown');
+    if(countdownEl) countdownEl.innerHTML = 
+        String(hours).padStart(2, '0') + ":" + 
+        String(minutes).padStart(2, '0') + ":" + 
+        String(seconds).padStart(2, '0');
+}
+
+// Check on load and every 60 seconds
+setTimeout(checkMaintenance, 500);
+setInterval(checkMaintenance, 60000);
+
 </script>
 
 
@@ -15566,7 +15665,9 @@ function renderAllBadgesModal() {
 </div>
 
 
-    <!-- YENİ ŞİFRE BELİRLEME KUTUCUĞU -->
+    
+
+<!-- YENİ ŞİFRE BELİRLEME KUTUCUĞU -->
     <div id="new-password-modal" class="hidden fixed inset-0 modal-backdrop flex items-center justify-center z-[99999] px-4">
         <div class="glass-panel w-full max-w-sm rounded-3xl p-6 border border-zinc-700 scale-in-anim bg-zinc-950">
             <h2 class="text-3xl text-white mb-3 teko-font tracking-wide text-center text-red-500">GÜVENLİK UYARISI</h2>
@@ -15581,7 +15682,6 @@ function renderAllBadgesModal() {
             <button onclick="document.getElementById('new-password-modal').classList.add('hidden')" class="w-full bg-zinc-800/80 hover:bg-zinc-700 text-white font-bold py-3 rounded-xl transition text-xs">İPTAL</button>
         </div>
     </div>
-
 </body>
 </html>
 """

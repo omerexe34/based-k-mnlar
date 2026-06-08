@@ -389,6 +389,13 @@ def api_data():
                     u.pop('_int_weekly', None)
                     u.pop('_int_monthly', None)
                     stripped.append(u)
+                import json
+                for _u in stripped:
+                    _st = _u.get('stats') or {}
+                    if isinstance(_st, str):
+                        try: _st = json.loads(_st)
+                        except: _st = {}
+                    _u['stats'] = _st
                 
                 db_data['users'] = stripped
 
@@ -433,6 +440,13 @@ def api_data():
                 )
                 if curr_res.data:
                     curr_data = curr_res.data[0]
+                    import json
+                    _st = curr_data.get('stats') or {}
+                    if isinstance(_st, str):
+                        try: _st = json.loads(_st)
+                        except: _st = {}
+                    curr_data['stats'] = _st
+
                     if cu.lower() == 'admin':
                         curr_data['role'] = 'Admin'
                         if isinstance(curr_data.get('stats'), dict):
@@ -498,7 +512,7 @@ def api_data():
             except Exception:
                 # bumped_at sütunu yoksa created_at ile sırala
                 logger.info("Market: bumped_at sütunu bulunamadı, created_at ile sıralanıyor.")
-                market_res = supabase.table('market').select('*').order('created_at', desc=True).limit(50).execute()
+                market_res = supabase.table('market').select('*').order('id', desc=True).limit(50).execute()
             db_data['market'] = market_res.data or []
         except Exception as exc:
             logger.warning(f"Market yükleme hatası: {exc}")
@@ -534,7 +548,7 @@ def api_data():
         # Stories
         try:
             now_ts = int(time.time())
-            stories_res = supabase.table('stories').select('id, user, text, image, expires_at, created_at, viewers').gt('expires_at', now_ts).order('created_at', desc=True).limit(50).execute()
+            stories_res = supabase.table('stories').select('id, user, text, image, expires_at, created_at, viewers').gt('expires_at', now_ts).order('id', desc=True).limit(50).execute()
             db_data['stories'] = stories_res.data or []
         except Exception as exc:
             logger.warning(f"Stories yükleme hatası: {exc}")
@@ -576,7 +590,7 @@ def api_data():
                 msg_res = (
                     supabase.table('messages')
                     .select('id, user, text, type, photo, voice, reactions, reply_to, is_flagged, flag_count, created_at')
-                    .order('created_at', desc=True)
+                    .order('id', desc=True)
                     .limit(50)
                     .execute()
                 )
@@ -586,7 +600,7 @@ def api_data():
                 msg_res = (
                     supabase.table('messages')
                     .select('*')
-                    .order('created_at', desc=True)
+                    .order('id', desc=True)
                     .limit(50)
                     .execute()
                 )
@@ -1658,7 +1672,7 @@ def api_data():
             elif action == 'list_giveaways':
                 import datetime as _dt
                 try:
-                    res = supabase.table('giveaways').select('*').order('created_at', desc=True).execute()
+                    res = supabase.table('giveaways').select('*').order('id', desc=True).execute()
                     giveaways = res.data or []
                     today = _dt.date.today().isoformat()
                     needs_refresh = False
@@ -1686,7 +1700,7 @@ def api_data():
                                 supabase.table('giveaways').update({'status': 'completed', 'winners': winners, 'finalized_at': _dt.datetime.utcnow().isoformat()}).eq('id', gw['id']).execute()
                             needs_refresh = True
                     if needs_refresh:
-                        res = supabase.table('giveaways').select('*').order('created_at', desc=True).execute()
+                        res = supabase.table('giveaways').select('*').order('id', desc=True).execute()
                     return jsonify({'status': 'ok', 'data': res.data or []})
                 except Exception as e:
                     logger.error(f'list_giveaways hatası: {e}')
@@ -3660,7 +3674,78 @@ Tum JSON'lari konusma metninin en SONUNA ekle. Ayni yanitta birden fazla JSON ol
                     avg = round(sum(ratings.values()) / len(ratings), 1)
                     supabase.table('markers').update({'ratings': ratings, 'avg_rating': avg}).eq('id', marker_id).execute()
 
-            elif action == 'report_danger':
+            elif action == 'report_marker':
+                marker_id = str(data.get('marker_id', ''))
+                marker_name = html.escape(data.get('marker_name', 'Bilinmeyen yer'))
+                reason = html.escape(data.get('reason', 'Bu yer mevcut değil').strip()[:200])
+                if not marker_id:
+                    return jsonify({'status': 'error', 'message': 'Marker ID eksik!'})
+                # Admin'e Telegram mesajı gönder
+                report_id = str(int(time.time() * 1000))
+                try:
+                    report_entry = {
+                        'id': report_id,
+                        'marker_id': marker_id,
+                        'marker_name': marker_name,
+                        'reporter': current_username,
+                        'reason': reason,
+                        'ts': int(time.time()),
+                        'status': 'pending'
+                    }
+                    supabase.table('marker_reports').insert(report_entry).execute()
+                except Exception as db_err:
+                    logger.warning(f'marker_reports kayıt hatası (tablo yoksa sorun değil): {db_err}')
+                # Admin'e push bildirim gönder
+                try:
+                    send_push_to_user('Admin',
+                        title=f'📍 Yer Bildirimi: {marker_name}',
+                        body=f'{current_username}: {reason[:80]}',
+                        url='/'
+                    )
+                except Exception as push_err:
+                    logger.warning(f'Admin push hatası: {push_err}')
+                # Admin'e Telegram mesajı gönder
+                try:
+                    from telegram_bot import send_telegram_message
+                    send_telegram_message(
+                        f'\U0001f4cd Yer Bildirimi\n'
+                        f'Yer: {marker_name}\n'
+                        f'Bildiren: {current_username}\n'
+                        f'Sebep: {reason}\n'
+                        f'Marker ID: {marker_id}\n'
+                        f'Rapor ID: {report_id}'
+                    )
+                except Exception as tg_err:
+                    logger.warning(f'Telegram bildirim hatası: {tg_err}')
+                return jsonify({'status': 'ok', 'message': 'Bildiriminiz alındı, teşekkürler!'})
+
+            elif action == 'get_marker_reports':
+                if not is_admin:
+                    return jsonify({'status': 'error', 'message': 'Yetkisiz!'})
+                try:
+                    rep_res = supabase.table('marker_reports').select('*').eq('status', 'pending').order('id', desc=True).limit(50).execute()
+                    return jsonify({'status': 'ok', 'reports': rep_res.data or []})
+                except Exception as e:
+                    return jsonify({'status': 'ok', 'reports': []})
+
+            elif action == 'resolve_marker_report':
+                if not is_admin:
+                    return jsonify({'status': 'error', 'message': 'Yetkisiz!'})
+                report_id = str(data.get('report_id', ''))
+                marker_id = str(data.get('marker_id', ''))
+                action_taken = data.get('action_taken', 'dismiss')  # 'delete' or 'dismiss'
+                if action_taken == 'delete' and marker_id:
+                    try:
+                        supabase.table('markers').delete().eq('id', marker_id).execute()
+                        supabase.table('comments').delete().eq('target_id', marker_id).execute()
+                    except Exception as del_err:
+                        logger.warning(f'Marker silme hatası: {del_err}')
+                try:
+                    supabase.table('marker_reports').update({'status': 'resolved'}).eq('id', report_id).execute()
+                except Exception:
+                    pass
+                return jsonify({'status': 'ok'})
+
                 marker_id = str(data.get('marker_id',''))
                 reason   = html.escape(data.get('reason','').strip())
                 if not marker_id or not reason:
@@ -3755,18 +3840,17 @@ Tum JSON'lari konusma metninin en SONUNA ekle. Ayni yanitta birden fazla JSON ol
 
             elif action == 'get_comments':
                 target_id = str(data.get('target_id', ''))
+                comments_data = []
                 try:
-                    c_res = supabase.table('comments').select('*').eq('target_id', target_id).order('created_at').execute()
+                    c_res = supabase.table('comments').select('*').eq('target_id', target_id).execute()
                     comments_data = c_res.data or []
+                    # Python tarafında güvenli sıralama
+                    def _safe_sort_key(x):
+                        return str(x.get('created_at') or '')
+                    comments_data.sort(key=_safe_sort_key)
                 except Exception as e:
-                    logger.warning(f"get_comments order hatası: {e}. Python tabanlı sıralamaya geçiliyor.")
-                    try:
-                        c_res = supabase.table('comments').select('*').eq('target_id', target_id).execute()
-                        comments_data = c_res.data or []
-                        comments_data.sort(key=lambda x: str(x.get('created_at') or ''))
-                    except Exception as fb_exc:
-                        logger.error(f"get_comments fallback hatası: {fb_exc}")
-                        comments_data = []
+                    logger.error(f"get_comments hatası: {e}")
+                    comments_data = []
                 return jsonify({'status': 'ok', 'comments': comments_data})
 
             # ================================================================
@@ -3820,7 +3904,7 @@ Tum JSON'lari konusma metninin en SONUNA ekle. Ayni yanitta birden fazla JSON ol
 
             elif action == 'get_stories':
                 now_ts = int(time.time())
-                s_res = supabase.table('stories').select('*').gt('expires_at', now_ts).order('created_at', desc=True).limit(50).execute()
+                s_res = supabase.table('stories').select('*').gt('expires_at', now_ts).order('id', desc=True).limit(50).execute()
                 return jsonify({'status': 'ok', 'stories': s_res.data or []})
 
             # ================================================================
@@ -3931,9 +4015,16 @@ Tum JSON'lari konusma metninin en SONUNA ekle. Ayni yanitta birden fazla JSON ol
             elif action == 'get_reels':
                 offset = int(data.get('offset', 0))
                 try:
-                    r_res = supabase.table('reels').select('*').order('created_at', desc=True).range(offset, offset + 19).execute()
+                    r_res = supabase.table('reels').select('*').execute()
+                    all_reels = r_res.data or []
+                    
+                    def _safe_sort_key(x):
+                        return str(x.get('created_at') or '')
+                    
+                    all_reels.sort(key=_safe_sort_key, reverse=True)
+                    
                     reels_out = []
-                    for r in (r_res.data or []):
+                    for r in all_reels[offset:offset+20]:
                         url = r.get('media_url', '') or ''
                         # Base64 veya boş URL içeren eski kayıtları atla
                         if url.startswith('data:') or not url:
@@ -3941,6 +4032,7 @@ Tum JSON'lari konusma metninin en SONUNA ekle. Ayni yanitta birden fazla JSON ol
                         reels_out.append(r)
                     return jsonify({'status': 'ok', 'reels': reels_out})
                 except Exception as e:
+                    logger.error(f"get_reels hatası: {e}")
                     return jsonify({'status': 'ok', 'reels': []})
 
             elif action == 'like_reel':
@@ -4090,7 +4182,7 @@ Tum JSON'lari konusma metninin en SONUNA ekle. Ayni yanitta birden fazla JSON ol
                 if not is_admin:
                     return jsonify({'status': 'error', 'message': 'Yetkisiz!'})
                 try:
-                    logs_res = supabase.table('admin_logs').select('*').order('ts', desc=True).limit(100).execute()
+                    logs_res = supabase.table('admin_logs').select('*').order('id', desc=True).limit(100).execute()
                     return jsonify({'status': 'ok', 'logs': logs_res.data or []})
                 except Exception as e:
                     return jsonify({'status': 'ok', 'logs': []})
@@ -4111,7 +4203,7 @@ Tum JSON'lari konusma metninin en SONUNA ekle. Ayni yanitta birden fazla JSON ol
                     result['dms'] = dms_res.data or []
                 except Exception: result['dms'] = []
                 try:
-                    reels_res = supabase.table('reels').select('*').eq('user', target).order('created_at', desc=True).limit(20).execute()
+                    reels_res = supabase.table('reels').select('*').eq('user', target).order('id', desc=True).limit(20).execute()
                     result['reels'] = reels_res.data or []
                 except Exception: result['reels'] = []
                 try:
