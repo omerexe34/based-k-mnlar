@@ -731,8 +731,7 @@ def api_data():
                         if isinstance(admin_stats, str):
                             try: admin_stats = json.loads(admin_stats)
                             except: admin_stats = {}
-                        import uuid as _uuid
-                        admin_stats['session_token'] = str(_uuid.uuid4())
+                        admin_stats['session_token'] = str(uuid.uuid4())
                         admin_stats['last_seen_ts'] = int(time.time())
                         try:
                             supabase.table('users').update({'stats': admin_stats, 'role': 'Admin'}).eq('username', admin_data['username']).execute()
@@ -1874,7 +1873,6 @@ Tum JSON'lari konusma metninin en SONUNA ekle. Ayni yanitta birden fazla JSON ol
                                         verified = True
                                         
                                     if verified:
-                                        import uuid
                                         token = str(uuid.uuid4())
                                         u_stats['ai_reset_token'] = token
                                         supabase.table('users').update({'stats': u_stats}).eq('username', target_username).execute()
