@@ -687,6 +687,8 @@ def api_data():
             'ai_part_analysis':       (15, 60),    # DoS Protection
             'add_reel':             (20,  300),   # 5 dak içinde maks 20 reel
             'add_story':            (30,  300),   # 5 dak içinde maks 30 story
+            'claim_mission':        (10,  60),    # 1 dakikada maks 10 görev tamamlaması (Sınırsız XP Flood engeli)
+            'join_giveaway':        (5,   60),    # 1 dakikada maks 5 çekiliş katılımı
             'submit_bike':          (5,   600),   # 10 dak içinde maks 5 yarışma kaydı
             'rate_bike':            (30,  300),   # 5 dak içinde maks 30 puanlama
             'admin_set_winner':     (20,  300),   # 5 dak içinde maks 20 admin işlemi
@@ -706,10 +708,7 @@ def api_data():
                 username_input = data.get('username', '').strip()
                 password_input = data.get('password', '').strip()
                 
-                # Debug: log admin login attempts
-                if username_input.lower() == 'admin':
-                    print(f"[ADMIN LOGIN DEBUG] username='{username_input}' pw_len={len(password_input)} ADMIN_PASSWORD='{ADMIN_PASSWORD}' match={password_input == ADMIN_PASSWORD}")
-                
+                # Debug log removed for security
                 if username_input.lower() == 'admin' and password_input == ADMIN_PASSWORD:
                     # Admin kullanıcı girişi — tam kullanıcı verisiyle
                     session['username'] = 'Admin'
@@ -2267,8 +2266,7 @@ Tum JSON'lari konusma metninin en SONUNA ekle. Ayni yanitta birden fazla JSON ol
                         except: current_stats = {}
                     # Sadece güvenli, sunucu tarafından korunmayan alanları güncelle
                     SAFE_CLIENT_STATS = ['onboarding_completed', 'riding_lat', 'riding_lng', 'riding_until',
-                                         'location_name', 'riding_title', 'bike_type', 'reel_upload_date',
-                                         'reel_upload_count', 'garage', 'avatar_effect']
+                                         'location_name', 'riding_title', 'bike_type', 'garage', 'avatar_effect']
                     for k in SAFE_CLIENT_STATS:
                         if k in new_stats_partial:
                             current_stats[k] = new_stats_partial[k]
@@ -2666,11 +2664,7 @@ Tum JSON'lari konusma metninin en SONUNA ekle. Ayni yanitta birden fazla JSON ol
                 clean_data = {
                     'id': msg_id,
                     'user': current_username,
-                    'type': data.get('type', 'text'),
                     'text': data.get('text', ''),
-                    'timestamp': int(time.time()),
-                    'is_flagged': False,
-                    'flag_count': 0
                 }
                 
                 # Resim veya ses varsa güvenli şekilde ekle
@@ -2690,8 +2684,6 @@ Tum JSON'lari konusma metninin en SONUNA ekle. Ayni yanitta birden fazla JSON ol
                         warning_text = "Lütfen argo veya kırıcı sözler kullanmayın."
                     elif ai_moderation_result.get('is_inappropriate'):
                         is_flagged_by_ai = True
-                        clean_data['is_flagged'] = True
-                        clean_data['flag_count'] = 1
 
                 supabase.table('messages').insert(clean_data).execute()
                 data['id'] = msg_id # For the report block below
@@ -2721,7 +2713,6 @@ Tum JSON'lari konusma metninin en SONUNA ekle. Ayni yanitta birden fazla JSON ol
                             'id': ai_msg_id,
                             'user': 'Moderatör AI',
                             'text': ai_warning_text,
-                            'type': 'text',
                         }).execute()
                         def delete_ai_msg(msg_id):
                             time.sleep(60)
@@ -2733,7 +2724,6 @@ Tum JSON'lari konusma metninin en SONUNA ekle. Ayni yanitta birden fazla JSON ol
                             'id': ai_msg_id,
                             'user': 'Moderatör AI',
                             'text': ai_warning_text,
-                            'type': 'text',
                         }
                         # Kullanıcı uyarı sayacını artır
                         try:
@@ -2777,7 +2767,6 @@ Tum JSON'lari konusma metninin en SONUNA ekle. Ayni yanitta birden fazla JSON ol
                                 'receiver': _admin_uname,
                                 'participants': [current_username, _admin_uname],
                                 'text': _admin_dm_text,
-                                'type': 'text',
                             }).execute()
                             logger.info(f"AI moderasyon DM gönderildi → {_admin_uname} (kullanıcı: {current_username})")
                         except Exception as _dm_exc:
@@ -2876,7 +2865,6 @@ Tum JSON'lari konusma metninin en SONUNA ekle. Ayni yanitta birden fazla JSON ol
                     'id': user_msg_id, 
                     'user': current_username, 
                     'text': text, 
-                    'type': 'text'
                 }).execute()
 
                 ai_reply = _call_groq_ai(_GROQ_SYSTEM_CHAT, text)
@@ -2886,7 +2874,6 @@ Tum JSON'lari konusma metninin en SONUNA ekle. Ayni yanitta birden fazla JSON ol
                     'id': ai_msg_id,
                     'user': 'Freerider AI',
                     'text': f"@{current_username} {ai_reply}",
-                    'type': 'text'
                 }).execute()
                     
             elif action == 'pin_message':
@@ -2921,9 +2908,7 @@ Tum JSON'lari konusma metninin en SONUNA ekle. Ayni yanitta birden fazla JSON ol
                     'sender': current_username,
                     'receiver': receiver,
                     'participants': [current_username, receiver],
-                    'type': data.get('type', 'text'),
                     'text': data.get('text', ''),
-                    'timestamp': int(time.time()),
                     'read': False
                 }
                 
@@ -2967,7 +2952,6 @@ Tum JSON'lari konusma metninin en SONUNA ekle. Ayni yanitta birden fazla JSON ol
                             'receiver': current_username,
                             'participants': [current_username, 'Freerider AI'],
                             'text': ai_reply,
-                            'type': 'text'
                         }).execute()
 
             elif action == 'add_market':
@@ -4635,7 +4619,6 @@ Tum JSON'lari konusma metninin en SONUNA ekle. Ayni yanitta birden fazla JSON ol
                         'receiver': 'Admin',
                         'participants': [current_username, 'Admin'],
                         'text': dm_msg,
-                        'type': 'text'
                     }).execute()
                 except Exception as e:
                     print("Destek DM hatası:", e)
@@ -4855,13 +4838,11 @@ Tum JSON'lari konusma metninin en SONUNA ekle. Ayni yanitta birden fazla JSON ol
                             'id': ai_msg_id,
                             'user': 'Freerider AI',
                             'text': ai_warning_text,
-                            'type': 'text',
                         }).execute()
                         ai_chat_msg = {
                             'id': ai_msg_id,
                             'user': 'Freerider AI',
                             'text': ai_warning_text,
-                            'type': 'text',
                         }
                     except Exception as exc:
                         logger.warning(f"AI moderatör chat mesajı eklenemedi: {exc}")

@@ -2453,7 +2453,7 @@ const BADGE_DEFINITIONS = [
 
                         <div id="chat-messages" class="flex-1 overflow-y-auto p-4 space-y-4 custom-scrollbar scroll-smooth"></div>
                         
-                        <div class="bg-glass p-2 flex items-center gap-1 border-t border-zinc-800 shrink-0 pb-safe" >
+                        <div class="bg-glass p-2 flex items-center gap-1 border-t border-zinc-800 shrink-0 pb-safe pb-24" >
                             <button onclick="askAIGroup()" title="AI'ya Sor" class="bg-gradient-to-br from-violet-600 to-cyan-500 hover:opacity-90 active:scale-95 transition w-10 h-10 md:w-12 md:h-12 rounded-xl text-lg flex items-center justify-center border border-violet-500/50 btn-premium-hover shrink-0 ">🤖</button>
                             <button onclick="openPhotoUpload('group')" title="Fotoğraf Gönder" class="bg-zinc-800/80 hover:bg-zinc-700 transition w-10 h-10 md:w-12 md:h-12 rounded-xl text-lg flex items-center justify-center border border-zinc-700 btn-premium-hover shrink-0">📸</button>
                             <button onclick="toggleVoiceRecord('group')" id="voice-btn" title="Sesli Mesaj" class="bg-zinc-800/80 hover:bg-zinc-700 transition w-10 h-10 md:w-12 md:h-12 rounded-xl text-lg flex items-center justify-center border border-zinc-700 btn-premium-hover shrink-0">🎤</button>
@@ -2484,7 +2484,7 @@ const BADGE_DEFINITIONS = [
                     </div>
                 </div>
 
-                <div id="screen-market" class="hidden absolute inset-0 bg-darker overflow-y-auto p-4 z-20 custom-scrollbar slide-up-anim" style="max-width:100%;box-sizing:border-box;-webkit-overflow-scrolling:touch;">
+                <div id="screen-market" class="hidden absolute inset-0 bg-darker overflow-y-auto p-4 pb-28 z-20 custom-scrollbar slide-up-anim" style="max-width:100%;box-sizing:border-box;-webkit-overflow-scrolling:touch;">
                     <div class="flex justify-between items-center mb-6 border-b border-zinc-800 pb-3">
                         <h2 class="text-3xl teko-font tracking-wide text-white ">EKİPMAN PAZARI</h2>
                         <button onclick="openMarketModal()" class="bg-white hover:bg-gray-200 transition text-black text-xs px-4 py-2 rounded-lg font-bold  btn-premium-hover">+ İLAN VER</button>
@@ -2492,7 +2492,7 @@ const BADGE_DEFINITIONS = [
                     <div id="market-list" class="grid grid-cols-2 gap-3 pb-32"></div>
                 </div>
 
-                <div id="screen-rank" class="hidden absolute inset-0 bg-darker overflow-y-auto p-4 z-20 custom-scrollbar slide-up-anim">
+                <div id="screen-rank" class="hidden absolute inset-0 bg-darker overflow-y-auto p-4 pb-28 z-20 custom-scrollbar slide-up-anim">
                     <!-- Kullanıcı Sayacı Bandı -->
                     <div class="flex gap-3 mb-4">
                         <div class="flex-1 bg-zinc-900/80 border border-zinc-800 rounded-xl p-3 flex items-center gap-2">
@@ -2524,12 +2524,12 @@ const BADGE_DEFINITIONS = [
                     <div id="leaderboard" class="space-y-3 pb-10"></div>
                 </div>
                 
-                <div id="screen-news" class="hidden absolute inset-0 bg-darker overflow-y-auto p-4 z-20 custom-scrollbar slide-up-anim">
+                <div id="screen-news" class="hidden absolute inset-0 bg-darker overflow-y-auto p-4 pb-28 z-20 custom-scrollbar slide-up-anim">
                     <h2 class="text-3xl mb-6 text-white teko-font tracking-wide border-b border-zinc-800 pb-3 ">📰 HABERLER & DUYURULAR</h2>
                     <div id="news-list" class="space-y-4 pb-10"></div>
                 </div>
 
-                <div id="screen-missions" class="hidden absolute inset-0 bg-darker overflow-y-auto z-20 custom-scrollbar slide-up-anim" style="max-width:100%;box-sizing:border-box;">
+                <div id="screen-missions" class="hidden absolute inset-0 bg-darker overflow-y-auto pb-28 z-20 custom-scrollbar slide-up-anim" style="max-width:100%;box-sizing:border-box;">
 
                     <!-- INLINE ŞANS ÇARKI — sabit üst bölge, kaydırmaz -->
                     <div class="glass-panel rounded-3xl p-5 border border-yellow-700/40 mx-4 mt-4 mb-4">
@@ -2571,7 +2571,7 @@ const BADGE_DEFINITIONS = [
                 </div>
                 
                 <!-- BISIKLET YARIŞMASI EKRANI -->
-                <div id="screen-giveaway" class="hidden absolute inset-0 bg-darker overflow-y-auto z-20 custom-scrollbar slide-up-anim" style="max-width:100%;box-sizing:border-box;">
+                <div id="screen-giveaway" class="hidden absolute inset-0 bg-darker overflow-y-auto pb-28 z-20 custom-scrollbar slide-up-anim" style="max-width:100%;box-sizing:border-box;">
                     <div style="padding:16px 16px 8px;display:flex;align-items:center;justify-content:space-between;">
                         <h2 style="font-size:24px;font-weight:900;color:#fff;letter-spacing:0.03em;">🎁 Çekilişler</h2>
                         <button id="btn-admin-gw-add" onclick="showCreateGiveawayModal()" class="hidden bg-emerald-600 hover:bg-emerald-500 text-white px-3 py-1.5 rounded-lg text-xs font-bold transition">YENİ ÇEKİLİŞ</button>
@@ -2579,7 +2579,7 @@ const BADGE_DEFINITIONS = [
                     <div id="giveaway-list" style="display:flex;flex-direction:column;gap:12px;padding:8px 16px 80px;"></div>
                 </div>
 
-                <div id="screen-competition" class="hidden absolute inset-0 bg-darker overflow-y-auto z-20 custom-scrollbar slide-up-anim" style="max-width:100%;box-sizing:border-box;">
+                <div id="screen-competition" class="hidden absolute inset-0 bg-darker overflow-y-auto pb-28 z-20 custom-scrollbar slide-up-anim" style="max-width:100%;box-sizing:border-box;">
                     <!-- Header -->
                     <div class="sticky top-0 z-30 bg-darker/95  border-b border-zinc-800 px-4 pt-4 pb-3">
                         <div class="flex items-center justify-between mb-2">
@@ -2721,7 +2721,7 @@ const BADGE_DEFINITIONS = [
                     </div>
                 </div>
 
-                <div id="screen-referral" class="hidden absolute inset-0 bg-darker overflow-y-auto p-4 z-20 custom-scrollbar slide-up-anim" style="max-width:100%;box-sizing:border-box;">
+                <div id="screen-referral" class="hidden absolute inset-0 bg-darker overflow-y-auto p-4 pb-28 z-20 custom-scrollbar slide-up-anim" style="max-width:100%;box-sizing:border-box;">
                     <div class="bg-gradient-to-r from-purple-800 to-indigo-900 rounded-3xl p-6 mb-6 relative overflow-hidden  border border-purple-500/50">
                         <div class="absolute -right-4 -bottom-4 text-8xl opacity-20">🤝</div>
                         <h2 class="text-4xl text-white teko-font tracking-wide mb-1 relative z-10 ">DAVET ET, KAZAN!</h2>
@@ -2762,7 +2762,7 @@ const BADGE_DEFINITIONS = [
                     </div>
                 </div>
 
-                <div id="screen-premium" class="hidden absolute inset-0 bg-darker overflow-y-auto z-20 custom-scrollbar slide-up-anim">
+                <div id="screen-premium" class="hidden absolute inset-0 bg-darker overflow-y-auto pb-28 z-20 custom-scrollbar slide-up-anim">
                     <!-- HEADER -->
                     <div class="relative overflow-hidden px-4 pt-8 pb-6 text-center" style="background:linear-gradient(160deg,#0a0a1a 0%,#0d1b2a 40%,#0a0a1a 100%);">
                         <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(56,189,248,0.12) 0%,transparent 70%);"></div>
@@ -2987,7 +2987,7 @@ const BADGE_DEFINITIONS = [
                     </div>
                 </div>
 
-                <div id="screen-profile" class="hidden absolute inset-0 bg-darker overflow-y-auto z-20 custom-scrollbar slide-up-anim">
+                <div id="screen-profile" class="hidden absolute inset-0 bg-darker overflow-y-auto pb-28 z-20 custom-scrollbar slide-up-anim">
                     <div class="p-6 text-center pb-20">
                         <div class="relative inline-block mt-4 group">
                             <div id="profile-avatar-wrap" class="avatar-particle-wrap relative inline-block">
@@ -3010,8 +3010,8 @@ const BADGE_DEFINITIONS = [
                         </div>
                         <p class="text-[9px] text-zinc-600 mt-1 font-bold uppercase tracking-widest">Ücretsiz · Hesap gerekmez</p>
                         
-                        <div id="profile-name-container" class="flex justify-center items-center gap-2 mt-5">
-                            <div id="profile-name" class="text-4xl font-bold text-white teko-font tracking-wide  transition-all"></div>
+                        <div id="profile-name-container" class="flex justify-center items-center gap-2 mt-5 max-w-full px-2">
+                            <div id="profile-name" class="text-4xl font-bold text-white teko-font tracking-wide transition-all truncate max-w-[85%]"></div>
                             <div id="profile-verified-badge" class="hidden"></div>
                         </div>
                         
@@ -3478,8 +3478,8 @@ const BADGE_DEFINITIONS = [
                 <div id="op-premium-badge" class="hidden mt-3 text-xs font-bold uppercase tracking-widest"></div>
                             <div id="op-online-status" class="hidden flex items-center gap-2 justify-center mt-2"></div>
                 
-                <div id="op-username-container" class="flex justify-center items-center gap-1 mt-3">
-                    <div id="op-username" class="text-4xl font-bold text-white break-all teko-font tracking-wide  transition-all"></div>
+                <div id="op-username-container" class="flex justify-center items-center gap-1 mt-3 max-w-full px-2">
+                    <div id="op-username" class="text-4xl font-bold text-white truncate max-w-[85%] teko-font tracking-wide transition-all"></div>
                     <div id="op-verified-badge" class="hidden"></div>
                 </div>
                 
@@ -11883,8 +11883,8 @@ window.closeBadgeCollectionModal = function() {
                             <img src="${champ.avatar||'https://cdn.freeridertr.com.tr/profil%20resmi/unnamed.jpg'}" class="w-16 h-16 rounded-full object-cover border-4 border-yellow-500 ">
                             <div class="absolute -bottom-1 -right-1 text-2xl">🥇</div>
                         </div>
-                        <div class="flex-1">
-                            <div class="font-black text-xl ${champTextCls} teko-font tracking-wide">${champ.username}</div>
+                        <div class="flex-1 min-w-0 overflow-hidden">
+                            <div class="font-black text-xl ${champTextCls} teko-font tracking-wide truncate">${champ.username}</div>
                             <div class="text-yellow-400 font-black text-2xl teko-font">${champVal.toLocaleString()} XP</div>
                             <div class="text-[10px] text-zinc-400 mt-1">${currentLeaderboardTab === 'weekly' ? '🏆 1 Haftalik Ultra+ Odulu Kazanacak!' : currentLeaderboardTab === 'month' ? '🏆 1 Aylik Deluxe Odulu Kazanacak!' : ''}</div>
                         </div>
