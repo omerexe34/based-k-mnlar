@@ -1,3 +1,4 @@
+import time
 """
 routes_api_data.py
 ==================
@@ -10,7 +11,6 @@ import re
 import sys
 import json
 import html
-import time
 import uuid
 import random
 import string
@@ -2133,6 +2133,41 @@ Tum JSON'lari konusma metninin en SONUNA ekle. Ayni yanitta birden fazla JSON ol
                     'status': 'info',
                     'message': 'Ödeme işlemi mobil uygulama üzerinden Google Play Store üzerinden gerçekleştirilmelidir.',
                 })
+
+            elif action == 'save_avatar_outfit':
+                if not current_user:
+                    return jsonify({'status': 'error', 'message': 'Giriş yapmalısınız.'})
+                
+                config = data.get('config')
+                image_base64 = data.get('image_base64')
+                if not config or not image_base64:
+                    return jsonify({'status': 'error', 'message': 'Eksik veri.'})
+                    
+                try:
+                    from storage import upload_base64_to_storage
+                    file_name = f"avatar_{current_user['username']}_{int(time.time())}.png"
+                    avatar_url = upload_base64_to_storage(image_base64, "avatars", file_name)
+                    
+                    if not avatar_url:
+                        avatar_url = image_base64
+                        
+                    stats = current_user.get('stats', {})
+                    stats['avatar_config'] = config
+                    
+                    supabase.table('users').update({
+                        'avatar_url': avatar_url,
+                        'stats': stats
+                    }).eq('username', current_user['username']).execute()
+                    
+                    return jsonify({
+                        'status': 'ok',
+                        'message': 'Avatar güncellendi',
+                        'avatar_url': avatar_url
+                    })
+                    
+                except Exception as e:
+                    logger.error(f"Avatar save error: {e}")
+                    return jsonify({'status': 'error', 'message': f'Avatar yüklenirken hata oluştu: {str(e)}'})
 
             elif action == 'update_user':
                 target = data.get('username')

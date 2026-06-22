@@ -22,7 +22,7 @@ Modül yükleme sırası (bağımlılık grafiğine göre):
 import os
 
 # 1 — Temel bileşenler (Flask app, Supabase, R2)
-from extensions import app, supabase, logger, ONESIGNAL_APP_ID, SUPABASE_URL, SUPABASE_KEY, SUPABASE_ANON_KEY
+from extensions import app, supabase, logger, ONESIGNAL_APP_ID, SUPABASE_URL, SUPABASE_KEY, SUPABASE_ANON_KEY, GOOGLE_CLIENT_ID
 
 # 2 — Rate limiter (extensions'a bağımlı)
 import rate_limiter  # noqa: F401 — yan etki: thread'i başlatır
@@ -85,6 +85,7 @@ def _build_html_cache():
         onesignal_app_id=ONESIGNAL_APP_ID or "",
         supabase_url=SUPABASE_URL or "",
         supabase_key=SUPABASE_ANON_KEY or "",
+        google_client_id=GOOGLE_CLIENT_ID or "",
     )
     logger.info("HTML şablonu belleğe alındı (%d bayt).", len(_CACHED_HTML))
 
@@ -104,17 +105,25 @@ def index():
 def reload_template():
     """Sadece yetkili Admin tarafından çağrılabilir — HTML cache'i yeniler."""
     from flask import request as _req, session as _ses
-    if _ses.get('role') != 'Admin' and _ses.get('username') != 'Admin':
+    if _ses.get('role') != 'Admin':
         return jsonify({'status': 'error', 'message': 'Yetkisiz'}), 403
     _build_html_cache()
-    return jsonify({'status': 'ok', 'message': 'HTML cache yenilendi.'})
+    return jsonify({'status': 'ok', 'message': 'Template cache yenilendi.'})
 
 # ==============================================================================
 # TELEGRAM BOT BAŞLATICI
 # ==============================================================================
 try:
     import telegram_bot
-    telegram_bot.start_bot_thread()
+    import fcntl
+    import os
+    
+    lock_file = open('/tmp/freerider_tg_bot.lock', 'w')
+    try:
+        fcntl.flock(lock_file, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        telegram_bot.start_bot_thread()
+    except BlockingIOError:
+        pass # Başka bir worker kilidi almış, bot zaten çalışıyor.
 except Exception as e:
     from extensions import logger
     logger.error(f"Telegram bot başlatılamadı: {e}")

@@ -88,6 +88,8 @@ GOOGLE_PLAY_PACKAGE_NAME = os.environ.get("GOOGLE_PLAY_PACKAGE_NAME", "")
 
 ADMIN_PASSWORD = os.environ.get("ADMIN_PASSWORD")
 
+GOOGLE_CLIENT_ID = os.environ.get("GOOGLE_CLIENT_ID", "")
+
 # ==============================================================================
 # ZORUNLU VE OPSİYONEL ENVIRONMENT VARIABLE KONTROLÜ
 # ==============================================================================

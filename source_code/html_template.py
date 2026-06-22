@@ -203,6 +203,7 @@ const BADGE_DEFINITIONS = [
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
 <script>
 // AI HUB LOGIC - BULLETPROOF REWRITE
 (function() {
@@ -2256,7 +2257,8 @@ const BADGE_DEFINITIONS = [
                             <div class="flex-grow border-t border-zinc-700"></div>
                         </div>
                         
-                        <button onclick="handleGoogleLogin()" class="w-full bg-white text-black py-3.5 rounded-xl font-bold flex items-center justify-center gap-3 transition hover:bg-gray-200">
+                        <div id="google-signin-btn-target" style="display:none;"></div>
+                        <button id="google-login-main-btn" onclick="handleGoogleLogin()" class="w-full bg-white text-black py-3.5 rounded-xl font-bold flex items-center justify-center gap-3 transition hover:bg-gray-200">
                             <svg class="w-5 h-5" viewBox="0 0 24 24"><path fill="currentColor" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" /><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" /><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" /><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" /></svg>
                             Google ile Giriş Yap
                         </button>
@@ -2991,7 +2993,7 @@ const BADGE_DEFINITIONS = [
                     <div class="p-6 text-center pb-20">
                         <div class="relative inline-block mt-4 group">
                             <div id="profile-avatar-wrap" class="avatar-particle-wrap relative inline-block">
-                            <img id="profile-avatar" src="" class="w-32 h-32 mx-auto rounded-full object-cover cursor-pointer bg-zinc-900 transition-all duration-300 group-hover:opacity-80 group-hover:scale-105 " onclick="openProfilePicUpload()">
+                            <img id="profile-avatar" src="" class="w-32 h-32 mx-auto rounded-full object-cover cursor-pointer bg-zinc-900 transition-all duration-300 group-hover:opacity-80 group-hover:scale-105 " onclick="openProfilePicUpload()" style="cursor:pointer;" onclick="openAvatarBuilder()" title="Avatarı Düzenle">
                             </div>
                             <div class="absolute inset-0 bg-black/50 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-300">
                                 <span class="text-2xl text-white ">📸</span>
@@ -3010,7 +3012,13 @@ const BADGE_DEFINITIONS = [
                         </div>
                         <p class="text-[9px] text-zinc-600 mt-1 font-bold uppercase tracking-widest">Ücretsiz · Hesap gerekmez</p>
                         
-                        <div id="profile-name-container" class="flex justify-center items-center gap-2 mt-5 max-w-full px-2">
+                        
+                        <!-- Avatar Builder Button -->
+                        <button onclick="openAvatarBuilder()" class="mt-3 bg-zinc-800 hover:bg-zinc-700 text-xs font-bold px-4 py-2 rounded-lg border border-zinc-700 flex items-center gap-2 mx-auto transition mb-2 shadow-lg">
+                            <i data-lucide="shirt" class="w-4 h-4 text-sky-400"></i> Avatarı Özelleştir
+                        </button>
+
+<div id="profile-name-container" class="flex justify-center items-center gap-2 mt-5 max-w-full px-2">
                             <div id="profile-name" class="text-4xl font-bold text-white teko-font tracking-wide transition-all truncate max-w-[85%]"></div>
                             <div id="profile-verified-badge" class="hidden"></div>
                         </div>
@@ -4762,6 +4770,32 @@ const BADGE_DEFINITIONS = [
             console.error("[FreeriderTR] Supabase JS SDK yuklenemedi. Realtime ozellikler calismiyor.");
             // Script hatasi tum sayfayi kilitlememesi icin devam et
         }
+        
+        // ── Google GSI One Tap Başlatma ──────────────────────────────────────
+        (function initGoogleSignIn() {
+            const GOOGLE_CLIENT_ID = '{{ google_client_id }}';
+            if (!GOOGLE_CLIENT_ID) return; // Client ID yoksa sessizce çık
+            function _initGSI() {
+                if (typeof google === 'undefined' || !google.accounts) return;
+                try {
+                    google.accounts.id.initialize({
+                        client_id: GOOGLE_CLIENT_ID,
+                        callback: window.handleGoogleCredential,
+                        auto_select: false,
+                        cancel_on_tap_outside: true,
+                        context: 'signin',
+                        ux_mode: 'popup',
+                    });
+                    console.log('[FreeriderTR] Google GSI başlatıldı.');
+                } catch(e) { console.warn('[FreeriderTR] Google GSI init hatası:', e); }
+            }
+            // GSI script async yüklenebilir, hazır olana kadar bekle
+            if (typeof google !== 'undefined' && google.accounts) {
+                _initGSI();
+            } else {
+                window.addEventListener('load', _initGSI);
+            }
+        })();
 
         // ==============================================================
         // ÇEVRİM İÇİ DURUM YARDIMCI FONKSİYONLARI
@@ -5430,23 +5464,80 @@ const BADGE_DEFINITIONS = [
             }
         }
 
-        async function handleGoogleLogin() {
-            alert("Google ile giriş şimdilik kullanılamaz.");
-            return;
-            
-            if (!supaClient) return alert("Sistem henüz hazır değil, lütfen bekleyin.");
+        // ── Google One Tap / GSI Giriş ───────────────────────────────────────
+        // Google GSI callback — One Tap veya popup'tan token gelince çağrılır
+        window.handleGoogleCredential = async function(response) {
+            // response.credential = JWT id_token
+            const idToken = response.credential;
+            // JWT payload'ı decode et (base64url)
+            let payload = {};
             try {
-                const { error } = await supaClient.auth.signInWithOAuth({
-                    provider: 'google',
-                    options: {
-                        redirectTo: window.location.origin + '/',
-                        queryParams: { access_type: 'offline', prompt: 'consent' }
-                    }
-                });
-                if (error) throw error;
-            } catch (err) {
-                alert("Google ile giriş başlatılamadı: " + err.message);
+                const parts = idToken.split('.');
+                const b64 = parts[1].replace(/-/g, '+').replace(/_/g, '/');
+                const padded = b64 + '='.repeat((4 - b64.length % 4) % 4);
+                payload = JSON.parse(atob(padded));
+            } catch(e) { console.error('JWT decode hatası:', e); }
+            
+            const email = payload.email || '';
+            const name = payload.name || '';
+            const avatar_url = payload.picture || '';
+            
+            if (!email) {
+                showToast('Google hesabından e-posta alınamadı.');
+                return;
             }
+            
+            const loadScreen = document.getElementById("app-loading-screen");
+            if (loadScreen) { loadScreen.style.display = "flex"; loadScreen.style.opacity = "1"; }
+            
+            try {
+                const res = await sendAction('google_login', { email, name, avatar_url });
+                if (res && res.status === 'ok') {
+                    currentUser = res.user;
+                    window.currentUser = currentUser;
+                    localStorage.setItem("fr_user", JSON.stringify(currentUser));
+                    const meIdx3 = db.users.findIndex(u => u.username === currentUser.username);
+                    if (meIdx3 !== -1) { db.users[meIdx3] = currentUser; } else { db.users.push(currentUser); }
+                    if (res.user.just_got_daily) {
+                        showToast("🎉 Günlük giriş ödülü: +" + res.user.just_got_daily + " XP!");
+                    }
+                    loginSuccess();
+                } else if (res && res.status === 'needs_onboarding') {
+                    if (loadScreen) loadScreen.style.display = "none";
+                    document.getElementById("go-email").value = res.email || email;
+                    document.getElementById("go-name").value = res.name || name;
+                    document.getElementById("go-avatar").value = res.avatar_url || avatar_url;
+                    if (res.name || name) {
+                        const cleanName = (res.name || name).toLowerCase().replace(/[^a-z0-9]/g, '');
+                        document.getElementById("go-username").value = cleanName + Math.floor(Math.random() * 1000);
+                    }
+                    document.getElementById("google-onboarding-modal").classList.remove("hidden");
+                } else {
+                    if (loadScreen) loadScreen.style.display = "none";
+                    showToast("Google girişi başarısız: " + (res?.message || "Bilinmeyen hata"));
+                }
+            } catch(err) {
+                if (loadScreen) loadScreen.style.display = "none";
+                showToast("Google sunucusuna bağlanırken hata: " + err.message);
+            }
+        };
+        
+        async function handleGoogleLogin() {
+            // Google One Tap / GSI popup ile giriş başlat
+            if (typeof google === 'undefined' || !google.accounts) {
+                showToast('Google servisi yüklenemedi. İnternet bağlantınızı kontrol edin.');
+                return;
+            }
+            google.accounts.id.prompt((notification) => {
+                if (notification.isNotDisplayed() || notification.isSkippedMoment()) {
+                    // One Tap gösterilemezse (3rd-party cookies kapalı vb.) popup aç
+                    google.accounts.id.renderButton(
+                        document.getElementById('google-signin-btn-target'),
+                        { theme: 'outline', size: 'large', width: 300, text: 'signin_with' }
+                    );
+                    document.getElementById('google-signin-btn-target').click();
+                }
+            });
         }
 
         async function submitGoogleOnboarding(e) {
@@ -10093,7 +10184,7 @@ window.closeBadgeCollectionModal = function() {
             let tick = (premTier === 3) ? verifiedTick : ''; 
             let adminTag = (u.role === 'Admin') ? '<span class="ml-2 bg-red-600 text-white px-2 py-0.5 rounded text-[9px] uppercase font-bold tracking-widest ">👑 Yönetici</span>' : (u.role === 'SubAdmin' ? '<span class="ml-2 bg-orange-800 text-orange-200 px-2 py-0.5 rounded text-[9px] uppercase font-bold tracking-widest">🛡️ Yrd. Admin</span>' : '');
 
-            document.getElementById("op-avatar").src = u.avatar || `https://cdn.freeridertr.com.tr/profil%20resmi/unnamed.jpg`; 
+            document.getElementById("op-avatar").src = u.avatar_url || u.avatar || `https://cdn.freeridertr.com.tr/profil%20resmi/unnamed.jpg`; 
             document.getElementById("op-avatar").className = `w-28 h-28 mx-auto rounded-full object-cover mt-6 bg-zinc-950  border-4 transition-all duration-300 ${borderCls}`;
             
             const badge = document.getElementById("op-premium-badge");
@@ -15682,6 +15773,502 @@ setInterval(checkMaintenance, 60000);
             <button onclick="document.getElementById('new-password-modal').classList.add('hidden')" class="w-full bg-zinc-800/80 hover:bg-zinc-700 text-white font-bold py-3 rounded-xl transition text-xs">İPTAL</button>
         </div>
     </div>
+
+
+
+
+<!-- ==============================================================================
+     FREERIDER AVATAR BUILDER SYSTEM (V4 - HIGH QUALITY SVG GRID)
+     ============================================================================== -->
+<style>
+#avatar-builder-modal .glass-panel { background: rgba(20, 20, 25, 0.98); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.1); }
+#avatar-canvas-container {
+    width: 260px; height: 420px; margin: 0 auto;
+    background: radial-gradient(circle, #2a2a35 0%, #121212 100%);
+    border-radius: 16px; border: 2px solid #333; overflow: hidden; position: relative;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+.avatar-layer { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.avatar-layer svg { width: 100%; height: 100%; display: block; filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.4)); }
+.grid-col-title { font-size: 0.85rem; font-weight: 900; text-transform: uppercase; color: #94a3b8; margin-bottom: 0.5rem; letter-spacing: 0.05em; border-bottom: 1px solid #334155; padding-bottom: 0.25rem; }
+.item-btn { width: 100%; aspect-ratio: 1; border-radius: 12px; background: #1c1c20; border: 2px solid #333; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: all 0.2s; padding: 0.25rem; }
+.item-btn.active { border-color: #38bdf8; background: #0f172a; box-shadow: 0 0 10px rgba(56,189,248,0.2); }
+.item-btn:hover { border-color: #7dd3fc; }
+.item-color-preview { width: 32px; height: 32px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.2); margin-bottom: 4px; display:flex; align-items:center; justify-content:center; overflow:hidden;}
+.item-color-preview svg { width: 24px; height: 24px;}
+.item-label { font-size: 10px; color: #cbd5e1; text-align: center; line-height: 1.1; }
+.category-group { background: rgba(255,255,255,0.02); border-radius: 12px; padding: 0.5rem; margin-bottom: 1rem; }
+</style>
+
+<div id="avatar-builder-modal" class="hidden fixed inset-0 modal-backdrop flex items-center justify-center z-[9999] p-2 sm:p-4">
+    <div class="glass-panel w-full max-w-6xl h-[95vh] rounded-2xl flex flex-col slide-up-anim overflow-hidden">
+        <div class="flex justify-between items-center p-4 border-b border-zinc-800 bg-zinc-900/50">
+            <h2 class="text-3xl text-white teko-font tracking-wide flex items-center gap-2">
+                <i data-lucide="shirt" class="w-6 h-6 text-sky-400"></i> AVATAR GARAJI <span class="bg-gradient-to-r from-purple-600 to-pink-600 text-white text-xs px-2 py-0.5 rounded-full uppercase tracking-widest font-black ml-2 shadow-[0_0_10px_rgba(219,39,119,0.5)]">Beta</span>
+            </h2>
+            <div class="flex items-center gap-3">
+                <button onclick="saveAvatar()" id="btn-save-avatar" class="bg-gradient-to-r from-sky-600 to-sky-400 text-white px-6 py-2 rounded-lg font-bold btn-premium-hover flex items-center gap-2 shadow-lg shadow-sky-500/30">
+                    <i data-lucide="save" class="w-4 h-4"></i> KAYDET
+                </button>
+                <button onclick="document.getElementById('avatar-builder-modal').classList.add('hidden')" class="text-zinc-400 hover:text-white bg-zinc-800 rounded-lg p-2">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+        </div>
+        <div class="flex flex-col lg:flex-row flex-1 overflow-hidden">
+            <div class="w-full lg:w-[320px] shrink-0 p-4 border-b lg:border-b-0 lg:border-r border-zinc-800 flex flex-col items-center justify-center bg-black/20">
+                <div id="avatar-canvas-container"></div>
+                <div class="mt-4 text-xs font-medium text-zinc-500 flex items-center gap-1">
+                    <i data-lucide="info" class="w-4 h-4"></i> Canlı Önizleme Aktif
+                </div>
+            </div>
+            <div class="flex-1 overflow-y-auto custom-scrollbar p-4 lg:p-6 bg-[#0f0f13]">
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6" id="avatar-grid-container"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// ============================================================================
+// ENHANCED SVG LIBRARY WITH REALISTIC SHADOWS AND DETAILS
+// ============================================================================
+const AvatarAssets = {
+    base: {
+        rider_male: `<svg viewBox="0 0 300 450" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <defs>
+                <linearGradient id="skinGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="{skin}"/><stop offset="100%" stop-color="#8a5a44"/></linearGradient>
+            </defs>
+            <path d="M135,70 L165,70 L160,110 L140,110 Z" fill="url(#skinGrad)" />
+            <circle cx="150" cy="50" r="35" fill="url(#skinGrad)" />
+            <path d="M110,115 L75,190 C65,210 80,240 90,230 L105,185 Z" fill="url(#skinGrad)" />
+            <path d="M190,115 L225,190 C235,210 220,240 210,230 L195,185 Z" fill="url(#skinGrad)" />
+            <path d="M115,280 L140,280 L135,380 L120,380 Z" fill="url(#skinGrad)" />
+            <path d="M160,280 L185,280 L180,380 L165,380 Z" fill="url(#skinGrad)" />
+            <path d="M110,210 L190,210 L195,290 C195,295 155,290 150,230 C145,290 105,295 105,290 Z" fill="#1c1c1c" />
+            <!-- Yüz Detayları -->
+            <path d="M135,45 Q140,40 145,45" stroke="#111" fill="none" stroke-width="2" opacity="0.6"/>
+            <path d="M165,45 Q160,40 155,45" stroke="#111" fill="none" stroke-width="2" opacity="0.6"/>
+            <path d="M145,65 Q150,70 155,65" stroke="#111" fill="none" stroke-width="2" opacity="0.5"/>
+        </svg>`
+    },
+    shorts: {
+        basic: `<svg viewBox="0 0 300 450" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <defs>
+                <linearGradient id="shortGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="{primary}" />
+                    <stop offset="100%" stop-color="#111" />
+                </linearGradient>
+            </defs>
+            <path d="M105,210 L195,210 L200,310 L160,300 L150,230 L140,300 L100,310 Z" fill="url(#shortGrad)" />
+            <path d="M100,305 L140,295 L145,305 L100,315 Z" fill="{secondary}" />
+            <path d="M160,295 L200,305 L200,315 L155,305 Z" fill="{secondary}" />
+            <!-- Kırışıklık efekti -->
+            <path d="M120,220 L130,280" stroke="#000" stroke-width="3" opacity="0.3" fill="none"/>
+            <path d="M180,220 L170,280" stroke="#000" stroke-width="3" opacity="0.3" fill="none"/>
+        </svg>`
+    },
+    shoes: {
+        mtb_flat: `<svg viewBox="0 0 300 450" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <path d="M110,375 L140,375 L145,415 L100,415 C95,415 95,395 110,375 Z" fill="{primary}" />
+            <path d="M100,405 L145,405 L145,415 L100,415 Z" fill="{secondary}" />
+            <path d="M160,375 L190,375 L200,415 C205,415 205,395 190,375 Z" fill="{primary}" />
+            <path d="M155,405 L200,405 L200,415 L155,415 Z" fill="{secondary}" />
+            <circle cx="120" cy="390" r="3" fill="#fff" opacity="0.5"/>
+            <circle cx="180" cy="390" r="3" fill="#fff" opacity="0.5"/>
+        </svg>`
+    },
+    gloves: {
+        basic: `<svg viewBox="0 0 300 450" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <path d="M70,225 C60,240 95,250 95,225 L90,215 Z" fill="{primary}" />
+            <path d="M230,225 C240,240 205,250 205,225 L210,215 Z" fill="{primary}" />
+            <path d="M75,235 L90,230" stroke="{secondary}" stroke-width="2"/>
+            <path d="M225,235 L210,230" stroke="{secondary}" stroke-width="2"/>
+        </svg>`
+    },
+    jersey: {
+        long_sleeve: `<svg viewBox="0 0 300 450" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <defs>
+                <linearGradient id="jerseyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="{primary}" />
+                    <stop offset="100%" stop-color="#111" />
+                </linearGradient>
+            </defs>
+            <path d="M115,108 L185,108 C195,130 195,200 190,230 C170,235 130,235 110,230 C105,200 105,130 115,108 Z" fill="url(#jerseyGrad)" />
+            <path d="M105,115 L70,185 L85,225 L100,185 Z" fill="{secondary}" />
+            <path d="M195,115 L230,185 L215,225 L200,185 Z" fill="{secondary}" />
+            <path d="M125,108 L175,108 L150,150 Z" fill="#ffffff" opacity="0.15" />
+            <path d="M130,232 L170,232 L150,170 Z" fill="#000000" opacity="0.3" />
+            <!-- V yakası veya logo simgesi -->
+            <circle cx="150" cy="140" r="10" fill="{secondary}" opacity="0.8"/>
+            <path d="M110,130 L110,200" stroke="#000" stroke-width="2" opacity="0.2"/>
+            <path d="M190,130 L190,200" stroke="#000" stroke-width="2" opacity="0.2"/>
+        </svg>`,
+        short_sleeve: `<svg viewBox="0 0 300 450" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <defs>
+                <linearGradient id="jerseyShortGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="{primary}" />
+                    <stop offset="100%" stop-color="#111" />
+                </linearGradient>
+            </defs>
+            <path d="M115,108 L185,108 C195,130 195,200 190,230 C170,235 130,235 110,230 C105,200 105,130 115,108 Z" fill="url(#jerseyShortGrad)" />
+            <path d="M105,115 L85,145 L100,155 Z" fill="{secondary}" />
+            <path d="M195,115 L215,145 L200,155 Z" fill="{secondary}" />
+            <circle cx="150" cy="140" r="10" fill="{secondary}" opacity="0.8"/>
+        </svg>`
+    },
+    armor: {
+        chest_protector: `<svg viewBox="0 0 300 450" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <path d="M125,120 L175,120 L185,180 L150,210 L115,180 Z" fill="{primary}" stroke="#000" stroke-width="3"/>
+            <path d="M135,130 L165,130 L150,150 Z" fill="{secondary}" />
+            <path d="M140,160 L160,160 L150,190 Z" fill="{secondary}" />
+            <path d="M115,115 L85,135 L100,155 Z" fill="{primary}" stroke="#000" stroke-width="3"/>
+            <path d="M185,115 L215,135 L200,155 Z" fill="{primary}" stroke="#000" stroke-width="3"/>
+            <circle cx="150" cy="150" r="6" fill="#111"/>
+        </svg>`
+    },
+    neck_brace: {
+        leatt: `<svg viewBox="0 0 300 450" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <path d="M120,110 C120,130 180,130 180,110 L175,120 C160,140 140,140 125,120 Z" fill="{primary}" stroke="#000" stroke-width="3"/>
+            <path d="M125,115 L175,115" stroke="{secondary}" stroke-width="2"/>
+        </svg>`
+    },
+    helmet: {
+        full_face: `<svg viewBox="0 0 300 450" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <defs>
+                <linearGradient id="helmGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="{primary}" />
+                    <stop offset="100%" stop-color="#111" />
+                </linearGradient>
+            </defs>
+            <path d="M105,80 C100,30 140,10 150,10 C160,10 200,30 195,80 C190,110 170,115 150,115 C130,115 110,110 105,80 Z" fill="url(#helmGrad)" />
+            <path d="M90,45 C110,25 190,25 210,45 L190,30 C170,15 130,15 110,30 Z" fill="{secondary}" />
+            <path d="M125,85 L175,85 L165,110 L135,110 Z" fill="#050505" />
+            <!-- Ağızlık Çizgileri -->
+            <path d="M140,90 L160,90 L155,105 L145,105 Z" fill="#fff" opacity="0.3"/>
+            <path d="M145,95 L155,95" stroke="#111" stroke-width="2"/>
+            <path d="M147,100 L153,100" stroke="#111" stroke-width="2"/>
+            
+            <path d="M110,70 L140,40" stroke="{secondary}" stroke-width="5" stroke-linecap="round"/>
+            <path d="M190,70 L160,40" stroke="{secondary}" stroke-width="5" stroke-linecap="round"/>
+            <!-- Kask Yansıma -->
+            <path d="M150,15 C130,15 115,35 115,50" stroke="#fff" stroke-width="3" fill="none" opacity="0.3" stroke-linecap="round"/>
+        </svg>`
+    },
+    goggles: {
+        mx_goggle: `<svg viewBox="0 0 300 450" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <path d="M95,65 L205,65 L200,75 L100,75 Z" fill="{strap_color}" stroke="#111" stroke-width="1"/>
+            <rect x="115" y="52" width="70" height="30" rx="10" fill="{primary}" stroke="#000" stroke-width="2"/>
+            <defs>
+                <linearGradient id="lensGrad_{id}" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="{lens_color1}" />
+                    <stop offset="100%" stop-color="{lens_color2}" />
+                </linearGradient>
+            </defs>
+            <rect x="119" y="56" width="62" height="22" rx="7" fill="url(#lensGrad_{id})" />
+            <!-- Goggle Reflection -->
+            <path d="M125,58 L145,58 L135,75 Z" fill="#fff" opacity="0.6"/>
+            <path d="M165,58 L175,58 L160,75 Z" fill="#fff" opacity="0.3"/>
+        </svg>`
+    }
+};
+
+const AvatarConfigOptions = {
+    skin: [
+        { id: 'skin_light', name: 'Açık Ten', color: '#F5CBA7' },
+        { id: 'skin_medium', name: 'Buğday', color: '#DEB887' },
+        { id: 'skin_dark', name: 'Esmer', color: '#8B4513' },
+        { id: 'skin_black', name: 'Siyahi', color: '#3b2210' }
+    ],
+    helmets: [
+        { id: 'none', name: 'Kask Yok', primary: 'none', secondary: 'none' },
+        { id: 'helmet_red', name: 'Race Kırmızı', primary: '#E74C3C', secondary: '#fff' },
+        { id: 'helmet_black', name: 'Stealth Siyah', primary: '#222222', secondary: '#444' },
+        { id: 'helmet_green', name: 'Neon Yeşil', primary: '#2ECC71', secondary: '#111' },
+        { id: 'helmet_blue', name: 'Speed Mavi', primary: '#3498DB', secondary: '#F1C40F' },
+        { id: 'helmet_white', name: 'Saf Beyaz', primary: '#ffffff', secondary: '#E74C3C' }
+    ],
+    goggles: [
+        { id: 'none', name: 'Gözlük Yok', primary: 'none', strap_color: 'none', lens_color1: 'none', lens_color2: 'none' },
+        { id: 'goggle_gold', name: '100% Gold', primary: '#ffffff', strap_color: '#E74C3C', lens_color1: '#F1C40F', lens_color2: '#E67E22' },
+        { id: 'goggle_blue', name: 'Oakley Mavi', primary: '#111111', strap_color: '#3498DB', lens_color1: '#00d2ff', lens_color2: '#3a7bd5' },
+        { id: 'goggle_dark', name: 'Siyah Cam', primary: '#111111', strap_color: '#111111', lens_color1: '#434343', lens_color2: '#000000' },
+        { id: 'goggle_pink', name: 'Neon Pembe', primary: '#fff', strap_color: '#E91E63', lens_color1: '#ff99cc', lens_color2: '#ff0066' }
+    ],
+    neck_braces: [
+        { id: 'none', name: 'Yok', primary: 'none', secondary: 'none' },
+        { id: 'leatt_black', name: 'Leatt Siyah', primary: '#222', secondary: '#555' },
+        { id: 'leatt_white', name: 'Leatt Beyaz', primary: '#eee', secondary: '#E74C3C' }
+    ],
+    armors: [
+        { id: 'none', name: 'Zırh Yok', primary: 'none', secondary: 'none' },
+        { id: 'armor_black', name: 'Titan Siyah', primary: '#1c1c1c', secondary: '#333' },
+        { id: 'armor_red', name: 'Race Kırmızı', primary: '#E74C3C', secondary: '#1c1c1c' },
+        { id: 'armor_white', name: 'Pro Beyaz', primary: '#ECF0F1', secondary: '#BDC3C7' }
+    ],
+    jerseys: [
+        { id: 'none', name: 'Çıplak', primary: 'none', secondary: 'none', type: 'short_sleeve' },
+        { id: 'jersey_fox_red', name: 'Fox Kırmızı (Uzun)', primary: '#E74C3C', secondary: '#111', type: 'long_sleeve' },
+        { id: 'jersey_tld_blue', name: 'TLD Mavi (Uzun)', primary: '#3498DB', secondary: '#F1C40F', type: 'long_sleeve' },
+        { id: 'jersey_black_short', name: 'Düz Siyah (Kısa)', primary: '#1c1c1c', secondary: '#111', type: 'short_sleeve' },
+        { id: 'jersey_green', name: 'Monster Yeşil', primary: '#2ECC71', secondary: '#1c1c1c', type: 'long_sleeve' }
+    ],
+    shorts: [
+        { id: 'none', name: 'Klasik', primary: 'none', secondary: 'none' },
+        { id: 'short_black', name: 'Siyah DH Şort', primary: '#111', secondary: '#444' },
+        { id: 'short_blue', name: 'Mavi Şort', primary: '#3498DB', secondary: '#2980B9' },
+        { id: 'short_red', name: 'Kırmızı Şort', primary: '#E74C3C', secondary: '#C0392B' }
+    ],
+    gloves: [
+        { id: 'none', name: 'Eldivensiz', primary: 'none', secondary: 'none' },
+        { id: 'glove_black', name: 'Siyah', primary: '#1c1c1c', secondary: '#333' },
+        { id: 'glove_red', name: 'Kırmızı', primary: '#E74C3C', secondary: '#1c1c1c' },
+        { id: 'glove_blue', name: 'Mavi', primary: '#3498DB', secondary: '#fff' }
+    ],
+    shoes: [
+        { id: 'none', name: 'Çıplak Ayak', primary: 'none', secondary: 'none' },
+        { id: 'shoe_510', name: 'Five Ten Siyah', primary: '#1c1c1c', secondary: '#E74C3C' },
+        { id: 'shoe_shimano', name: 'Shimano Mavi', primary: '#34495E', secondary: '#3498DB' },
+        { id: 'shoe_white', name: 'RC Beyaz', primary: '#ECF0F1', secondary: '#95A5A6' }
+    ]
+};
+
+let currentAvatarConfig = {
+    skin: 'skin_light',
+    helmet: 'helmet_red',
+    goggles: 'goggle_gold',
+    neck_brace: 'none',
+    armor: 'none',
+    jersey: 'jersey_fox_red',
+    shorts: 'short_black',
+    gloves: 'glove_black',
+    shoes: 'shoe_510'
+};
+
+const LayersOrder = ['base', 'shorts', 'shoes', 'gloves', 'jersey', 'armor', 'neck_brace', 'helmet', 'goggles'];
+
+function openAvatarBuilder() {
+    if(currentUser && currentUser.stats && currentUser.stats.avatar_config) {
+        currentAvatarConfig = {...currentAvatarConfig, ...currentUser.stats.avatar_config};
+    }
+    document.getElementById('avatar-builder-modal').classList.remove('hidden');
+    renderAvatarUIGrid();
+    renderAvatarCanvas();
+}
+
+function getSVGString(layerName, itemDef) {
+    if(!itemDef || itemDef.primary === 'none') return '';
+    let template = "";
+    if (layerName === 'shoes') template = AvatarAssets.shoes.mtb_flat;
+    if (layerName === 'shorts') template = AvatarAssets.shorts.basic;
+    if (layerName === 'gloves') template = AvatarAssets.gloves.basic;
+    if (layerName === 'jersey') template = itemDef.type === 'short_sleeve' ? AvatarAssets.jersey.short_sleeve : AvatarAssets.jersey.long_sleeve;
+    if (layerName === 'armor') template = AvatarAssets.armor.chest_protector;
+    if (layerName === 'neck_brace') template = AvatarAssets.neck_brace.leatt;
+    if (layerName === 'helmet') template = AvatarAssets.helmet.full_face;
+    if (layerName === 'goggles') template = AvatarAssets.goggles.mx_goggle;
+
+    let svgStr = template;
+    Object.keys(itemDef).forEach(k => {
+        if (k !== 'id' && k !== 'name' && k !== 'type') {
+            svgStr = svgStr.replace(new RegExp(`{${k}}`, 'g'), itemDef[k]);
+        }
+    });
+    svgStr = svgStr.replace(/{id}/g, Math.random().toString(36).substring(7));
+    return svgStr;
+}
+
+function renderAvatarUIGrid() {
+    const container = document.getElementById('avatar-grid-container');
+    container.innerHTML = '';
+    
+    const columns = [
+        { title: "AVATAR & YÜZLER", items: [{cat: 'skin', label: 'Ten Rengi'}] },
+        { title: "KASKLAR", items: [{cat: 'helmets', label: 'Tüm Kasklar'}] },
+        { title: "GÖZLÜK VE BOYUNLUK", items: [{cat: 'goggles', label: 'Gözlükler'}, {cat: 'neck_braces', label: 'Boyunluklar'}] },
+        { title: "FORMALAR & ZIRHLAR", items: [{cat: 'jerseys', label: 'Formalar'}, {cat: 'armors', label: 'Göğüslükler'}] },
+        { title: "ŞORT, AYAKKABI, ELDİVEN", items: [{cat: 'shorts', label: 'Şortlar'}, {cat: 'shoes', label: 'Ayakkabılar'}, {cat: 'gloves', label: 'Eldivenler'}] }
+    ];
+
+    const catKeys = { skin: 'skin', helmets: 'helmet', goggles: 'goggles', neck_braces: 'neck_brace', armors: 'armor', jerseys: 'jersey', shorts: 'shorts', gloves: 'gloves', shoes: 'shoes' };
+
+    columns.forEach(col => {
+        let colHtml = `<div class="flex flex-col"><h3 class="grid-col-title">${col.title}</h3>`;
+        col.items.forEach(sub => {
+            const confKey = catKeys[sub.cat];
+            colHtml += `<div class="category-group">
+                <div class="text-xs text-zinc-500 mb-2">${sub.label}</div>
+                <div class="grid grid-cols-2 gap-2">`;
+            
+            AvatarConfigOptions[sub.cat].forEach(opt => {
+                const activeClass = currentAvatarConfig[confKey] === opt.id ? 'active' : '';
+                
+                // Butonun içinde mini SVG preview oluştur
+                let previewInner = '';
+                if(sub.cat === 'skin') {
+                    previewInner = `<div style="width:100%; height:100%; background:${opt.color}; border-radius:50%;"></div>`;
+                } else if(opt.id !== 'none') {
+                    const iconSvg = getSVGString(confKey, opt);
+                    // viewbox'u zoomlayarak ikona sığdır (basitçe ortala)
+                    previewInner = iconSvg.replace('<svg ', '<svg preserveAspectRatio="xMidYMid slice" ');
+                }
+
+                colHtml += `<button onclick="updateAvatarPart('${confKey}', '${opt.id}')" class="item-btn ${activeClass}">
+                    <div class="item-color-preview">${previewInner}</div>
+                    <span class="item-label">${opt.name}</span>
+                </button>`;
+            });
+            colHtml += `</div></div>`;
+        });
+        colHtml += `</div>`;
+        container.innerHTML += colHtml;
+    });
+}
+
+function updateAvatarPart(key, val) {
+    currentAvatarConfig[key] = val;
+    renderAvatarUIGrid();
+    renderAvatarCanvas();
+}
+
+function renderAvatarCanvas() {
+    const container = document.getElementById('avatar-canvas-container');
+    container.innerHTML = '';
+
+    LayersOrder.forEach((layerName, index) => {
+        const itemId = currentAvatarConfig[layerName === 'base' ? 'skin' : layerName] || 'none';
+        if (itemId === 'none') return;
+
+        let svgString = "";
+        if (layerName === 'base') {
+            svgString = AvatarAssets.base.rider_male;
+            const skinDef = AvatarConfigOptions.skin.find(s => s.id === itemId);
+            svgString = svgString.replace(/{skin}/g, skinDef ? skinDef.color : '#F5CBA7');
+        } else {
+            const itemDef = AvatarConfigOptions[layerName + 's']?.find(i => i.id === itemId);
+            if (!itemDef) return;
+            svgString = getSVGString(layerName, itemDef);
+        }
+
+        const div = document.createElement('div');
+        div.className = 'avatar-layer';
+        div.style.zIndex = index + 10;
+        div.innerHTML = svgString;
+        container.appendChild(div);
+    });
+}
+
+function exportAvatarToCanvas() {
+    return new Promise((resolve) => {
+        const c = document.createElement('canvas');
+        c.width = 300;
+        c.height = 450;
+        const ctx = c.getContext('2d');
+        
+        const grd = ctx.createRadialGradient(150, 225, 10, 150, 225, 250);
+        grd.addColorStop(0, "#2a2a35");
+        grd.addColorStop(1, "#121212");
+        ctx.fillStyle = grd;
+        ctx.fillRect(0,0,300,450);
+
+        let loadedCount = 0;
+        const images = [];
+
+        LayersOrder.forEach((layerName, index) => {
+            const itemId = currentAvatarConfig[layerName === 'base' ? 'skin' : layerName] || 'none';
+            if(itemId === 'none') {
+                loadedCount++;
+                if(loadedCount === LayersOrder.length) drawAll();
+                return;
+            }
+
+            let svgString = "";
+            if (layerName === 'base') {
+                svgString = AvatarAssets.base.rider_male;
+                const skinDef = AvatarConfigOptions.skin.find(s => s.id === itemId);
+                svgString = svgString.replace(/{skin}/g, skinDef ? skinDef.color : '#F5CBA7');
+            } else {
+                const itemDef = AvatarConfigOptions[layerName + 's']?.find(i => i.id === itemId);
+                if(!itemDef) {
+                    loadedCount++;
+                    if(loadedCount === LayersOrder.length) drawAll();
+                    return;
+                }
+                svgString = getSVGString(layerName, itemDef);
+            }
+
+            
+            const img = new Image();
+            img.onload = () => {
+                images[index] = img;
+                loadedCount++;
+                if(loadedCount === LayersOrder.length) drawAll();
+            };
+            img.onerror = (e) => {
+                console.error("Image load error for layer:", layerName, e);
+                loadedCount++;
+                if(loadedCount === LayersOrder.length) drawAll();
+            }
+            // Blob URL Canvas Tainting (CORS) sorununu önlemek için Base64 Data URI kullanımı:
+            img.src = "data:image/svg+xml;base64," + btoa(unescape(encodeURIComponent(svgString)));
+
+        });
+
+        function drawAll() {
+            for(let i=0; i<LayersOrder.length; i++) {
+                if(images[i]) {
+                    ctx.drawImage(images[i], 0, 0, 300, 450);
+                }
+            }
+            resolve(c.toDataURL('image/png', 0.9));
+        }
+    });
+}
+
+async function saveAvatar() {
+    const btn = document.getElementById('btn-save-avatar');
+    btn.innerHTML = '<i data-lucide="loader-2" class="w-4 h-4 animate-spin"></i> YÜKLENİYOR...';
+    btn.disabled = true;
+
+    try {
+        const base64Png = await exportAvatarToCanvas();
+        const res = await sendAction('save_avatar_outfit', {
+            config: currentAvatarConfig,
+            image_base64: base64Png
+        });
+
+        if (res && res.status === 'ok') {
+            showToast("✅ Avatar başarıyla kaydedildi!");
+            document.getElementById('avatar-builder-modal').classList.add('hidden');
+            if(currentUser) {
+                if(!currentUser.stats) currentUser.stats = {};
+                currentUser.stats.avatar_config = currentAvatarConfig;
+                currentUser.avatar_url = res.avatar_url;
+                currentUser.avatar = res.avatar_url;
+                localStorage.setItem("fr_user", JSON.stringify(currentUser));
+                const idx = db.users.findIndex(u => u.username === currentUser.username);
+                if(idx !== -1) {
+                    db.users[idx].avatar_url = res.avatar_url;
+                    db.users[idx].avatar = res.avatar_url;
+                    db.users[idx].stats.avatar_config = currentAvatarConfig;
+                }
+                
+                const profileImg = document.getElementById('profile-avatar');
+                if(profileImg) profileImg.src = res.avatar_url;
+            }
+        } else {
+            showToast("❌ " + (res.message || "Hata"));
+        }
+    } catch(err) {
+        showToast("❌ Kayıt edilemedi.");
+    } finally {
+        btn.innerHTML = '<i data-lucide="save" class="w-4 h-4"></i> KAYDET';
+        btn.disabled = false;
+        lucide.createIcons();
+    }
+}
+</script>
+
 </body>
 </html>
 """
