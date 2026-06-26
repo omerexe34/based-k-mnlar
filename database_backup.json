@@ -1,6 +1,6 @@
 {
   "_metadata": {
-    "timestamp": "2026-06-27T02:30:03.976998",
+    "timestamp": "2026-06-27T02:40:03.690385",
     "description": "Supabase Auto-Backup"
   },
   "users": [
@@ -6240,8 +6240,8 @@
       },
       "is_banned": false,
       "created_at": "2026-06-03T13:49:45.868426+00:00",
-      "updated_at": "2026-06-26T23:28:11.505096+00:00",
-      "xp": 108800,
+      "updated_at": "2026-06-26T23:33:33.918487+00:00",
+      "xp": 109200,
       "level": 1,
       "password": "pbkdf2:sha256:600000$BslaMh4hGLWwmNTR$ff82eae866a1b86ccfc98390757cd6ddca115fdfaf25b0645979d8586f3233ba",
       "accepted_chat_rules": true
@@ -15658,7 +15658,7 @@
         "spin_count": 1,
         "reset_token": "",
         "current_week": "2026-06-22",
-        "last_seen_ts": 1782516555,
+        "last_seen_ts": 1782516862,
         "login_streak": 5,
         "premium_tier": 2,
         "riding_until": 0,
@@ -15712,10 +15712,10 @@
       },
       "is_banned": false,
       "created_at": "2026-05-23T18:51:36.395619+00:00",
-      "updated_at": "2026-06-26T23:29:25.718787+00:00",
+      "updated_at": "2026-06-26T23:34:22.516112+00:00",
       "xp": 7650,
       "level": 1,
-      "password": "pbkdf2:sha256:600000$3JOKLyE54iuHzDkw$5cfd6623d5e2b258712e8499b6e160b7229d291ce64e608c8c8557c98fb73e61",
+      "password": "pbkdf2:sha256:600000$mbjJfu39TwkgGSqJ$e590804fa5df8c4fddf108a107cd5c9d583b84d872b7eef52c2130d9faabe0ec",
       "accepted_chat_rules": true
     },
     {
@@ -27210,8 +27210,8 @@
       },
       "is_banned": false,
       "created_at": "2026-05-28T05:42:18.835993+00:00",
-      "updated_at": "2026-06-26T23:28:11.53502+00:00",
-      "xp": 110510,
+      "updated_at": "2026-06-26T23:33:33.950362+00:00",
+      "xp": 110910,
       "level": 1,
       "password": "pbkdf2:sha256:600000$aitWrbHXy2JvrA3z$df889df9c0761a02640f679c9cfe40303ed545cfe0492bd274a9a68d8994f207",
       "accepted_chat_rules": true
