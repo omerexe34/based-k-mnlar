@@ -1,6 +1,6 @@
 {
   "_metadata": {
-    "timestamp": "2026-06-26T12:50:04.108885",
+    "timestamp": "2026-06-26T13:00:03.757394",
     "description": "Supabase Auto-Backup"
   },
   "users": [
@@ -920,71 +920,6 @@
       "accepted_chat_rules": false
     },
     {
-      "id": "806e27ca-c683-481d-ae37-03932457bfd2",
-      "username": "m1rzql_fr",
-      "password_hash": null,
-      "name": "Muhammed mirzal özcan",
-      "bio": "",
-      "avatar": "https://cdn.freeridertr.com.tr/profil%20resmi/unnamed.jpg",
-      "city": "İstanbul",
-      "instagram": null,
-      "youtube": null,
-      "role": "user",
-      "stats": {
-        "email": "muhammedmirzalozcan3456@gmail.com",
-        "events": 1,
-        "garage": [],
-        "market": 0,
-        "markers": 1,
-        "is_trial": false,
-        "missions": {
-          "m1": true,
-          "m5": true,
-          "m8": true,
-          "m12": true
-        },
-        "ref_code": "M1R5989FR",
-        "ref_count": 0,
-        "ref_month": "2026-06",
-        "weekly_xp": 350,
-        "last_login": "2026-06-03",
-        "monthly_xp": 350,
-        "onboarding": true,
-        "current_week": "2026-06-01",
-        "last_seen_ts": 1780518294,
-        "login_streak": 1,
-        "premium_tier": 0,
-        "ai_usage_date": "",
-        "avatar_effect": "none",
-        "current_month": "2026-06",
-        "premium_color": "",
-        "profile_views": 6,
-        "session_token": "ad850cb9-a1c7-4bff-8706-14b0d41e49ed",
-        "ai_usage_count": 0,
-        "claimable_refs": 0,
-        "daily_missions": {
-          "date": "2026-06-03",
-          "done_d1": true,
-          "daily_login": 1
-        },
-        "email_verified": false,
-        "total_messages": 1,
-        "trial_notified": false,
-        "weekly_missions": {},
-        "marketing_opt_in": true,
-        "verification_code": "518213",
-        "last_miss_notif_ts": 1780555040,
-        "onboarding_completed": true
-      },
-      "is_banned": false,
-      "created_at": "2026-06-03T13:49:45.868426+00:00",
-      "updated_at": "2026-06-26T09:37:50.714987+00:00",
-      "xp": 90800,
-      "level": 1,
-      "password": "pbkdf2:sha256:600000$BslaMh4hGLWwmNTR$ff82eae866a1b86ccfc98390757cd6ddca115fdfaf25b0645979d8586f3233ba",
-      "accepted_chat_rules": true
-    },
-    {
       "id": "8e286006-d669-4802-8238-ed1820518fa4",
       "username": "naci",
       "password_hash": null,
@@ -1886,6 +1821,71 @@
       "level": 1,
       "password": "pbkdf2:sha256:600000$mT6udfg2XVdXjatm$5ab0ce4f4e2912f4793225ed0d985d543f954518ed70173e4bab309a3a41684c",
       "accepted_chat_rules": false
+    },
+    {
+      "id": "806e27ca-c683-481d-ae37-03932457bfd2",
+      "username": "m1rzql_fr",
+      "password_hash": null,
+      "name": "Muhammed mirzal özcan",
+      "bio": "",
+      "avatar": "https://cdn.freeridertr.com.tr/profil%20resmi/unnamed.jpg",
+      "city": "İstanbul",
+      "instagram": null,
+      "youtube": null,
+      "role": "user",
+      "stats": {
+        "email": "muhammedmirzalozcan3456@gmail.com",
+        "events": 1,
+        "garage": [],
+        "market": 0,
+        "markers": 1,
+        "is_trial": false,
+        "missions": {
+          "m1": true,
+          "m5": true,
+          "m8": true,
+          "m12": true
+        },
+        "ref_code": "M1R5989FR",
+        "ref_count": 0,
+        "ref_month": "2026-06",
+        "weekly_xp": 350,
+        "last_login": "2026-06-03",
+        "monthly_xp": 350,
+        "onboarding": true,
+        "current_week": "2026-06-01",
+        "last_seen_ts": 1780518294,
+        "login_streak": 1,
+        "premium_tier": 0,
+        "ai_usage_date": "",
+        "avatar_effect": "none",
+        "current_month": "2026-06",
+        "premium_color": "",
+        "profile_views": 6,
+        "session_token": "ad850cb9-a1c7-4bff-8706-14b0d41e49ed",
+        "ai_usage_count": 0,
+        "claimable_refs": 0,
+        "daily_missions": {
+          "date": "2026-06-03",
+          "done_d1": true,
+          "daily_login": 1
+        },
+        "email_verified": false,
+        "total_messages": 1,
+        "trial_notified": false,
+        "weekly_missions": {},
+        "marketing_opt_in": true,
+        "verification_code": "518213",
+        "last_miss_notif_ts": 1780555040,
+        "onboarding_completed": true
+      },
+      "is_banned": false,
+      "created_at": "2026-06-03T13:49:45.868426+00:00",
+      "updated_at": "2026-06-26T09:57:38.416058+00:00",
+      "xp": 91200,
+      "level": 1,
+      "password": "pbkdf2:sha256:600000$BslaMh4hGLWwmNTR$ff82eae866a1b86ccfc98390757cd6ddca115fdfaf25b0645979d8586f3233ba",
+      "accepted_chat_rules": true
     },
     {
       "id": "1d2d651d-9518-4d91-8790-d5125d6c51f0",
@@ -11037,6 +11037,71 @@
       "accepted_chat_rules": false
     },
     {
+      "id": "fbb06979-a01a-4d91-9c82-21f3f22383d9",
+      "username": "Toprak",
+      "password_hash": null,
+      "name": "Kütük",
+      "bio": "",
+      "avatar": "https://cdn.freeridertr.com.tr/profil%20resmi/unnamed.jpg",
+      "city": "Gebze",
+      "instagram": null,
+      "youtube": null,
+      "role": "user",
+      "stats": {
+        "email": "a.toprak.kutuk@gmail.com",
+        "events": 0,
+        "garage": [],
+        "market": 0,
+        "markers": 0,
+        "is_trial": false,
+        "missions": {
+          "m1": true
+        },
+        "ref_code": "TOP5163AK",
+        "ref_count": 0,
+        "ref_month": "2026-06",
+        "weekly_xp": 1350,
+        "last_login": "2026-06-26",
+        "monthly_xp": 1350,
+        "onboarding": true,
+        "spin_count": 1,
+        "votes_cast": 2,
+        "secret_word": "Cannondale",
+        "current_week": "2026-06-22",
+        "last_seen_ts": 1782467997,
+        "login_streak": 1,
+        "premium_tier": 0,
+        "ai_usage_date": "",
+        "avatar_effect": "none",
+        "current_month": "2026-06",
+        "premium_color": "",
+        "profile_views": 0,
+        "session_token": "0d02d8f6-c55d-430a-b479-44c229cea8bf",
+        "ai_usage_count": 0,
+        "claimable_refs": 0,
+        "daily_missions": {
+          "date": "2026-06-26",
+          "done_d1": true,
+          "daily_login": 1
+        },
+        "email_verified": false,
+        "last_spin_date": "2026-06-26",
+        "total_messages": 0,
+        "trial_notified": false,
+        "weekly_missions": {},
+        "marketing_opt_in": true,
+        "verification_code": "749660",
+        "onboarding_completed": true
+      },
+      "is_banned": false,
+      "created_at": "2026-06-26T06:13:28.07476+00:00",
+      "updated_at": "2026-06-26T09:59:57.363274+00:00",
+      "xp": 1350,
+      "level": 1,
+      "password": "pbkdf2:sha256:600000$z0NlLezi94Q5bsez$d091f10657fa955418098859f0a3cf33e70b83b84723155ddd04efa67e7b03f9",
+      "accepted_chat_rules": false
+    },
+    {
       "id": "a511a43e-d764-4af0-bed7-577d5e46580f",
       "username": "_omer__",
       "password_hash": null,
@@ -13481,8 +13546,8 @@
       },
       "is_banned": false,
       "created_at": "2026-05-28T05:42:18.835993+00:00",
-      "updated_at": "2026-06-26T09:37:50.74222+00:00",
-      "xp": 91720,
+      "updated_at": "2026-06-26T09:57:38.455452+00:00",
+      "xp": 92120,
       "level": 1,
       "password": "pbkdf2:sha256:600000$aitWrbHXy2JvrA3z$df889df9c0761a02640f679c9cfe40303ed545cfe0492bd274a9a68d8994f207",
       "accepted_chat_rules": true
@@ -14031,70 +14096,6 @@
       "level": 1,
       "password": "scrypt:32768:8:1$UOpxnkgV0YDarXI6$8d512e26c5e1c4067ba1c7bbc4c34253a10c4eb4e86009069abe0637cf4367ecb58585a5895751f267fb9ce760c903df46429cd385c8da11ea3074f1b72e9a82",
       "accepted_chat_rules": true
-    },
-    {
-      "id": "fbb06979-a01a-4d91-9c82-21f3f22383d9",
-      "username": "Toprak",
-      "password_hash": null,
-      "name": "Kütük",
-      "bio": "",
-      "avatar": "https://cdn.freeridertr.com.tr/profil%20resmi/unnamed.jpg",
-      "city": "Gebze",
-      "instagram": null,
-      "youtube": null,
-      "role": "user",
-      "stats": {
-        "email": "a.toprak.kutuk@gmail.com",
-        "events": 0,
-        "garage": [],
-        "market": 0,
-        "markers": 0,
-        "is_trial": false,
-        "missions": {
-          "m1": true
-        },
-        "ref_code": "TOP5163AK",
-        "ref_count": 0,
-        "ref_month": "2026-06",
-        "weekly_xp": 1350,
-        "last_login": "2026-06-26",
-        "monthly_xp": 1350,
-        "onboarding": true,
-        "spin_count": 1,
-        "secret_word": "Cannondale",
-        "current_week": "2026-06-22",
-        "last_seen_ts": 1782461163,
-        "login_streak": 1,
-        "premium_tier": 0,
-        "ai_usage_date": "",
-        "avatar_effect": "none",
-        "current_month": "2026-06",
-        "premium_color": "",
-        "profile_views": 0,
-        "session_token": "0d02d8f6-c55d-430a-b479-44c229cea8bf",
-        "ai_usage_count": 0,
-        "claimable_refs": 0,
-        "daily_missions": {
-          "date": "2026-06-26",
-          "done_d1": true,
-          "daily_login": 1
-        },
-        "email_verified": false,
-        "last_spin_date": "2026-06-26",
-        "total_messages": 0,
-        "trial_notified": false,
-        "weekly_missions": {},
-        "marketing_opt_in": true,
-        "verification_code": "749660",
-        "onboarding_completed": true
-      },
-      "is_banned": false,
-      "created_at": "2026-06-26T06:13:28.07476+00:00",
-      "updated_at": "2026-06-26T08:06:03.24704+00:00",
-      "xp": 1350,
-      "level": 1,
-      "password": "pbkdf2:sha256:600000$z0NlLezi94Q5bsez$d091f10657fa955418098859f0a3cf33e70b83b84723155ddd04efa67e7b03f9",
-      "accepted_chat_rules": false
     },
     {
       "id": "c1ba0923-4e20-496d-bbe3-ed0a17b55e0b",
@@ -26159,7 +26160,7 @@
         "riding_lat": 39.584157,
         "riding_lng": 27.0322252,
         "current_week": "2026-06-22",
-        "last_seen_ts": 1782464105,
+        "last_seen_ts": 1782467859,
         "login_streak": 1,
         "premium_tier": 0,
         "riding_until": 0,
@@ -26188,7 +26189,7 @@
       },
       "is_banned": false,
       "created_at": "2026-06-02T22:29:26.395959+00:00",
-      "updated_at": "2026-06-26T08:55:05.403357+00:00",
+      "updated_at": "2026-06-26T09:57:39.925291+00:00",
       "xp": 320,
       "level": 1,
       "password": "pbkdf2:sha256:600000$8n8p7jsaTDWOETtI$7d653690489d9a2d7d1175caddc198b10aec893541084610f13f60ce39a42019",
@@ -35637,6 +35638,70 @@
       "updated_at": "2026-06-03T15:25:44.560295+00:00"
     },
     {
+      "id": "c75e5204-2c0a-4c9c-a5c1-7ec59a7934b3",
+      "username": "Aeganfr",
+      "week_id": "2026-W22",
+      "category": "Hardtail",
+      "bike_data": {
+        "id": 1779949256134,
+        "desc": "",
+        "fork": "Rockshox silver tl 35",
+        "stem": "",
+        "type": "Trail",
+        "chain": "Kmc",
+        "grips": "Odi hucker",
+        "image": [
+          "https://cdn.freeridertr.com.tr/uploads/b36949b19a564d7ab18e000c5a8016ff.jpg"
+        ],
+        "model": "Cube acid",
+        "rotor": "180",
+        "shock": "",
+        "tires": "Maxxis ikon 27.5x2.25",
+        "brakes": "Mt5",
+        "pedals": "Shimano PD-GR400",
+        "saddle": "",
+        "weight": "13kg",
+        "cassette": "",
+        "crankset": "Deore m6100",
+        "seatpost": "",
+        "wheelset": "Dt swiss e593",
+        "handlebar": "Xlc",
+        "tire_size": "48pai",
+        "drivetrain": "Singel speed",
+        "original_index": 0
+      },
+      "user_ratings": [
+        {
+          "user": "Admin",
+          "score": 8.0
+        },
+        {
+          "user": "umut_ht35",
+          "score": 10.0
+        },
+        {
+          "user": "Furkan_fr.52",
+          "score": 8.0
+        },
+        {
+          "user": "Egemen",
+          "score": 9.0
+        },
+        {
+          "user": "Emirr",
+          "score": 1.0
+        },
+        {
+          "user": "Toprak",
+          "score": 10.0
+        }
+      ],
+      "avg_rating": 7.7,
+      "final_rank": 1,
+      "created_at": "2026-05-31T23:51:50.285852+00:00",
+      "updated_at": "2026-06-02T14:39:57.484699+00:00"
+    },
+    {
       "id": "b1f61680-3ed2-420d-9d11-6b60d5447c5f",
       "username": "umut_ht35",
       "week_id": "2026-W22",
@@ -35691,66 +35756,6 @@
       "final_rank": 1,
       "created_at": "2026-06-02T14:51:30.69056+00:00",
       "updated_at": "2026-06-02T18:56:35.645587+00:00"
-    },
-    {
-      "id": "c75e5204-2c0a-4c9c-a5c1-7ec59a7934b3",
-      "username": "Aeganfr",
-      "week_id": "2026-W22",
-      "category": "Hardtail",
-      "bike_data": {
-        "id": 1779949256134,
-        "desc": "",
-        "fork": "Rockshox silver tl 35",
-        "stem": "",
-        "type": "Trail",
-        "chain": "Kmc",
-        "grips": "Odi hucker",
-        "image": [
-          "https://cdn.freeridertr.com.tr/uploads/b36949b19a564d7ab18e000c5a8016ff.jpg"
-        ],
-        "model": "Cube acid",
-        "rotor": "180",
-        "shock": "",
-        "tires": "Maxxis ikon 27.5x2.25",
-        "brakes": "Mt5",
-        "pedals": "Shimano PD-GR400",
-        "saddle": "",
-        "weight": "13kg",
-        "cassette": "",
-        "crankset": "Deore m6100",
-        "seatpost": "",
-        "wheelset": "Dt swiss e593",
-        "handlebar": "Xlc",
-        "tire_size": "48pai",
-        "drivetrain": "Singel speed",
-        "original_index": 0
-      },
-      "user_ratings": [
-        {
-          "user": "Admin",
-          "score": 8.0
-        },
-        {
-          "user": "umut_ht35",
-          "score": 10.0
-        },
-        {
-          "user": "Furkan_fr.52",
-          "score": 8.0
-        },
-        {
-          "user": "Egemen",
-          "score": 9.0
-        },
-        {
-          "user": "Emirr",
-          "score": 1.0
-        }
-      ],
-      "avg_rating": 7.2,
-      "final_rank": 1,
-      "created_at": "2026-05-31T23:51:50.285852+00:00",
-      "updated_at": "2026-06-02T14:39:57.484699+00:00"
     },
     {
       "id": "3afc1f47-3aae-44de-997e-f69697ad29c5",
@@ -36205,45 +36210,6 @@
       "updated_at": null
     },
     {
-      "id": "c01fcd1c-3024-4e98-bac2-7785f897c4d8",
-      "username": "agony.ht",
-      "week_id": "2026-W25",
-      "category": "Hardtail",
-      "bike_data": {
-        "id": 1782427404068,
-        "desc": "",
-        "fork": "Fox 34 factory kashima 2015",
-        "stem": "Lunje gumjs",
-        "type": "Diger",
-        "chain": "9 lu",
-        "grips": "80cm",
-        "image": [
-          "https://cdn.freeridertr.com.tr/uploads/475f7291348c4314bbeb5ad3db6a24cb.jpg"
-        ],
-        "model": "Rockrider btwin 560 ht L",
-        "rotor": "On 180 arka 160",
-        "shock": "",
-        "tires": "On michell 2.60 arka cst rock hawk 2.25 yanakli",
-        "brakes": "On arka xtr 2 piston",
-        "pedals": "Evo siyah",
-        "saddle": "Bandit",
-        "weight": "14kg",
-        "cassette": "",
-        "crankset": "Bolany",
-        "seatpost": "15 rise",
-        "wheelset": "Mach1",
-        "handlebar": "Pro frs",
-        "tire_size": "2.60 2.25",
-        "drivetrain": "Single speed",
-        "original_index": 0
-      },
-      "user_ratings": [],
-      "avg_rating": 0,
-      "final_rank": 0,
-      "created_at": null,
-      "updated_at": null
-    },
-    {
       "id": "df44f794-ed22-463f-922c-85985ef4a865",
       "username": "umut_ht35",
       "week_id": "2026-W25",
@@ -36278,6 +36244,50 @@
       },
       "user_ratings": [],
       "avg_rating": 0,
+      "final_rank": 0,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "c01fcd1c-3024-4e98-bac2-7785f897c4d8",
+      "username": "agony.ht",
+      "week_id": "2026-W25",
+      "category": "Hardtail",
+      "bike_data": {
+        "id": 1782427404068,
+        "desc": "",
+        "fork": "Fox 34 factory kashima 2015",
+        "stem": "Lunje gumjs",
+        "type": "Diger",
+        "chain": "9 lu",
+        "grips": "80cm",
+        "image": [
+          "https://cdn.freeridertr.com.tr/uploads/475f7291348c4314bbeb5ad3db6a24cb.jpg"
+        ],
+        "model": "Rockrider btwin 560 ht L",
+        "rotor": "On 180 arka 160",
+        "shock": "",
+        "tires": "On michell 2.60 arka cst rock hawk 2.25 yanakli",
+        "brakes": "On arka xtr 2 piston",
+        "pedals": "Evo siyah",
+        "saddle": "Bandit",
+        "weight": "14kg",
+        "cassette": "",
+        "crankset": "Bolany",
+        "seatpost": "15 rise",
+        "wheelset": "Mach1",
+        "handlebar": "Pro frs",
+        "tire_size": "2.60 2.25",
+        "drivetrain": "Single speed",
+        "original_index": 0
+      },
+      "user_ratings": [
+        {
+          "user": "Toprak",
+          "score": 7.5
+        }
+      ],
+      "avg_rating": 7.5,
       "final_rank": 0,
       "created_at": null,
       "updated_at": null
