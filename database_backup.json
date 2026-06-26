@@ -1,6 +1,6 @@
 {
   "_metadata": {
-    "timestamp": "2026-06-26T06:00:03.720207",
+    "timestamp": "2026-06-26T06:10:03.941956",
     "description": "Supabase Auto-Backup"
   },
   "users": [
@@ -490,8 +490,8 @@
       },
       "is_banned": false,
       "created_at": "2026-06-03T13:49:45.868426+00:00",
-      "updated_at": "2026-06-26T02:55:06.64257+00:00",
-      "xp": 82400,
+      "updated_at": "2026-06-26T03:04:01.632786+00:00",
+      "xp": 82800,
       "level": 1,
       "password": "pbkdf2:sha256:600000$BslaMh4hGLWwmNTR$ff82eae866a1b86ccfc98390757cd6ddca115fdfaf25b0645979d8586f3233ba",
       "accepted_chat_rules": true
@@ -13221,8 +13221,8 @@
       },
       "is_banned": false,
       "created_at": "2026-05-28T05:42:18.835993+00:00",
-      "updated_at": "2026-06-26T02:55:06.669547+00:00",
-      "xp": 83320,
+      "updated_at": "2026-06-26T03:04:01.663815+00:00",
+      "xp": 83720,
       "level": 1,
       "password": "pbkdf2:sha256:600000$aitWrbHXy2JvrA3z$df889df9c0761a02640f679c9cfe40303ed545cfe0492bd274a9a68d8994f207",
       "accepted_chat_rules": true
