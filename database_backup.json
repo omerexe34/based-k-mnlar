@@ -1,6 +1,6 @@
 {
   "_metadata": {
-    "timestamp": "2026-06-26T05:50:04.391137",
+    "timestamp": "2026-06-26T06:00:03.720207",
     "description": "Supabase Auto-Backup"
   },
   "users": [
@@ -490,8 +490,8 @@
       },
       "is_banned": false,
       "created_at": "2026-06-03T13:49:45.868426+00:00",
-      "updated_at": "2026-06-26T02:47:37.37714+00:00",
-      "xp": 82000,
+      "updated_at": "2026-06-26T02:55:06.64257+00:00",
+      "xp": 82400,
       "level": 1,
       "password": "pbkdf2:sha256:600000$BslaMh4hGLWwmNTR$ff82eae866a1b86ccfc98390757cd6ddca115fdfaf25b0645979d8586f3233ba",
       "accepted_chat_rules": true
@@ -13221,8 +13221,8 @@
       },
       "is_banned": false,
       "created_at": "2026-05-28T05:42:18.835993+00:00",
-      "updated_at": "2026-06-26T02:47:37.409372+00:00",
-      "xp": 82920,
+      "updated_at": "2026-06-26T02:55:06.669547+00:00",
+      "xp": 83320,
       "level": 1,
       "password": "pbkdf2:sha256:600000$aitWrbHXy2JvrA3z$df889df9c0761a02640f679c9cfe40303ed545cfe0492bd274a9a68d8994f207",
       "accepted_chat_rules": true
@@ -22350,28 +22350,32 @@
           "m6": true,
           "m8": true,
           "m9": true,
-          "m10": true
+          "m10": true,
+          "m23": true
         },
         "ref_code": "OME7863R1",
         "fcm_token": "eaRVGZQlS7mQv_wMDoMzZ7:APA91bFhJeWuWc4jwcJvVo8fgXfnOfqJOFIlmvxvJX9pwSRlpSdu4ENiROyyoLvjNTkxVKc7vOdRbBG8T7C_A11A77ybQk3gR-5l5QfPnSdiP_urElTY0Kc",
         "ref_count": 0,
         "ref_month": "2026-04",
-        "weekly_xp": 1850,
+        "weekly_xp": 2100,
         "last_login": "2026-06-26",
-        "monthly_xp": 2910,
+        "monthly_xp": 3160,
         "onboarding": true,
         "reset_code": "957583",
         "riding_lat": 39,
         "riding_lng": 35,
         "spin_count": 1,
         "current_week": "2026-06-22",
-        "last_seen_ts": 1782442060,
+        "last_seen_ts": 1782442239,
         "login_streak": 4,
         "premium_tier": 0,
         "riding_until": 0,
         "ai_usage_date": "2026-05-28",
         "avatar_effect": "fire",
         "current_month": "2026-06",
+        "earned_badges": [
+          "badge_m23"
+        ],
         "gp_product_id": "freeridertr_standard_pack_monthly",
         "last_login_ip": "5.229.177.171",
         "premium_color": "",
@@ -22382,7 +22386,7 @@
         "ai_usage_count": 2,
         "claimable_refs": 0,
         "daily_missions": {
-          "date": "2026-06-25",
+          "date": "2026-06-26",
           "done_d1": true,
           "daily_login": 1
         },
@@ -22416,8 +22420,8 @@
       },
       "is_banned": false,
       "created_at": "2026-05-23T18:51:36.395619+00:00",
-      "updated_at": "2026-06-26T02:47:40.247808+00:00",
-      "xp": 7280,
+      "updated_at": "2026-06-26T02:50:39.524376+00:00",
+      "xp": 7530,
       "level": 1,
       "password": "pbkdf2:sha256:600000$4z0hE1WZJ8flkyEj$eaee0c675c426153fb621a6bb0293425dd454c44f0c95dee5c5928265bfe0596",
       "accepted_chat_rules": true
