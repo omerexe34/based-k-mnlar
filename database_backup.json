@@ -1,6 +1,6 @@
 {
   "_metadata": {
-    "timestamp": "2026-06-27T09:30:04.001073",
+    "timestamp": "2026-06-27T09:40:04.222823",
     "description": "Supabase Auto-Backup"
   },
   "users": [
@@ -1600,11 +1600,12 @@
         "trial_notified": false,
         "weekly_missions": {},
         "marketing_opt_in": true,
-        "verification_code": "958699"
+        "verification_code": "958699",
+        "last_miss_notif_ts": 1782542235
       },
       "is_banned": false,
       "created_at": "2026-06-26T20:17:59.326345+00:00",
-      "updated_at": "2026-06-26T20:17:59.326345+00:00",
+      "updated_at": "2026-06-27T06:37:15.439537+00:00",
       "xp": 100,
       "level": 1,
       "password": "pbkdf2:sha256:600000$FwIHzTZMQICgAijP$5a4af22972c98814702b20ec4f8d768a848f0afee97c9ceb0a7bd87ce380eaea",
