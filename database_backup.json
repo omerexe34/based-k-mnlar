@@ -1,6 +1,6 @@
 {
   "_metadata": {
-    "timestamp": "2026-06-27T21:00:04.397208",
+    "timestamp": "2026-06-27T21:10:03.831504",
     "description": "Supabase Auto-Backup"
   },
   "users": [
@@ -12959,8 +12959,8 @@
       },
       "is_banned": false,
       "created_at": "2026-06-03T13:49:45.868426+00:00",
-      "updated_at": "2026-06-27T17:46:34.176734+00:00",
-      "xp": 7600,
+      "updated_at": "2026-06-27T18:06:18.283349+00:00",
+      "xp": 8000,
       "level": 1,
       "password": "pbkdf2:sha256:600000$BslaMh4hGLWwmNTR$ff82eae866a1b86ccfc98390757cd6ddca115fdfaf25b0645979d8586f3233ba",
       "accepted_chat_rules": true
@@ -23839,8 +23839,8 @@
       },
       "is_banned": false,
       "created_at": "2026-05-28T05:42:18.835993+00:00",
-      "updated_at": "2026-06-27T17:46:34.224823+00:00",
-      "xp": 9510,
+      "updated_at": "2026-06-27T18:06:18.308436+00:00",
+      "xp": 9910,
       "level": 1,
       "password": "pbkdf2:sha256:600000$aitWrbHXy2JvrA3z$df889df9c0761a02640f679c9cfe40303ed545cfe0492bd274a9a68d8994f207",
       "accepted_chat_rules": true
@@ -27689,15 +27689,15 @@
         "ref_code": "ALI4545LI",
         "ref_count": 0,
         "ref_month": "2026-06",
-        "weekly_xp": 60,
-        "last_login": "2026-06-26",
-        "monthly_xp": 320,
+        "weekly_xp": 180,
+        "last_login": "2026-06-27",
+        "monthly_xp": 440,
         "onboarding": true,
         "riding_lat": 39.584157,
         "riding_lng": 27.0322252,
         "current_week": "2026-06-22",
-        "last_seen_ts": 1782479884,
-        "login_streak": 1,
+        "last_seen_ts": 1782583574,
+        "login_streak": 2,
         "premium_tier": 0,
         "riding_until": 0,
         "ai_usage_date": "",
@@ -27710,7 +27710,7 @@
         "ai_usage_count": 0,
         "claimable_refs": 0,
         "daily_missions": {
-          "date": "2026-06-03",
+          "date": "2026-06-27",
           "done_d1": true,
           "daily_login": 1
         },
@@ -27725,8 +27725,8 @@
       },
       "is_banned": false,
       "created_at": "2026-06-02T22:29:26.395959+00:00",
-      "updated_at": "2026-06-27T00:07:11.393442+00:00",
-      "xp": 320,
+      "updated_at": "2026-06-27T18:06:20.084775+00:00",
+      "xp": 440,
       "level": 1,
       "password": "pbkdf2:sha256:600000$8n8p7jsaTDWOETtI$7d653690489d9a2d7d1175caddc198b10aec893541084610f13f60ce39a42019",
       "accepted_chat_rules": false
@@ -39835,7 +39835,8 @@
       "likes": [
         "agony.ht",
         "umut_ht35",
-        "Admin"
+        "Admin",
+        "ali"
       ],
       "comment_count": 0,
       "created_at": 1782539024346,
