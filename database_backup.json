@@ -1,6 +1,6 @@
 {
   "_metadata": {
-    "timestamp": "2026-06-27T21:40:03.626044",
+    "timestamp": "2026-06-27T21:50:03.348385",
     "description": "Supabase Auto-Backup"
   },
   "users": [
@@ -12959,8 +12959,8 @@
       },
       "is_banned": false,
       "created_at": "2026-06-03T13:49:45.868426+00:00",
-      "updated_at": "2026-06-27T18:26:00.590895+00:00",
-      "xp": 8200,
+      "updated_at": "2026-06-27T18:43:05.695876+00:00",
+      "xp": 8600,
       "level": 1,
       "password": "pbkdf2:sha256:600000$BslaMh4hGLWwmNTR$ff82eae866a1b86ccfc98390757cd6ddca115fdfaf25b0645979d8586f3233ba",
       "accepted_chat_rules": true
@@ -14359,102 +14359,6 @@
       "accepted_chat_rules": false
     },
     {
-      "id": "e04ec3c6-a61a-4941-92f9-0c1511e471a5",
-      "username": "doruk.rr540",
-      "password_hash": null,
-      "name": "Doruk Baysal",
-      "bio": "Rockrider st 540 small ",
-      "avatar": "https://cdn.freeridertr.com.tr/avatars/a3a7402b022045a0b3d627e5d1200e04.jpg",
-      "city": "Adana",
-      "instagram": null,
-      "youtube": null,
-      "role": "user",
-      "stats": {
-        "events": 0,
-        "garage": [
-          {
-            "id": 1782500360124,
-            "desc": "Eski bike 4 çatlaklı ghost",
-            "fork": "Rockshox silver 35",
-            "stem": "Hasnns pembe",
-            "type": "Freeride",
-            "chain": "Altus",
-            "grips": "Btwin elcik",
-            "image": [
-              "https://cdn.freeridertr.com.tr/bildirim%20resmi/photo_5825636358775573905_y%20(1).jpg"
-            ],
-            "model": "Rockrider st 540 small",
-            "rotor": "160",
-            "shock": "Yok",
-            "tires": "Rockhawk 2.25 27,5",
-            "brakes": "Arka dört piston deore,ön slx kol mt 200 kaliper",
-            "pedals": "İmpact",
-            "saddle": "Dynacraft",
-            "weight": "Bilmiyom",
-            "cassette": "Shimano",
-            "crankset": "Shimano",
-            "seatpost": "Anlamadım",
-            "wheelset": "Arka Raceface aeffect sl 24,ön mavic xm119",
-            "handlebar": "Stok rr gidonu",
-            "tire_size": "48 psi",
-            "drivetrain": "Altus uzun bacak"
-          }
-        ],
-        "market": 0,
-        "markers": 47,
-        "is_trial": false,
-        "missions": {
-          "m1": true,
-          "m5": true,
-          "m8": true,
-          "m9": true
-        },
-        "ref_code": "DOR364040",
-        "ref_count": 0,
-        "ref_month": "2026-06",
-        "weekly_xp": 2180,
-        "last_login": "2026-06-27",
-        "monthly_xp": 2180,
-        "onboarding": true,
-        "secret_word": "Rr540",
-        "current_week": "2026-06-22",
-        "last_seen_ts": 1782576552,
-        "login_streak": 2,
-        "premium_tier": 0,
-        "ai_usage_date": "",
-        "avatar_effect": "none",
-        "current_month": "2026-06",
-        "premium_color": "",
-        "profile_views": 11,
-        "session_token": "9e96ef1e-0d25-42e6-87d6-b2d3f1dcdfeb",
-        "ai_usage_count": 0,
-        "claimable_refs": 0,
-        "daily_missions": {
-          "date": "2026-06-27",
-          "done_d1": true,
-          "daily_login": 1
-        },
-        "email_verified": false,
-        "social_rewards": [
-          "freeridertr1",
-          "om3r.em1n",
-          "om3r_10fr"
-        ],
-        "total_messages": 11,
-        "trial_notified": false,
-        "weekly_missions": {},
-        "verification_code": "",
-        "onboarding_completed": true
-      },
-      "is_banned": false,
-      "created_at": "2026-06-26T17:23:01.319211+00:00",
-      "updated_at": "2026-06-27T16:26:48.289597+00:00",
-      "xp": 3080,
-      "level": 1,
-      "password": "pbkdf2:sha256:600000$TsHNTsoFXFtDIdUf$43913d9969b0b1286cbd7798c8a71177935b957aaa58c975bf19e07ad238e156",
-      "accepted_chat_rules": true
-    },
-    {
       "id": "6a1e4460-24df-404f-833b-09fe2299a66d",
       "username": "Sen",
       "password_hash": null,
@@ -14604,6 +14508,102 @@
       "level": 1,
       "password": "pbkdf2:sha256:600000$Ni928a49ZGSW2CDB$b8a83981bbeca90cde9ef15dd4f8f4e6585fa4d713aba6b507256e3d58b14ddb",
       "accepted_chat_rules": false
+    },
+    {
+      "id": "e04ec3c6-a61a-4941-92f9-0c1511e471a5",
+      "username": "doruk.rr540",
+      "password_hash": null,
+      "name": "Doruk Baysal",
+      "bio": "Rockrider st 540 small ",
+      "avatar": "https://cdn.freeridertr.com.tr/avatars/a3a7402b022045a0b3d627e5d1200e04.jpg",
+      "city": "Adana",
+      "instagram": null,
+      "youtube": null,
+      "role": "user",
+      "stats": {
+        "events": 0,
+        "garage": [
+          {
+            "id": 1782500360124,
+            "desc": "Eski bike 4 çatlaklı ghost",
+            "fork": "Rockshox silver 35",
+            "stem": "Hasnns pembe",
+            "type": "Freeride",
+            "chain": "Altus",
+            "grips": "Btwin elcik",
+            "image": [
+              "https://cdn.freeridertr.com.tr/bildirim%20resmi/photo_5825636358775573905_y%20(1).jpg"
+            ],
+            "model": "Rockrider st 540 small",
+            "rotor": "160",
+            "shock": "Yok",
+            "tires": "Rockhawk 2.25 27,5",
+            "brakes": "Arka dört piston deore,ön slx kol mt 200 kaliper",
+            "pedals": "İmpact",
+            "saddle": "Dynacraft",
+            "weight": "Bilmiyom",
+            "cassette": "Shimano",
+            "crankset": "Shimano",
+            "seatpost": "Anlamadım",
+            "wheelset": "Arka Raceface aeffect sl 24,ön mavic xm119",
+            "handlebar": "Stok rr gidonu",
+            "tire_size": "48 psi",
+            "drivetrain": "Altus uzun bacak"
+          }
+        ],
+        "market": 0,
+        "markers": 47,
+        "is_trial": false,
+        "missions": {
+          "m1": true,
+          "m5": true,
+          "m8": true,
+          "m9": true
+        },
+        "ref_code": "DOR364040",
+        "ref_count": 0,
+        "ref_month": "2026-06",
+        "weekly_xp": 2180,
+        "last_login": "2026-06-27",
+        "monthly_xp": 2180,
+        "onboarding": true,
+        "secret_word": "Rr540",
+        "current_week": "2026-06-22",
+        "last_seen_ts": 1782585887,
+        "login_streak": 2,
+        "premium_tier": 0,
+        "ai_usage_date": "",
+        "avatar_effect": "none",
+        "current_month": "2026-06",
+        "premium_color": "",
+        "profile_views": 11,
+        "session_token": "9e96ef1e-0d25-42e6-87d6-b2d3f1dcdfeb",
+        "ai_usage_count": 0,
+        "claimable_refs": 0,
+        "daily_missions": {
+          "date": "2026-06-27",
+          "done_d1": true,
+          "daily_login": 1
+        },
+        "email_verified": false,
+        "social_rewards": [
+          "freeridertr1",
+          "om3r.em1n",
+          "om3r_10fr"
+        ],
+        "total_messages": 11,
+        "trial_notified": false,
+        "weekly_missions": {},
+        "verification_code": "",
+        "onboarding_completed": true
+      },
+      "is_banned": false,
+      "created_at": "2026-06-26T17:23:01.319211+00:00",
+      "updated_at": "2026-06-27T18:44:47.314073+00:00",
+      "xp": 3080,
+      "level": 1,
+      "password": "pbkdf2:sha256:600000$TsHNTsoFXFtDIdUf$43913d9969b0b1286cbd7798c8a71177935b957aaa58c975bf19e07ad238e156",
+      "accepted_chat_rules": true
     },
     {
       "id": "db6eb523-eafd-4cb5-8f33-bbcd18b84c45",
@@ -23786,8 +23786,8 @@
       },
       "is_banned": false,
       "created_at": "2026-05-28T05:42:18.835993+00:00",
-      "updated_at": "2026-06-27T18:26:00.617616+00:00",
-      "xp": 10110,
+      "updated_at": "2026-06-27T18:43:05.71695+00:00",
+      "xp": 10510,
       "level": 1,
       "password": "pbkdf2:sha256:600000$aitWrbHXy2JvrA3z$df889df9c0761a02640f679c9cfe40303ed545cfe0492bd274a9a68d8994f207",
       "accepted_chat_rules": true
