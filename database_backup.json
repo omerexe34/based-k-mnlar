@@ -1,6 +1,6 @@
 {
   "_metadata": {
-    "timestamp": "2026-06-27T19:50:03.151540",
+    "timestamp": "2026-06-27T20:00:03.769156",
     "description": "Supabase Auto-Backup"
   },
   "users": [
@@ -12959,8 +12959,8 @@
       },
       "is_banned": false,
       "created_at": "2026-06-03T13:49:45.868426+00:00",
-      "updated_at": "2026-06-27T16:44:10.770229+00:00",
-      "xp": 6200,
+      "updated_at": "2026-06-27T16:59:16.856302+00:00",
+      "xp": 6600,
       "level": 1,
       "password": "pbkdf2:sha256:600000$BslaMh4hGLWwmNTR$ff82eae866a1b86ccfc98390757cd6ddca115fdfaf25b0645979d8586f3233ba",
       "accepted_chat_rules": true
@@ -23786,8 +23786,8 @@
       },
       "is_banned": false,
       "created_at": "2026-05-28T05:42:18.835993+00:00",
-      "updated_at": "2026-06-27T16:44:10.795113+00:00",
-      "xp": 8110,
+      "updated_at": "2026-06-27T16:59:16.880783+00:00",
+      "xp": 8510,
       "level": 1,
       "password": "pbkdf2:sha256:600000$aitWrbHXy2JvrA3z$df889df9c0761a02640f679c9cfe40303ed545cfe0492bd274a9a68d8994f207",
       "accepted_chat_rules": true
@@ -27583,6 +27583,103 @@
       "accepted_chat_rules": true
     },
     {
+      "id": "13a14e1b-3054-4975-acae-bbad96b1403f",
+      "username": "Admin",
+      "password_hash": null,
+      "name": "Sistem Yöneticisi",
+      "bio": "FreeriderTR Grubu Kurucusu",
+      "avatar": "https://cdn.freeridertr.com.tr/avatars/1ad299c2a5824da9aee8acbcea0ee425.jpg",
+      "city": "",
+      "instagram": null,
+      "youtube": null,
+      "role": "Admin",
+      "stats": {
+        "email": "omerytoyundad@gmail.com",
+        "events": 101,
+        "garage": [],
+        "market": 105,
+        "last_ip": "176.54.234.110",
+        "markers": 135,
+        "missions": {
+          "m1": true,
+          "m5": true,
+          "m6": true,
+          "m7": true,
+          "m8": true,
+          "m9": true,
+          "m10": true,
+          "m11": true,
+          "m12": true,
+          "m13": true,
+          "m23": true
+        },
+        "expiry_ts": 1787469803,
+        "fcm_token": "djQbTSayTCqg8c8PQSsy3j:APA91bFNS1zP_9K1GVQBK1Myge0h638zvk927klAZ2hIBkgoEoz26ZGmYNNtWTSjJrSxMtk3gofViYLml3bivVMwQeWdDh1pLkhMTa2RkPnS846RI-iKuLs",
+        "weekly_xp": 13890,
+        "last_login": "2026-06-27",
+        "monthly_xp": 18620,
+        "onboarding": true,
+        "riding_lat": 39.5385345,
+        "riding_lng": 26.9443277,
+        "spin_count": 1,
+        "current_week": "2026-06-22",
+        "last_seen_ts": 1782579155,
+        "login_streak": 6,
+        "premium_tier": 3,
+        "riding_until": 0,
+        "ai_usage_date": "2026-04-22",
+        "avatar_effect": "fire",
+        "blocked_users": [
+          "Omer"
+        ],
+        "current_month": "2026-06",
+        "earned_badges": [
+          "badge_m23"
+        ],
+        "gp_product_id": "freeridertr_ultra_pack_monthly",
+        "last_login_ip": "5.229.177.171",
+        "premium_color": "rainbow",
+        "profile_views": 1062,
+        "session_token": "4272c0db-8d43-46a1-a712-5e55aeefe0d0",
+        "ai_usage_count": 1,
+        "daily_missions": {
+          "date": "2026-06-27",
+          "done_d1": true,
+          "daily_login": 1
+        },
+        "email_verified": true,
+        "last_device_id": "d3db3477-1153-48ac-9d33-af77fd9fdf85",
+        "social_rewards": [
+          "om3r_10fr",
+          "om3r.em1n",
+          "freeridertr1"
+        ],
+        "total_messages": 322,
+        "weekly_missions": {
+          "week": "2026-06-22",
+          "weekly_msg": 1
+        },
+        "marketing_opt_in": false,
+        "reel_upload_date": "2026-05-29",
+        "gp_admin_override": true,
+        "gp_purchase_token": "fjpgcpmloghpggeohljjmdng.AO-J1OzJ2UTesiu2UYEMhG0XaRqkOTd1GdS_hROLkwdomsm1B57oeESkmPjj1FPuknkItsQXUZM7uza-w1znBMKR8qbycRns2A",
+        "mod_warning_count": 18,
+        "reel_upload_count": 2,
+        "verification_code": "",
+        "last_miss_notif_ts": 1782201111,
+        "last_mod_warning_ts": 1782382183,
+        "onboarding_completed": true,
+        "weekly_reward_active": true
+      },
+      "is_banned": false,
+      "created_at": "2026-05-23T18:51:36.395619+00:00",
+      "updated_at": "2026-06-27T16:52:35.950852+00:00",
+      "xp": 136439,
+      "level": 1,
+      "password": "pbkdf2:sha256:600000",
+      "accepted_chat_rules": true
+    },
+    {
       "id": "4136fe45-2ea9-49d3-9c14-6206db593565",
       "username": "dorukrr540",
       "password_hash": null,
@@ -27730,103 +27827,6 @@
       "level": 1,
       "password": "pbkdf2:sha256:600000$8n8p7jsaTDWOETtI$7d653690489d9a2d7d1175caddc198b10aec893541084610f13f60ce39a42019",
       "accepted_chat_rules": false
-    },
-    {
-      "id": "13a14e1b-3054-4975-acae-bbad96b1403f",
-      "username": "Admin",
-      "password_hash": null,
-      "name": "Sistem Yöneticisi",
-      "bio": "FreeriderTR Grubu Kurucusu",
-      "avatar": "https://cdn.freeridertr.com.tr/avatars/1ad299c2a5824da9aee8acbcea0ee425.jpg",
-      "city": "",
-      "instagram": null,
-      "youtube": null,
-      "role": "Admin",
-      "stats": {
-        "email": "omerytoyundad@gmail.com",
-        "events": 101,
-        "garage": [],
-        "market": 105,
-        "last_ip": "176.54.234.110",
-        "markers": 135,
-        "missions": {
-          "m1": true,
-          "m5": true,
-          "m6": true,
-          "m7": true,
-          "m8": true,
-          "m9": true,
-          "m10": true,
-          "m11": true,
-          "m12": true,
-          "m13": true,
-          "m23": true
-        },
-        "expiry_ts": 1787469803,
-        "fcm_token": "djQbTSayTCqg8c8PQSsy3j:APA91bFNS1zP_9K1GVQBK1Myge0h638zvk927klAZ2hIBkgoEoz26ZGmYNNtWTSjJrSxMtk3gofViYLml3bivVMwQeWdDh1pLkhMTa2RkPnS846RI-iKuLs",
-        "weekly_xp": 13890,
-        "last_login": "2026-06-27",
-        "monthly_xp": 18620,
-        "onboarding": true,
-        "riding_lat": 39.5385345,
-        "riding_lng": 26.9443277,
-        "spin_count": 1,
-        "current_week": "2026-06-22",
-        "last_seen_ts": 1782578700,
-        "login_streak": 6,
-        "premium_tier": 3,
-        "riding_until": 0,
-        "ai_usage_date": "2026-04-22",
-        "avatar_effect": "fire",
-        "blocked_users": [
-          "Omer"
-        ],
-        "current_month": "2026-06",
-        "earned_badges": [
-          "badge_m23"
-        ],
-        "gp_product_id": "freeridertr_ultra_pack_monthly",
-        "last_login_ip": "5.229.177.171",
-        "premium_color": "rainbow",
-        "profile_views": 1062,
-        "session_token": "4272c0db-8d43-46a1-a712-5e55aeefe0d0",
-        "ai_usage_count": 1,
-        "daily_missions": {
-          "date": "2026-06-27",
-          "done_d1": true,
-          "daily_login": 1
-        },
-        "email_verified": true,
-        "last_device_id": "d3db3477-1153-48ac-9d33-af77fd9fdf85",
-        "social_rewards": [
-          "om3r_10fr",
-          "om3r.em1n",
-          "freeridertr1"
-        ],
-        "total_messages": 322,
-        "weekly_missions": {
-          "week": "2026-06-22",
-          "weekly_msg": 1
-        },
-        "marketing_opt_in": false,
-        "reel_upload_date": "2026-05-29",
-        "gp_admin_override": true,
-        "gp_purchase_token": "fjpgcpmloghpggeohljjmdng.AO-J1OzJ2UTesiu2UYEMhG0XaRqkOTd1GdS_hROLkwdomsm1B57oeESkmPjj1FPuknkItsQXUZM7uza-w1znBMKR8qbycRns2A",
-        "mod_warning_count": 18,
-        "reel_upload_count": 2,
-        "verification_code": "",
-        "last_miss_notif_ts": 1782201111,
-        "last_mod_warning_ts": 1782382183,
-        "onboarding_completed": true,
-        "weekly_reward_active": true
-      },
-      "is_banned": false,
-      "created_at": "2026-05-23T18:51:36.395619+00:00",
-      "updated_at": "2026-06-27T16:45:00.820635+00:00",
-      "xp": 136439,
-      "level": 1,
-      "password": "pbkdf2:sha256:600000",
-      "accepted_chat_rules": true
     }
   ],
   "market_items": [],
