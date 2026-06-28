@@ -1,6 +1,6 @@
 {
   "_metadata": {
-    "timestamp": "2026-06-28T03:10:03.268198",
+    "timestamp": "2026-06-28T03:20:04.079601",
     "description": "Supabase Auto-Backup"
   },
   "users": [
@@ -20132,20 +20132,21 @@
           "m11": true,
           "m12": true,
           "m13": true,
+          "m20": true,
           "m23": true
         },
         "expiry_ts": 1787469803,
         "fcm_token": "djQbTSayTCqg8c8PQSsy3j:APA91bFNS1zP_9K1GVQBK1Myge0h638zvk927klAZ2hIBkgoEoz26ZGmYNNtWTSjJrSxMtk3gofViYLml3bivVMwQeWdDh1pLkhMTa2RkPnS846RI-iKuLs",
-        "weekly_xp": 15010,
+        "weekly_xp": 15110,
         "last_login": "2026-06-28",
-        "monthly_xp": 19740,
+        "monthly_xp": 19840,
         "onboarding": true,
         "riding_lat": 39.5385345,
         "riding_lng": 26.9443277,
         "spin_count": 1,
         "votes_cast": 1,
         "current_week": "2026-06-22",
-        "last_seen_ts": 1782605201,
+        "last_seen_ts": 1782605918,
         "login_streak": 7,
         "premium_tier": 3,
         "riding_until": 0,
@@ -20156,7 +20157,8 @@
         ],
         "current_month": "2026-06",
         "earned_badges": [
-          "badge_m23"
+          "badge_m23",
+          "badge_m20"
         ],
         "gp_product_id": "freeridertr_ultra_pack_monthly",
         "last_login_ip": "5.229.177.171",
@@ -20196,13 +20198,13 @@
       },
       "is_banned": false,
       "created_at": "2026-05-23T18:51:36.395619+00:00",
-      "updated_at": "2026-06-28T00:06:41.290635+00:00",
-      "xp": 137559,
+      "updated_at": "2026-06-28T00:18:39.13908+00:00",
+      "xp": 137659,
       "level": 1,
       "password": "pbkdf2:sha256:600000",
       "accepted_chat_rules": true,
-      "weekly_score": 15010,
-      "monthly_score": 19740,
+      "weekly_score": 15110,
+      "monthly_score": 19840,
       "membership_type": "free",
       "membership_expires_at": null
     },
