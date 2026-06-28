@@ -1,6 +1,6 @@
 {
   "_metadata": {
-    "timestamp": "2026-06-28T12:10:03.860434",
+    "timestamp": "2026-06-28T12:20:03.426664",
     "description": "Supabase Auto-Backup"
   },
   "users": [
@@ -24990,7 +24990,7 @@
         "spin_count": 1,
         "votes_cast": 18,
         "current_week": "2026-06-22",
-        "last_seen_ts": 1782634916,
+        "last_seen_ts": 1782638301,
         "login_streak": 3,
         "premium_tier": 0,
         "riding_until": 0,
@@ -25028,7 +25028,7 @@
       },
       "is_banned": false,
       "created_at": "2026-05-28T05:42:18.835993+00:00",
-      "updated_at": "2026-06-28T08:21:56.481387+00:00",
+      "updated_at": "2026-06-28T09:18:21.858317+00:00",
       "xp": 12030,
       "level": 1,
       "password": "pbkdf2:sha256:600000$aitWrbHXy2JvrA3z$df889df9c0761a02640f679c9cfe40303ed545cfe0492bd274a9a68d8994f207",
