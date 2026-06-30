@@ -1,6 +1,6 @@
 {
   "_metadata": {
-    "timestamp": "2026-07-01T00:10:03.743141",
+    "timestamp": "2026-07-01T00:30:03.770591",
     "description": "Supabase Auto-Backup"
   },
   "users": [
@@ -16393,6 +16393,72 @@
       "badges": []
     },
     {
+      "id": "6f985995-4af3-447a-a7f4-fdf4e3c197b0",
+      "username": "tahaaa",
+      "password_hash": null,
+      "name": "Tahaa",
+      "bio": "",
+      "avatar": "https://cdn.freerider.tr/profil%20resmi/unnamed.jpg",
+      "city": "Bursa",
+      "instagram": null,
+      "youtube": null,
+      "role": "user",
+      "stats": {
+        "email": "srfyildiz1655@gmail.com",
+        "events": 0,
+        "garage": [],
+        "market": 0,
+        "markers": 0,
+        "is_trial": false,
+        "missions": {
+          "m1": true
+        },
+        "ref_code": "TAH8432AA",
+        "ref_count": 0,
+        "ref_month": "2026-06",
+        "weekly_xp": 350,
+        "last_login": "2026-06-30",
+        "monthly_xp": 0,
+        "onboarding": true,
+        "current_week": "2026-06-29",
+        "last_seen_ts": 1782834453,
+        "login_streak": 1,
+        "premium_tier": 0,
+        "ai_usage_date": "",
+        "avatar_effect": "none",
+        "current_month": "2026-07",
+        "premium_color": "",
+        "profile_views": 0,
+        "session_token": "8852aedb-6b68-47de-b314-f26ad3417e71",
+        "ai_usage_count": 0,
+        "claimable_refs": 0,
+        "daily_missions": {
+          "date": "2026-06-30",
+          "done_d1": true,
+          "daily_login": 1
+        },
+        "email_verified": false,
+        "total_messages": 0,
+        "trial_notified": false,
+        "weekly_missions": {},
+        "marketing_opt_in": false,
+        "verification_code": "669375",
+        "onboarding_completed": true
+      },
+      "is_banned": false,
+      "created_at": "2026-06-30T15:42:12.21959+00:00",
+      "updated_at": "2026-06-30T21:27:12.639871+00:00",
+      "xp": 350,
+      "level": 1,
+      "password": "pbkdf2:sha256:600000$FK01bdyY3Omc0Jm9$f1b3873dc35eb79a70c4c907dc358ba5964e3d8590bf3ce3e7c0baa541b7940b",
+      "accepted_chat_rules": false,
+      "weekly_score": 350,
+      "monthly_score": 0,
+      "membership_type": "free",
+      "membership_expires_at": null,
+      "badges": []
+    },
+    {
       "id": "18db21c3-be63-4414-8987-e8adc26e682f",
       "username": "Tunifreeride",
       "password_hash": null,
@@ -16642,72 +16708,6 @@
       "level": 1,
       "password": "pbkdf2:sha256:600000$Gu7C64mpJ5oI3VsH$6a99fa9d829172cbd39aa3eedf5a603d36b0d7520e62f0b747efcefe62473810",
       "accepted_chat_rules": true,
-      "weekly_score": 350,
-      "monthly_score": 350,
-      "membership_type": "free",
-      "membership_expires_at": null,
-      "badges": []
-    },
-    {
-      "id": "6f985995-4af3-447a-a7f4-fdf4e3c197b0",
-      "username": "tahaaa",
-      "password_hash": null,
-      "name": "Tahaa",
-      "bio": "",
-      "avatar": "https://cdn.freerider.tr/profil%20resmi/unnamed.jpg",
-      "city": "Bursa",
-      "instagram": null,
-      "youtube": null,
-      "role": "user",
-      "stats": {
-        "email": "srfyildiz1655@gmail.com",
-        "events": 0,
-        "garage": [],
-        "market": 0,
-        "markers": 0,
-        "is_trial": false,
-        "missions": {
-          "m1": true
-        },
-        "ref_code": "TAH8432AA",
-        "ref_count": 0,
-        "ref_month": "2026-06",
-        "weekly_xp": 350,
-        "last_login": "2026-06-30",
-        "monthly_xp": 350,
-        "onboarding": true,
-        "current_week": "2026-06-29",
-        "last_seen_ts": 1782834453,
-        "login_streak": 1,
-        "premium_tier": 0,
-        "ai_usage_date": "",
-        "avatar_effect": "none",
-        "current_month": "2026-06",
-        "premium_color": "",
-        "profile_views": 0,
-        "session_token": "8852aedb-6b68-47de-b314-f26ad3417e71",
-        "ai_usage_count": 0,
-        "claimable_refs": 0,
-        "daily_missions": {
-          "date": "2026-06-30",
-          "done_d1": true,
-          "daily_login": 1
-        },
-        "email_verified": false,
-        "total_messages": 0,
-        "trial_notified": false,
-        "weekly_missions": {},
-        "marketing_opt_in": false,
-        "verification_code": "669375",
-        "onboarding_completed": true
-      },
-      "is_banned": false,
-      "created_at": "2026-06-30T15:42:12.21959+00:00",
-      "updated_at": "2026-06-30T15:47:33.35138+00:00",
-      "xp": 350,
-      "level": 1,
-      "password": "pbkdf2:sha256:600000$FK01bdyY3Omc0Jm9$f1b3873dc35eb79a70c4c907dc358ba5964e3d8590bf3ce3e7c0baa541b7940b",
-      "accepted_chat_rules": false,
       "weekly_score": 350,
       "monthly_score": 350,
       "membership_type": "free",
@@ -55551,7 +55551,7 @@
         "spin_count": 1,
         "votes_cast": 7,
         "current_week": "2026-06-29",
-        "last_seen_ts": 1782853784,
+        "last_seen_ts": 1782855002,
         "login_streak": 10,
         "premium_tier": 3,
         "riding_until": 0,
@@ -55600,8 +55600,8 @@
       },
       "is_banned": false,
       "created_at": "2026-05-23T18:51:36.395619+00:00",
-      "updated_at": "2026-06-30T21:09:45.029335+00:00",
-      "xp": 138469,
+      "updated_at": "2026-06-30T21:30:02.793065+00:00",
+      "xp": 139069,
       "level": 1,
       "password": "pbkdf2:sha256:600000",
       "accepted_chat_rules": true,
@@ -57106,115 +57106,6 @@
       "accepted_chat_rules": true,
       "weekly_score": 0,
       "monthly_score": 0,
-      "membership_type": "free",
-      "membership_expires_at": null,
-      "badges": []
-    },
-    {
-      "id": "cd745ee2-b0a2-4d89-bba1-1c1917a2a171",
-      "username": "poyrasogut",
-      "password_hash": null,
-      "name": "Poyraz Öğüt",
-      "bio": "",
-      "avatar": "https://cdn.freerider.tr/avatars/0ecae81dd7c04d29aed19352861cb7d4.jpg",
-      "city": "Kocaeli",
-      "instagram": null,
-      "youtube": null,
-      "role": "user",
-      "stats": {
-        "email": "poyrazbabapro1903@gmail.com",
-        "events": 0,
-        "garage": [
-          {
-            "id": 1782809380120,
-            "desc": "",
-            "fork": "Stock raptor",
-            "stem": "Raptor stock",
-            "type": "Trail",
-            "chain": "Shimano stock",
-            "grips": "Ovela 160 beyaz",
-            "image": [
-              "https://cdn.freerider.tr/uploads/6a17c4d63d04439bae889f045987c07f.jpg"
-            ],
-            "model": "Kron Xc100 2025",
-            "rotor": "160mm",
-            "shock": "",
-            "tires": "Maxxis Icon",
-            "brakes": "Mt200",
-            "pedals": "evo turuncu",
-            "saddle": "rio stock",
-            "weight": "14.5",
-            "cassette": "Shimano stock",
-            "crankset": "Shimano 3lü tourney",
-            "seatpost": "raptor stock",
-            "wheelset": "Raptor stock",
-            "handlebar": "Raptor stock",
-            "tire_size": "29 2.20 65 psi",
-            "drivetrain": "Shimano tourney 7vites"
-          }
-        ],
-        "market": 0,
-        "markers": 1,
-        "is_trial": false,
-        "missions": {
-          "m1": true,
-          "m5": true,
-          "m8": true,
-          "m20": true,
-          "m23": true
-        },
-        "ref_code": "POY8045UT",
-        "ref_count": 0,
-        "ref_month": "2026-06",
-        "weekly_xp": 1230,
-        "last_login": "2026-06-30",
-        "monthly_xp": 100,
-        "onboarding": true,
-        "spin_count": 1,
-        "votes_cast": 8,
-        "current_week": "2026-06-29",
-        "last_seen_ts": 1782853732,
-        "login_streak": 2,
-        "premium_tier": 0,
-        "ai_usage_date": "2026-06-30",
-        "avatar_effect": "none",
-        "current_month": "2026-07",
-        "earned_badges": [
-          "badge_m20",
-          "badge_m23"
-        ],
-        "premium_color": "",
-        "profile_views": 0,
-        "session_token": "4945cfbc-df03-4988-80ab-d59f8bf2c1e0",
-        "ai_usage_count": 1,
-        "claimable_refs": 0,
-        "daily_missions": {
-          "date": "2026-07-01",
-          "done_d1": true,
-          "daily_login": 1
-        },
-        "email_verified": false,
-        "last_spin_date": "2026-06-30",
-        "total_messages": 2,
-        "trial_notified": false,
-        "weekly_missions": {
-          "week": "2026-06-29",
-          "weekly_ai": 1
-        },
-        "marketing_opt_in": true,
-        "verification_code": "404023",
-        "last_miss_notif_ts": 1782785133,
-        "onboarding_completed": true
-      },
-      "is_banned": false,
-      "created_at": "2026-06-29T07:56:41.597598+00:00",
-      "updated_at": "2026-06-30T21:08:53.029154+00:00",
-      "xp": 1380,
-      "level": 1,
-      "password": "pbkdf2:sha256:600000$qD1VZ7nM4cni8Ezk$3a08c9a4229a4d8b222da9de28de7f34cb2a6fe1eb01ba6086964f60dfb20a3d",
-      "accepted_chat_rules": true,
-      "weekly_score": 1230,
-      "monthly_score": 100,
       "membership_type": "free",
       "membership_expires_at": null,
       "badges": []
@@ -59374,6 +59265,115 @@
       "accepted_chat_rules": false,
       "weekly_score": 350,
       "monthly_score": 350,
+      "membership_type": "free",
+      "membership_expires_at": null,
+      "badges": []
+    },
+    {
+      "id": "cd745ee2-b0a2-4d89-bba1-1c1917a2a171",
+      "username": "poyrasogut",
+      "password_hash": null,
+      "name": "Poyraz Öğüt",
+      "bio": "",
+      "avatar": "https://cdn.freerider.tr/avatars/0ecae81dd7c04d29aed19352861cb7d4.jpg",
+      "city": "Kocaeli",
+      "instagram": null,
+      "youtube": null,
+      "role": "user",
+      "stats": {
+        "email": "poyrazbabapro1903@gmail.com",
+        "events": 0,
+        "garage": [
+          {
+            "id": 1782809380120,
+            "desc": "",
+            "fork": "Stock raptor",
+            "stem": "Raptor stock",
+            "type": "Trail",
+            "chain": "Shimano stock",
+            "grips": "Ovela 160 beyaz",
+            "image": [
+              "https://cdn.freerider.tr/uploads/6a17c4d63d04439bae889f045987c07f.jpg"
+            ],
+            "model": "Kron Xc100 2025",
+            "rotor": "160mm",
+            "shock": "",
+            "tires": "Maxxis Icon",
+            "brakes": "Mt200",
+            "pedals": "evo turuncu",
+            "saddle": "rio stock",
+            "weight": "14.5",
+            "cassette": "Shimano stock",
+            "crankset": "Shimano 3lü tourney",
+            "seatpost": "raptor stock",
+            "wheelset": "Raptor stock",
+            "handlebar": "Raptor stock",
+            "tire_size": "29 2.20 65 psi",
+            "drivetrain": "Shimano tourney 7vites"
+          }
+        ],
+        "market": 0,
+        "markers": 1,
+        "is_trial": false,
+        "missions": {
+          "m1": true,
+          "m5": true,
+          "m8": true,
+          "m20": true,
+          "m23": true
+        },
+        "ref_code": "POY8045UT",
+        "ref_count": 0,
+        "ref_month": "2026-06",
+        "weekly_xp": 1450,
+        "last_login": "2026-07-01",
+        "monthly_xp": 320,
+        "onboarding": true,
+        "spin_count": 1,
+        "votes_cast": 42,
+        "current_week": "2026-06-29",
+        "last_seen_ts": 1782854514,
+        "login_streak": 3,
+        "premium_tier": 0,
+        "ai_usage_date": "2026-06-30",
+        "avatar_effect": "none",
+        "current_month": "2026-07",
+        "earned_badges": [
+          "badge_m20",
+          "badge_m23"
+        ],
+        "premium_color": "",
+        "profile_views": 0,
+        "session_token": "4945cfbc-df03-4988-80ab-d59f8bf2c1e0",
+        "ai_usage_count": 1,
+        "claimable_refs": 0,
+        "daily_missions": {
+          "date": "2026-07-01",
+          "done_d1": true,
+          "daily_login": 1
+        },
+        "email_verified": false,
+        "last_spin_date": "2026-07-01",
+        "total_messages": 2,
+        "trial_notified": false,
+        "weekly_missions": {
+          "week": "2026-06-29",
+          "weekly_ai": 1
+        },
+        "marketing_opt_in": true,
+        "verification_code": "404023",
+        "last_miss_notif_ts": 1782785133,
+        "onboarding_completed": true
+      },
+      "is_banned": false,
+      "created_at": "2026-06-29T07:56:41.597598+00:00",
+      "updated_at": "2026-06-30T21:21:54.64158+00:00",
+      "xp": 1600,
+      "level": 1,
+      "password": "pbkdf2:sha256:600000$qD1VZ7nM4cni8Ezk$3a08c9a4229a4d8b222da9de28de7f34cb2a6fe1eb01ba6086964f60dfb20a3d",
+      "accepted_chat_rules": true,
+      "weekly_score": 1450,
+      "monthly_score": 320,
       "membership_type": "free",
       "membership_expires_at": null,
       "badges": []
@@ -63531,39 +63531,6 @@
       "bumped_at": 0
     },
     {
-      "id": "1773547576209",
-      "lat": 39.5096260319816,
-      "lng": 26.9726818909277,
-      "name": "Merdiven",
-      "difficulty": "Kolay",
-      "desc": "Kolay merdiven",
-      "image": null,
-      "icon_type": "🚴",
-      "addedBy": "Admin",
-      "likes": [
-        "Admin"
-      ],
-      "fake_reports": [],
-      "dislikes": [],
-      "ratings": {},
-      "avg_rating": 0,
-      "is_dangerous": false,
-      "danger_reports": [],
-      "title": null,
-      "type": null,
-      "description": null,
-      "photos": [],
-      "created_at": "2026-05-21T22:47:26.361279+00:00",
-      "username": null,
-      "category": "🚴",
-      "extra_note": null,
-      "is_hidden": false,
-      "report_count": 0,
-      "updated_at": "2026-05-23T18:51:36.395619+00:00",
-      "views": 0,
-      "bumped_at": 0
-    },
-    {
       "id": "1774859098104",
       "lat": 36.6027406669753,
       "lng": 34.3165007425949,
@@ -63764,6 +63731,39 @@
       "is_hidden": false,
       "report_count": 0,
       "updated_at": "2026-06-29 22:09:33.819972+00",
+      "views": 0,
+      "bumped_at": 0
+    },
+    {
+      "id": "1773547576209",
+      "lat": 39.5096260319816,
+      "lng": 26.9726818909277,
+      "name": "Merdiven",
+      "difficulty": "Kolay",
+      "desc": "Kolay merdiven",
+      "image": null,
+      "icon_type": "🚴",
+      "addedBy": "Admin",
+      "likes": [
+        "Admin"
+      ],
+      "fake_reports": [],
+      "dislikes": [],
+      "ratings": {},
+      "avg_rating": 0,
+      "is_dangerous": false,
+      "danger_reports": [],
+      "title": null,
+      "type": null,
+      "description": null,
+      "photos": [],
+      "created_at": "2026-05-21T22:47:26.361279+00:00",
+      "username": null,
+      "category": "🚴",
+      "extra_note": null,
+      "is_hidden": false,
+      "report_count": 0,
+      "updated_at": "2026-06-30 21:29:18.843422+00",
       "views": 0,
       "bumped_at": 0
     },
@@ -66122,14 +66122,27 @@
       "title": "A101",
       "type": null,
       "description": null,
-      "photos": [],
+      "photos": [
+        {
+          "id": "1782854664933",
+          "url": "https://cdn.freerider.tr/marker_photos/3a16b696cf7a4ff8b4abcf5941ce6741.jpg",
+          "uploader": "Admin",
+          "created_at": 1782854664
+        },
+        {
+          "id": "1782854727947",
+          "url": "https://cdn.freerider.tr/marker_photos/12d1fc1a9da54e05ad95497a5b6a989a.jpg",
+          "uploader": "Admin",
+          "created_at": 1782854727
+        }
+      ],
       "created_at": "2026-05-28T00:58:55.668426+00:00",
       "username": null,
       "category": "Market",
       "extra_note": "",
       "is_hidden": false,
       "report_count": 0,
-      "updated_at": "2026-05-28T00:58:55.668426+00:00",
+      "updated_at": "2026-06-30 21:25:27.951207+00",
       "views": 0,
       "bumped_at": 0
     },
@@ -84107,9 +84120,13 @@
         {
           "user": "ikon_rr540",
           "score": 8.0
+        },
+        {
+          "user": "poyrasogut",
+          "score": 8.0
         }
       ],
-      "avg_rating": 6.7,
+      "avg_rating": 6.9,
       "final_rank": 1,
       "created_at": "2026-06-02T18:42:50.544389+00:00",
       "updated_at": "2026-06-02T18:56:48.710047+00:00"
@@ -84167,9 +84184,13 @@
         {
           "user": "agony.ht",
           "score": 10.0
+        },
+        {
+          "user": "poyrasogut",
+          "score": 8.0
         }
       ],
-      "avg_rating": 6.5,
+      "avg_rating": 6.8,
       "final_rank": 2,
       "created_at": "2026-06-02T19:30:24.773049+00:00",
       "updated_at": "2026-06-02T19:30:24.773049+00:00"
@@ -84227,9 +84248,13 @@
         {
           "user": "agony.ht",
           "score": 1.0
+        },
+        {
+          "user": "poyrasogut",
+          "score": 10.0
         }
       ],
-      "avg_rating": 5.9,
+      "avg_rating": 6.6,
       "final_rank": 1,
       "created_at": "2026-06-02T19:35:50.802156+00:00",
       "updated_at": "2026-06-02T19:35:50.802156+00:00"
@@ -84399,8 +84424,13 @@
         "drivetrain": "Sram",
         "original_index": 0
       },
-      "user_ratings": [],
-      "avg_rating": 0,
+      "user_ratings": [
+        {
+          "user": "poyrasogut",
+          "score": 7.5
+        }
+      ],
+      "avg_rating": 7.5,
       "final_rank": 0,
       "created_at": null,
       "updated_at": null
@@ -84454,6 +84484,10 @@
         {
           "user": "ikon_rr540",
           "score": 9.5
+        },
+        {
+          "user": "poyrasogut",
+          "score": 6.0
         }
       ],
       "avg_rating": 5.9,
@@ -84514,9 +84548,13 @@
         {
           "user": "ikon_rr540",
           "score": 7.0
+        },
+        {
+          "user": "poyrasogut",
+          "score": 5.5
         }
       ],
-      "avg_rating": 6.3,
+      "avg_rating": 6.2,
       "final_rank": 1,
       "created_at": "2026-06-02T14:51:30.69056+00:00",
       "updated_at": "2026-06-02T18:56:35.645587+00:00"
@@ -84566,49 +84604,118 @@
         {
           "user": "ikon_rr540",
           "score": 7.0
+        },
+        {
+          "user": "poyrasogut",
+          "score": 7.0
         }
       ],
-      "avg_rating": 5.5,
+      "avg_rating": 5.9,
       "final_rank": 3,
       "created_at": "2026-06-02T11:22:14.268502+00:00",
       "updated_at": "2026-06-02T18:56:21.373922+00:00"
     },
     {
-      "id": "113359c0-8291-467e-9043-2f30f1e9c2b8",
-      "username": "cagans.fr",
-      "week_id": "2026-W27",
-      "category": "Enduro",
+      "id": "305034ac-02da-4f2d-936a-efdfabd41d74",
+      "username": "Kor4y.dj",
+      "week_id": "2026-W25",
+      "category": "BMX",
       "bike_data": {
-        "id": 1782852794304,
+        "id": 1782401195615,
         "desc": "",
-        "fork": "Rockshox Lyrik RCT3 Debonair",
-        "stem": "Truvativ hussefelt",
-        "type": "Freeride",
-        "chain": "Kmc",
-        "grips": "No name",
+        "fork": "Rst dırth",
+        "stem": "",
+        "type": "Dirt Jump",
+        "chain": "",
+        "grips": "",
         "image": [
           "https://cdn.freeridertr.com.tr/bildirim%20resmi/photo_5825636358775573905_y%20(1).jpg"
         ],
-        "model": "SCOTT Voltage Fr710",
-        "rotor": "160/180",
-        "shock": "Fox Dhx RC2",
-        "tires": "Maxxis dhr",
-        "brakes": "Deore m4100 4 piston",
-        "pedals": "Nukeproof",
-        "saddle": "No name",
-        "weight": "15-16",
-        "cassette": "Saint",
-        "crankset": "Saint",
-        "seatpost": "Syncross",
-        "wheelset": "Dt swiss fr 1950",
-        "handlebar": "Chromah fu40",
-        "tire_size": "2.40",
-        "drivetrain": "Shimano SLX 11V",
+        "model": "Ns bike",
+        "rotor": "200/200",
+        "shock": "",
+        "tires": "Kenda",
+        "brakes": "Mt 200",
+        "pedals": "",
+        "saddle": "Ns bikes",
+        "weight": "12",
+        "cassette": "",
+        "crankset": "",
+        "seatpost": "",
+        "wheelset": "",
+        "handlebar": "Ns bikes 60 ml rise",
+        "tire_size": "",
+        "drivetrain": "",
         "original_index": 0
       },
-      "user_ratings": [],
-      "avg_rating": 0,
-      "final_rank": 0,
+      "user_ratings": [
+        {
+          "user": "Aeganfr",
+          "score": 5.0
+        },
+        {
+          "user": "ikon_rr540",
+          "score": 4.0
+        },
+        {
+          "user": "poyrasogut",
+          "score": 5.0
+        }
+      ],
+      "avg_rating": 4.7,
+      "final_rank": 1,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "0d2e001c-9f2b-4220-8912-80fcbe352ed1",
+      "username": "Toprak",
+      "week_id": "2026-W25",
+      "category": "Enduro",
+      "bike_data": {
+        "id": 1782468148166,
+        "desc": "",
+        "fork": "Rockshox zeb",
+        "stem": "Cannondale",
+        "type": "Freeride",
+        "chain": "Slx deore",
+        "grips": "Fabric",
+        "image": [
+          "https://cdn.freeridertr.com.tr/bildirim%20resmi/photo_5825636358775573905_y%20(1).jpg"
+        ],
+        "model": "Cannondale jekyll 2",
+        "rotor": "203/203",
+        "shock": "Fox float x",
+        "tires": "Ön assegai arka münion dhr",
+        "brakes": "Ön deore m6120 arka kol slx fren m6120",
+        "pedals": "No name",
+        "saddle": "Btwin 60 derece",
+        "weight": "16.9",
+        "cassette": "Slx m7100",
+        "crankset": "Saint",
+        "seatpost": "Cannondale",
+        "wheelset": "Arka yakında hopefortus 30 ön wtb",
+        "handlebar": "Cannondale three",
+        "tire_size": "29inç/27 psı ön 32psi arka",
+        "drivetrain": "M8100 12v",
+        "original_index": 0
+      },
+      "user_ratings": [
+        {
+          "user": "Aeganfr",
+          "score": 6.5
+        },
+        {
+          "user": "ikon_rr540",
+          "score": 7.0
+        },
+        {
+          "user": "poyrasogut",
+          "score": 7.5
+        }
+      ],
+      "avg_rating": 7,
+      "final_rank": 1,
       "created_at": null,
       "updated_at": null
     },
@@ -84665,98 +84772,46 @@
       "updated_at": null
     },
     {
-      "id": "0d2e001c-9f2b-4220-8912-80fcbe352ed1",
-      "username": "Toprak",
-      "week_id": "2026-W25",
+      "id": "113359c0-8291-467e-9043-2f30f1e9c2b8",
+      "username": "cagans.fr",
+      "week_id": "2026-W27",
       "category": "Enduro",
       "bike_data": {
-        "id": 1782468148166,
+        "id": 1782852794304,
         "desc": "",
-        "fork": "Rockshox zeb",
-        "stem": "Cannondale",
+        "fork": "Rockshox Lyrik RCT3 Debonair",
+        "stem": "Truvativ hussefelt",
         "type": "Freeride",
-        "chain": "Slx deore",
-        "grips": "Fabric",
+        "chain": "Kmc",
+        "grips": "No name",
         "image": [
           "https://cdn.freeridertr.com.tr/bildirim%20resmi/photo_5825636358775573905_y%20(1).jpg"
         ],
-        "model": "Cannondale jekyll 2",
-        "rotor": "203/203",
-        "shock": "Fox float x",
-        "tires": "Ön assegai arka münion dhr",
-        "brakes": "Ön deore m6120 arka kol slx fren m6120",
-        "pedals": "No name",
-        "saddle": "Btwin 60 derece",
-        "weight": "16.9",
-        "cassette": "Slx m7100",
+        "model": "SCOTT Voltage Fr710",
+        "rotor": "160/180",
+        "shock": "Fox Dhx RC2",
+        "tires": "Maxxis dhr",
+        "brakes": "Deore m4100 4 piston",
+        "pedals": "Nukeproof",
+        "saddle": "No name",
+        "weight": "15-16",
+        "cassette": "Saint",
         "crankset": "Saint",
-        "seatpost": "Cannondale",
-        "wheelset": "Arka yakında hopefortus 30 ön wtb",
-        "handlebar": "Cannondale three",
-        "tire_size": "29inç/27 psı ön 32psi arka",
-        "drivetrain": "M8100 12v",
+        "seatpost": "Syncross",
+        "wheelset": "Dt swiss fr 1950",
+        "handlebar": "Chromah fu40",
+        "tire_size": "2.40",
+        "drivetrain": "Shimano SLX 11V",
         "original_index": 0
       },
       "user_ratings": [
         {
-          "user": "Aeganfr",
-          "score": 6.5
-        },
-        {
-          "user": "ikon_rr540",
+          "user": "poyrasogut",
           "score": 7.0
         }
       ],
-      "avg_rating": 6.8,
-      "final_rank": 1,
-      "created_at": null,
-      "updated_at": null
-    },
-    {
-      "id": "305034ac-02da-4f2d-936a-efdfabd41d74",
-      "username": "Kor4y.dj",
-      "week_id": "2026-W25",
-      "category": "BMX",
-      "bike_data": {
-        "id": 1782401195615,
-        "desc": "",
-        "fork": "Rst dırth",
-        "stem": "",
-        "type": "Dirt Jump",
-        "chain": "",
-        "grips": "",
-        "image": [
-          "https://cdn.freeridertr.com.tr/bildirim%20resmi/photo_5825636358775573905_y%20(1).jpg"
-        ],
-        "model": "Ns bike",
-        "rotor": "200/200",
-        "shock": "",
-        "tires": "Kenda",
-        "brakes": "Mt 200",
-        "pedals": "",
-        "saddle": "Ns bikes",
-        "weight": "12",
-        "cassette": "",
-        "crankset": "",
-        "seatpost": "",
-        "wheelset": "",
-        "handlebar": "Ns bikes 60 ml rise",
-        "tire_size": "",
-        "drivetrain": "",
-        "original_index": 0
-      },
-      "user_ratings": [
-        {
-          "user": "Aeganfr",
-          "score": 5.0
-        },
-        {
-          "user": "ikon_rr540",
-          "score": 4.0
-        }
-      ],
-      "avg_rating": 4.5,
-      "final_rank": 1,
+      "avg_rating": 7,
+      "final_rank": 0,
       "created_at": null,
       "updated_at": null
     },
@@ -84913,6 +84968,138 @@
       "updated_at": null
     },
     {
+      "id": "1e3c4e9d-4fbc-4caf-944e-7a53a6b0a75f",
+      "username": "eemrelith",
+      "week_id": "2026-W22",
+      "category": "Enduro",
+      "bike_data": {
+        "id": 1780064385557,
+        "desc": "",
+        "fork": "Rockshox Yarı debon Air rc3 170mm",
+        "stem": "Raceface 40mm",
+        "type": "Enduro",
+        "chain": "Shimano  m7100",
+        "grips": "Pro lock on race",
+        "image": [
+          "https://cdn.freeridertr.com.tr/uploads/22b3eb79573b418e97354d8db8766944.jpg"
+        ],
+        "model": "Canyon torque al",
+        "rotor": "203",
+        "shock": "Fox float X2 performance 170mm",
+        "tires": "Pirelli Scorpion enduro s",
+        "brakes": "Shimano Saint",
+        "pedals": "Shimano gr400",
+        "saddle": "Fizik",
+        "weight": "",
+        "cassette": "Shimano m7100 10-51",
+        "crankset": "Shimano m6100",
+        "seatpost": "Canyon dropper post",
+        "wheelset": "Shimano mt-601 Boost",
+        "handlebar": "Raceface",
+        "tire_size": "29 jant 2.40",
+        "drivetrain": "Shimano m6100",
+        "original_index": 0
+      },
+      "user_ratings": [
+        {
+          "user": "Admin",
+          "score": 9.5
+        },
+        {
+          "user": "Emirr",
+          "score": 1.0
+        },
+        {
+          "user": "Aeganfr",
+          "score": 8.0
+        },
+        {
+          "user": "ikon_rr540",
+          "score": 10.0
+        },
+        {
+          "user": "efe.coskunlar26",
+          "score": 1.0
+        },
+        {
+          "user": "poyrasogut",
+          "score": 7.5
+        }
+      ],
+      "avg_rating": 6.2,
+      "final_rank": 2,
+      "created_at": "2026-06-02T18:54:30.681611+00:00",
+      "updated_at": "2026-06-02T18:56:02.005253+00:00"
+    },
+    {
+      "id": "eee3c384-1f95-4b6b-9c86-153ac107e413",
+      "username": "drnc.yt",
+      "week_id": "2026-W26",
+      "category": "DH",
+      "bike_data": {
+        "id": 1782648251496,
+        "desc": "",
+        "fork": "FOX 40 ELİTE PERFORMANCE FİT GRİP",
+        "stem": "RACEFACE CHESTER",
+        "type": "Downhill",
+        "chain": "SRAM",
+        "grips": "ODDYSEY",
+        "image": [
+          "https://cdn.freerider.tr/uploads/f8193454d4f449ed9efea15187427856.jpg"
+        ],
+        "model": "YT Tues 2022 AL COMP",
+        "rotor": "203/220",
+        "shock": "FOX FLOAT X2",
+        "tires": "ASSEGAİ",
+        "brakes": "SRAM CODE R",
+        "pedals": "CHROMAG CONTACT",
+        "saddle": "SDG PATRİOT",
+        "weight": "16,8KG",
+        "cassette": "SRAM",
+        "crankset": "SRAM DUB / TRUVATİV DESCENDANT",
+        "seatpost": "YT İNDUSTRİES",
+        "wheelset": "E*THİRTEEN LG1",
+        "handlebar": "CHROMAG FU 50",
+        "tire_size": "27.5",
+        "drivetrain": "SRAM GX",
+        "original_index": 0
+      },
+      "user_ratings": [
+        {
+          "user": "kralArda26",
+          "score": 5.0
+        },
+        {
+          "user": "Kurt",
+          "score": 6.0
+        },
+        {
+          "user": "ikon_rr540",
+          "score": 10.0
+        },
+        {
+          "user": "Admin",
+          "score": 10.0
+        },
+        {
+          "user": "efe.coskunlar26",
+          "score": 10.0
+        },
+        {
+          "user": "agony.ht",
+          "score": 1.0
+        },
+        {
+          "user": "poyrasogut",
+          "score": 8.0
+        }
+      ],
+      "avg_rating": 7.1,
+      "final_rank": 1,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
       "id": "f85c9c21-31b0-4013-893c-34f3699cbce1",
       "username": "gryw--37ue",
       "week_id": "2026-W26",
@@ -84953,9 +85140,13 @@
         {
           "user": "agony.ht",
           "score": 1.0
+        },
+        {
+          "user": "poyrasogut",
+          "score": 8.0
         }
       ],
-      "avg_rating": 4.5,
+      "avg_rating": 5.7,
       "final_rank": 3,
       "created_at": null,
       "updated_at": null
@@ -85053,182 +85244,6 @@
       "updated_at": null
     },
     {
-      "id": "35a83013-4f57-4653-8751-0876c727cff6",
-      "username": "Alig_07",
-      "week_id": "2026-W26",
-      "category": "Enduro",
-      "bike_data": {
-        "id": 1782646011626,
-        "desc": "",
-        "fork": "Fox 36 ELİTE",
-        "stem": "",
-        "type": "Enduro",
-        "chain": "Deore XT",
-        "grips": "",
-        "image": [
-          "https://cdn.freerider.tr/bildirim%20resmi/photo_5825636358775573905_y%20(1).jpg"
-        ],
-        "model": "Rocky Mountain altidude 70 CF",
-        "rotor": "180mm",
-        "shock": "Fox Float DPX2",
-        "tires": "Maxxis aggresor/Maxxis minion",
-        "brakes": "Deore XT",
-        "pedals": "",
-        "saddle": "Rocky mountain stock",
-        "weight": "12.5",
-        "cassette": "Deore XT",
-        "crankset": "Deore XT",
-        "seatpost": "Raceface post",
-        "wheelset": "Raceface",
-        "handlebar": "Raceface turbine",
-        "tire_size": "2.5/2.4",
-        "drivetrain": "Deore XT",
-        "original_index": 0
-      },
-      "user_ratings": [
-        {
-          "user": "ikon_rr540",
-          "score": 6.0
-        }
-      ],
-      "avg_rating": 6,
-      "final_rank": 1,
-      "created_at": null,
-      "updated_at": null
-    },
-    {
-      "id": "c679b8e1-f744-4ee5-8162-c8c9e6338bd2",
-      "username": "ruzgar.mtb",
-      "week_id": "2026-W26",
-      "category": "Enduro",
-      "bike_data": {
-        "id": 1782655169095,
-        "desc": "",
-        "fork": "Fox 36 grip 2",
-        "stem": "",
-        "type": "Downhill",
-        "chain": "Bilmiyom",
-        "grips": "",
-        "image": [
-          "https://cdn.freerider.tr/bildirim%20resmi/photo_5825636358775573905_y%20(1).jpg"
-        ],
-        "model": "Canyon spectral 29 Al 5",
-        "rotor": "180MM/200MM",
-        "shock": "Rockshock vivid ultime",
-        "tires": "Rear Pirelli scorpion 2.50 front maxxis minion dhr 2",
-        "brakes": "Sram DB 8",
-        "pedals": "Crank brother stamp 1",
-        "saddle": "Ergon",
-        "weight": "16.8 kg",
-        "cassette": "",
-        "crankset": "Micanda",
-        "seatpost": "",
-        "wheelset": "Race face r27 arka ön race face r30",
-        "handlebar": "G5",
-        "tire_size": "2.50 max 40 psi 2.40 max 50 psi",
-        "drivetrain": "Shimano deore",
-        "original_index": 0
-      },
-      "user_ratings": [
-        {
-          "user": "ikon_rr540",
-          "score": 7.0
-        }
-      ],
-      "avg_rating": 7,
-      "final_rank": 3,
-      "created_at": null,
-      "updated_at": null
-    },
-    {
-      "id": "6516ccfc-3812-4e2c-a344-0d16eef330db",
-      "username": "Active7",
-      "week_id": "2026-W26",
-      "category": "Enduro",
-      "bike_data": {
-        "id": 1782660157705,
-        "desc": "Tr tek",
-        "fork": "Fox 38",
-        "stem": "ONOFF Sulfur FG 30 mm",
-        "type": "Enduro",
-        "chain": "SRAM SX Eagle 12-Speed Chain",
-        "grips": "ONOFF Twin 1Lock-On 135 mm",
-        "image": [
-          "https://cdn.freerider.tr/bildirim%20resmi/photo_5825636358775573905_y%20(1).jpg"
-        ],
-        "model": "Mondraker Superfoxy",
-        "rotor": "203mm/203mm",
-        "shock": "Fox x Ultra Volume",
-        "tires": "Ön: Maxxis Assegai 29×2.5 Arka:Maxxis Minion Dhr2 29×2.4",
-        "brakes": "Sram DB8 4 piston",
-        "pedals": "Ns bikes Aerial Pedal Alüminyum",
-        "saddle": "SDG BEL-AIR 3.0",
-        "weight": "17,5 kg",
-        "cassette": "SRAM PG-1210 Eagle 11-50T",
-        "crankset": "SRAM SX Eagle DUB 32T",
-        "seatpost": "ONOFF Pija Dropper 210 mm",
-        "wheelset": "MDK-XP1 29\"",
-        "handlebar": "ONOFF Sulfur 1.0 800 mm genişlik  20mm Rise",
-        "tire_size": "Ön:29×2.50 50 psi Arka:29×2.40 50 psi",
-        "drivetrain": "Sram SX Eagle",
-        "original_index": 0
-      },
-      "user_ratings": [
-        {
-          "user": "ikon_rr540",
-          "score": 8.0
-        }
-      ],
-      "avg_rating": 8,
-      "final_rank": 4,
-      "created_at": null,
-      "updated_at": null
-    },
-    {
-      "id": "d69c7ad4-8332-43d8-89e5-718f2acc05c5",
-      "username": "patoz3232",
-      "week_id": "2026-W26",
-      "category": "Enduro",
-      "bike_data": {
-        "id": 1782647101300,
-        "desc": "",
-        "fork": "Zeb selcet+",
-        "stem": "Raceface",
-        "type": "Enduro",
-        "chain": "Zincir iste",
-        "grips": "Yok",
-        "image": [
-          "https://cdn.freerider.tr/bildirim%20resmi/photo_5825636358775573905_y%20(1).jpg"
-        ],
-        "model": "Radon swoop",
-        "rotor": "203",
-        "shock": "Süper Deluxe +",
-        "tires": "Magic Mary Pirelli",
-        "brakes": "Sigura ( Saint mt5)",
-        "pedals": "Dmr da degistircwm",
-        "saddle": "Sdg",
-        "weight": "16 herlade parac değişti çünkü",
-        "cassette": "Yok",
-        "crankset": "Bilmiyom",
-        "seatpost": "Bu ne",
-        "wheelset": "Ön sunringe arka reverse",
-        "handlebar": "Raceface",
-        "tire_size": "2.40 2.50",
-        "drivetrain": "Sram gx",
-        "original_index": 0
-      },
-      "user_ratings": [
-        {
-          "user": "ikon_rr540",
-          "score": 8.0
-        }
-      ],
-      "avg_rating": 8,
-      "final_rank": 3,
-      "created_at": null,
-      "updated_at": null
-    },
-    {
       "id": "ae7b7efb-a24c-4cf9-85ac-9dd9dc7949c7",
       "username": "agony.ht",
       "week_id": "2026-W26",
@@ -85281,124 +85296,256 @@
         {
           "user": "efe.coskunlar26",
           "score": 10.0
+        },
+        {
+          "user": "poyrasogut",
+          "score": 6.5
         }
       ],
-      "avg_rating": 8,
+      "avg_rating": 7.8,
       "final_rank": 1,
       "created_at": null,
       "updated_at": null
     },
     {
-      "id": "fae26822-d2e9-499b-b892-6665f04edd78",
-      "username": "Kurt",
+      "id": "d69c7ad4-8332-43d8-89e5-718f2acc05c5",
+      "username": "patoz3232",
       "week_id": "2026-W26",
-      "category": "DH",
+      "category": "Enduro",
       "bike_data": {
-        "id": 1782647839577,
+        "id": 1782647101300,
         "desc": "",
-        "fork": "rockshox boxxer worldcup",
-        "stem": "reverse",
-        "type": "Downhill",
-        "chain": "sram",
-        "grips": "reverse",
+        "fork": "Zeb selcet+",
+        "stem": "Raceface",
+        "type": "Enduro",
+        "chain": "Zincir iste",
+        "grips": "Yok",
         "image": [
           "https://cdn.freerider.tr/bildirim%20resmi/photo_5825636358775573905_y%20(1).jpg"
         ],
-        "model": "solid",
-        "rotor": "203-203",
-        "shock": "rockshox vivid",
-        "tires": "high roller ıı",
-        "brakes": "magura mt 7 pro -magura mt 5",
-        "pedals": "reverse",
-        "saddle": "reverse",
-        "weight": "16.4",
-        "cassette": "sram gx",
-        "crankset": "sram truvative",
-        "seatpost": "reverse",
-        "wheelset": "reverse base dh",
-        "handlebar": "reverse",
-        "tire_size": "2.40/27.5",
-        "drivetrain": "sram gx v",
+        "model": "Radon swoop",
+        "rotor": "203",
+        "shock": "Süper Deluxe +",
+        "tires": "Magic Mary Pirelli",
+        "brakes": "Sigura ( Saint mt5)",
+        "pedals": "Dmr da degistircwm",
+        "saddle": "Sdg",
+        "weight": "16 herlade parac değişti çünkü",
+        "cassette": "Yok",
+        "crankset": "Bilmiyom",
+        "seatpost": "Bu ne",
+        "wheelset": "Ön sunringe arka reverse",
+        "handlebar": "Raceface",
+        "tire_size": "2.40 2.50",
+        "drivetrain": "Sram gx",
         "original_index": 0
       },
       "user_ratings": [
-        {
-          "user": "Admin",
-          "score": 8.0
-        },
         {
           "user": "ikon_rr540",
           "score": 8.0
         },
         {
-          "user": "agony.ht",
-          "score": 1.0
+          "user": "poyrasogut",
+          "score": 8.0
         }
       ],
-      "avg_rating": 5.7,
-      "final_rank": 2,
+      "avg_rating": 8,
+      "final_rank": 3,
       "created_at": null,
       "updated_at": null
     },
     {
-      "id": "390bc2eb-7960-4b88-908c-d32ec20c6203",
-      "username": "FORCEFE970",
-      "week_id": "2026-W22",
-      "category": "Hardtail",
+      "id": "6516ccfc-3812-4e2c-a344-0d16eef330db",
+      "username": "Active7",
+      "week_id": "2026-W26",
+      "category": "Enduro",
       "bike_data": {
-        "id": 1780222464622,
-        "desc": "Süspansiyon:\n Fox 34 Maşa\nJant ve Göbek Kurulumu:\n Spank Spike race 33 Çember\n DT Swiss 370 önGöbek\n Hassns arka Göbek\nGidon ve Kokpit:\nWake Kısa Boğaz\nFren Sistemi:\n Impact ve ovela Rotorlar\nLastikler:\n Michelin wild 2.40 ve Kenda hellkat sports 2.60 Lastik Setleri\nDiğer Ekstralar:\n Evo pedallar\n Çamurluk (Mudguard)\nKırmızı Gidon boğazı vidaları",
-        "fork": "Fox34",
-        "stem": "Wake",
-        "type": "Trail",
-        "chain": "Stock",
-        "grips": "",
+        "id": 1782660157705,
+        "desc": "Tr tek",
+        "fork": "Fox 38",
+        "stem": "ONOFF Sulfur FG 30 mm",
+        "type": "Enduro",
+        "chain": "SRAM SX Eagle 12-Speed Chain",
+        "grips": "ONOFF Twin 1Lock-On 135 mm",
         "image": [
-          "https://cdn.freeridertr.com.tr/uploads/5c5e9f6309d44d4887beac3c98fb7ea5.jpg"
+          "https://cdn.freerider.tr/bildirim%20resmi/photo_5825636358775573905_y%20(1).jpg"
         ],
-        "model": "Carraro Force 970c",
-        "rotor": "160",
-        "shock": "Yok",
-        "tires": "Ön:kenda hellkar sport 2.60/arka:michelin wild 2.40",
-        "brakes": "Mt200",
-        "pedals": "Evo",
-        "saddle": "Carraro",
-        "weight": "14.5kg",
-        "cassette": "Shimano cuess",
-        "crankset": "Shimano cuess",
-        "seatpost": "Xlc",
-        "wheelset": "Spank spike 33 race",
-        "handlebar": "Xlc",
-        "tire_size": "Ön:29 2.60/arka:29 2.40",
-        "drivetrain": "Shimano cuess",
+        "model": "Mondraker Superfoxy",
+        "rotor": "203mm/203mm",
+        "shock": "Fox x Ultra Volume",
+        "tires": "Ön: Maxxis Assegai 29×2.5 Arka:Maxxis Minion Dhr2 29×2.4",
+        "brakes": "Sram DB8 4 piston",
+        "pedals": "Ns bikes Aerial Pedal Alüminyum",
+        "saddle": "SDG BEL-AIR 3.0",
+        "weight": "17,5 kg",
+        "cassette": "SRAM PG-1210 Eagle 11-50T",
+        "crankset": "SRAM SX Eagle DUB 32T",
+        "seatpost": "ONOFF Pija Dropper 210 mm",
+        "wheelset": "MDK-XP1 29\"",
+        "handlebar": "ONOFF Sulfur 1.0 800 mm genişlik  20mm Rise",
+        "tire_size": "Ön:29×2.50 50 psi Arka:29×2.40 50 psi",
+        "drivetrain": "Sram SX Eagle",
         "original_index": 0
       },
       "user_ratings": [
-        {
-          "user": "Emirr",
-          "score": 1.0
-        },
-        {
-          "user": "Admin",
-          "score": 8.0
-        },
-        {
-          "user": "Aeganfr",
-          "score": 7.0
-        },
         {
           "user": "ikon_rr540",
           "score": 8.0
         },
         {
-          "user": "Emirx",
-          "score": 10.0
+          "user": "poyrasogut",
+          "score": 8.0
+        }
+      ],
+      "avg_rating": 8,
+      "final_rank": 4,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "35a83013-4f57-4653-8751-0876c727cff6",
+      "username": "Alig_07",
+      "week_id": "2026-W26",
+      "category": "Enduro",
+      "bike_data": {
+        "id": 1782646011626,
+        "desc": "",
+        "fork": "Fox 36 ELİTE",
+        "stem": "",
+        "type": "Enduro",
+        "chain": "Deore XT",
+        "grips": "",
+        "image": [
+          "https://cdn.freerider.tr/bildirim%20resmi/photo_5825636358775573905_y%20(1).jpg"
+        ],
+        "model": "Rocky Mountain altidude 70 CF",
+        "rotor": "180mm",
+        "shock": "Fox Float DPX2",
+        "tires": "Maxxis aggresor/Maxxis minion",
+        "brakes": "Deore XT",
+        "pedals": "",
+        "saddle": "Rocky mountain stock",
+        "weight": "12.5",
+        "cassette": "Deore XT",
+        "crankset": "Deore XT",
+        "seatpost": "Raceface post",
+        "wheelset": "Raceface",
+        "handlebar": "Raceface turbine",
+        "tire_size": "2.5/2.4",
+        "drivetrain": "Deore XT",
+        "original_index": 0
+      },
+      "user_ratings": [
+        {
+          "user": "ikon_rr540",
+          "score": 6.0
+        },
+        {
+          "user": "poyrasogut",
+          "score": 7.5
         }
       ],
       "avg_rating": 6.8,
+      "final_rank": 1,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "c679b8e1-f744-4ee5-8162-c8c9e6338bd2",
+      "username": "ruzgar.mtb",
+      "week_id": "2026-W26",
+      "category": "Enduro",
+      "bike_data": {
+        "id": 1782655169095,
+        "desc": "",
+        "fork": "Fox 36 grip 2",
+        "stem": "",
+        "type": "Downhill",
+        "chain": "Bilmiyom",
+        "grips": "",
+        "image": [
+          "https://cdn.freerider.tr/bildirim%20resmi/photo_5825636358775573905_y%20(1).jpg"
+        ],
+        "model": "Canyon spectral 29 Al 5",
+        "rotor": "180MM/200MM",
+        "shock": "Rockshock vivid ultime",
+        "tires": "Rear Pirelli scorpion 2.50 front maxxis minion dhr 2",
+        "brakes": "Sram DB 8",
+        "pedals": "Crank brother stamp 1",
+        "saddle": "Ergon",
+        "weight": "16.8 kg",
+        "cassette": "",
+        "crankset": "Micanda",
+        "seatpost": "",
+        "wheelset": "Race face r27 arka ön race face r30",
+        "handlebar": "G5",
+        "tire_size": "2.50 max 40 psi 2.40 max 50 psi",
+        "drivetrain": "Shimano deore",
+        "original_index": 0
+      },
+      "user_ratings": [
+        {
+          "user": "ikon_rr540",
+          "score": 7.0
+        },
+        {
+          "user": "poyrasogut",
+          "score": 7.5
+        }
+      ],
+      "avg_rating": 7.2,
       "final_rank": 3,
-      "created_at": "2026-06-02T21:02:52.448017+00:00",
-      "updated_at": "2026-06-03T12:17:47.990259+00:00"
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "4bd911a0-a8d1-469e-997f-4fbbae707116",
+      "username": "eren_fr_09",
+      "week_id": "2026-W27",
+      "category": "Hardtail",
+      "bike_data": {
+        "id": 1782803417963,
+        "desc": "",
+        "fork": "Rockshox racon",
+        "stem": "",
+        "type": "Trail",
+        "chain": "",
+        "grips": "",
+        "image": [
+          "https://cdn.freeridertr.com.tr/bildirim%20resmi/photo_5825636358775573905_y%20(1).jpg"
+        ],
+        "model": "Bisan mtx7400",
+        "rotor": "180 203",
+        "shock": "",
+        "tires": "Maxxis dhr2 2.60",
+        "brakes": "Magura",
+        "pedals": "Gineya",
+        "saddle": "",
+        "weight": "18",
+        "cassette": "",
+        "crankset": "Deore m6100",
+        "seatpost": "",
+        "wheelset": "Stroke",
+        "handlebar": "Bplas",
+        "tire_size": "29",
+        "drivetrain": "Ss",
+        "original_index": 0
+      },
+      "user_ratings": [
+        {
+          "user": "ikon_rr540",
+          "score": 7.0
+        },
+        {
+          "user": "poyrasogut",
+          "score": 7.0
+        }
+      ],
+      "avg_rating": 7,
+      "final_rank": 0,
+      "created_at": null,
+      "updated_at": null
     },
     {
       "id": "6dee556e-3f76-43c4-8471-92e4e2c9de42",
@@ -85449,6 +85596,114 @@
       ],
       "avg_rating": 4.3,
       "final_rank": 4,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "fae26822-d2e9-499b-b892-6665f04edd78",
+      "username": "Kurt",
+      "week_id": "2026-W26",
+      "category": "DH",
+      "bike_data": {
+        "id": 1782647839577,
+        "desc": "",
+        "fork": "rockshox boxxer worldcup",
+        "stem": "reverse",
+        "type": "Downhill",
+        "chain": "sram",
+        "grips": "reverse",
+        "image": [
+          "https://cdn.freerider.tr/bildirim%20resmi/photo_5825636358775573905_y%20(1).jpg"
+        ],
+        "model": "solid",
+        "rotor": "203-203",
+        "shock": "rockshox vivid",
+        "tires": "high roller ıı",
+        "brakes": "magura mt 7 pro -magura mt 5",
+        "pedals": "reverse",
+        "saddle": "reverse",
+        "weight": "16.4",
+        "cassette": "sram gx",
+        "crankset": "sram truvative",
+        "seatpost": "reverse",
+        "wheelset": "reverse base dh",
+        "handlebar": "reverse",
+        "tire_size": "2.40/27.5",
+        "drivetrain": "sram gx v",
+        "original_index": 0
+      },
+      "user_ratings": [
+        {
+          "user": "Admin",
+          "score": 8.0
+        },
+        {
+          "user": "ikon_rr540",
+          "score": 8.0
+        },
+        {
+          "user": "agony.ht",
+          "score": 1.0
+        },
+        {
+          "user": "poyrasogut",
+          "score": 9.0
+        }
+      ],
+      "avg_rating": 6.5,
+      "final_rank": 2,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "c011b5bb-d800-48e7-9fc8-520adbc5e012",
+      "username": "gambleremir_fr",
+      "week_id": "2026-W27",
+      "category": "DH",
+      "bike_data": {
+        "id": 1782828179322,
+        "desc": "",
+        "fork": "Marzocchi",
+        "stem": "",
+        "type": "Downhill",
+        "chain": "Kmc",
+        "grips": "",
+        "image": [
+          "https://cdn.freerider.tr/uploads/c942d1b91cc04372aecc89541063f0f5.jpg"
+        ],
+        "model": "SCOTT gambler",
+        "rotor": "203 mm",
+        "shock": "Fox Van r",
+        "tires": "Maxxis Minion dhr 2",
+        "brakes": "Shigura 4 piston",
+        "pedals": "Crankbrothers",
+        "saddle": "Yt",
+        "weight": "16 kg",
+        "cassette": "32 t",
+        "crankset": "Shimano saint",
+        "seatpost": "",
+        "wheelset": "Stans flow",
+        "handlebar": "Scott",
+        "tire_size": "2.50 55 psi",
+        "drivetrain": "Shimano saint",
+        "original_index": 0
+      },
+      "user_ratings": [
+        {
+          "user": "ikon_rr540",
+          "score": 9.0
+        },
+        {
+          "user": "agony.ht",
+          "score": 1.0
+        },
+        {
+          "user": "poyrasogut",
+          "score": 7.0
+        }
+      ],
+      "avg_rating": 5.7,
+      "final_rank": 0,
       "created_at": null,
       "updated_at": null
     },
@@ -85505,220 +85760,16 @@
         {
           "user": "ikon_rr540",
           "score": 10.0
+        },
+        {
+          "user": "poyrasogut",
+          "score": 7.5
         }
       ],
-      "avg_rating": 6.8,
+      "avg_rating": 6.9,
       "final_rank": 2,
       "created_at": "2026-06-02T18:37:04.364926+00:00",
       "updated_at": "2026-06-02T18:56:07.165991+00:00"
-    },
-    {
-      "id": "4bd911a0-a8d1-469e-997f-4fbbae707116",
-      "username": "eren_fr_09",
-      "week_id": "2026-W27",
-      "category": "Hardtail",
-      "bike_data": {
-        "id": 1782803417963,
-        "desc": "",
-        "fork": "Rockshox racon",
-        "stem": "",
-        "type": "Trail",
-        "chain": "",
-        "grips": "",
-        "image": [
-          "https://cdn.freeridertr.com.tr/bildirim%20resmi/photo_5825636358775573905_y%20(1).jpg"
-        ],
-        "model": "Bisan mtx7400",
-        "rotor": "180 203",
-        "shock": "",
-        "tires": "Maxxis dhr2 2.60",
-        "brakes": "Magura",
-        "pedals": "Gineya",
-        "saddle": "",
-        "weight": "18",
-        "cassette": "",
-        "crankset": "Deore m6100",
-        "seatpost": "",
-        "wheelset": "Stroke",
-        "handlebar": "Bplas",
-        "tire_size": "29",
-        "drivetrain": "Ss",
-        "original_index": 0
-      },
-      "user_ratings": [
-        {
-          "user": "ikon_rr540",
-          "score": 7.0
-        }
-      ],
-      "avg_rating": 7,
-      "final_rank": 0,
-      "created_at": null,
-      "updated_at": null
-    },
-    {
-      "id": "c011b5bb-d800-48e7-9fc8-520adbc5e012",
-      "username": "gambleremir_fr",
-      "week_id": "2026-W27",
-      "category": "DH",
-      "bike_data": {
-        "id": 1782828179322,
-        "desc": "",
-        "fork": "Marzocchi",
-        "stem": "",
-        "type": "Downhill",
-        "chain": "Kmc",
-        "grips": "",
-        "image": [
-          "https://cdn.freerider.tr/uploads/c942d1b91cc04372aecc89541063f0f5.jpg"
-        ],
-        "model": "SCOTT gambler",
-        "rotor": "203 mm",
-        "shock": "Fox Van r",
-        "tires": "Maxxis Minion dhr 2",
-        "brakes": "Shigura 4 piston",
-        "pedals": "Crankbrothers",
-        "saddle": "Yt",
-        "weight": "16 kg",
-        "cassette": "32 t",
-        "crankset": "Shimano saint",
-        "seatpost": "",
-        "wheelset": "Stans flow",
-        "handlebar": "Scott",
-        "tire_size": "2.50 55 psi",
-        "drivetrain": "Shimano saint",
-        "original_index": 0
-      },
-      "user_ratings": [
-        {
-          "user": "ikon_rr540",
-          "score": 9.0
-        },
-        {
-          "user": "agony.ht",
-          "score": 1.0
-        }
-      ],
-      "avg_rating": 5,
-      "final_rank": 0,
-      "created_at": null,
-      "updated_at": null
-    },
-    {
-      "id": "eee3c384-1f95-4b6b-9c86-153ac107e413",
-      "username": "drnc.yt",
-      "week_id": "2026-W26",
-      "category": "DH",
-      "bike_data": {
-        "id": 1782648251496,
-        "desc": "",
-        "fork": "FOX 40 ELİTE PERFORMANCE FİT GRİP",
-        "stem": "RACEFACE CHESTER",
-        "type": "Downhill",
-        "chain": "SRAM",
-        "grips": "ODDYSEY",
-        "image": [
-          "https://cdn.freerider.tr/uploads/f8193454d4f449ed9efea15187427856.jpg"
-        ],
-        "model": "YT Tues 2022 AL COMP",
-        "rotor": "203/220",
-        "shock": "FOX FLOAT X2",
-        "tires": "ASSEGAİ",
-        "brakes": "SRAM CODE R",
-        "pedals": "CHROMAG CONTACT",
-        "saddle": "SDG PATRİOT",
-        "weight": "16,8KG",
-        "cassette": "SRAM",
-        "crankset": "SRAM DUB / TRUVATİV DESCENDANT",
-        "seatpost": "YT İNDUSTRİES",
-        "wheelset": "E*THİRTEEN LG1",
-        "handlebar": "CHROMAG FU 50",
-        "tire_size": "27.5",
-        "drivetrain": "SRAM GX",
-        "original_index": 0
-      },
-      "user_ratings": [
-        {
-          "user": "kralArda26",
-          "score": 5.0
-        },
-        {
-          "user": "Kurt",
-          "score": 6.0
-        },
-        {
-          "user": "ikon_rr540",
-          "score": 10.0
-        },
-        {
-          "user": "Admin",
-          "score": 10.0
-        },
-        {
-          "user": "efe.coskunlar26",
-          "score": 10.0
-        },
-        {
-          "user": "agony.ht",
-          "score": 1.0
-        }
-      ],
-      "avg_rating": 7,
-      "final_rank": 1,
-      "created_at": null,
-      "updated_at": null
-    },
-    {
-      "id": "49ad3c87-da7b-4807-b9fe-27f8ff2a69a1",
-      "username": "hardbisan",
-      "week_id": "2026-W23",
-      "category": "Hardtail",
-      "bike_data": {
-        "id": 1781302457529,
-        "desc": "sıfırdan dizildi",
-        "fork": "rockshox 35 silver tk 160m",
-        "stem": "rpt",
-        "type": "Freeride",
-        "chain": "ybn soulchain",
-        "grips": "",
-        "image": [
-          "https://cdn.freeridertr.com.tr/bildirim%20resmi/photo_5825636358775573905_y%20(1).jpg"
-        ],
-        "model": "bisan mtx7400 custom",
-        "rotor": "ön203 arka180",
-        "shock": "",
-        "tires": "ön michelin wild 2.40 arka maxxis dissector 2.40wt",
-        "brakes": "ön tektro 540 arka slx m7120",
-        "pedals": "xlc",
-        "saddle": "",
-        "weight": "",
-        "cassette": "sunrun 42 10",
-        "crankset": "ixf",
-        "seatpost": "",
-        "wheelset": "arka mach1 mad 40 35mm ön mach1 klix",
-        "handlebar": "lunje",
-        "tire_size": "27.5x2.40",
-        "drivetrain": "deore m5100",
-        "original_index": 0
-      },
-      "user_ratings": [
-        {
-          "user": "Aeganfr",
-          "score": 7.0
-        },
-        {
-          "user": "ikon_rr540",
-          "score": 7.0
-        },
-        {
-          "user": "agony.ht",
-          "score": 1.0
-        }
-      ],
-      "avg_rating": 5,
-      "final_rank": 1,
-      "created_at": null,
-      "updated_at": null
     },
     {
       "id": "8658d419-3ad4-4986-8236-7daa7a0b6198",
@@ -85777,6 +85828,58 @@
       "updated_at": null
     },
     {
+      "id": "60344009-4f4d-4fd9-a2ff-56af9518cf2d",
+      "username": "Aeganfr",
+      "week_id": "2026-W27",
+      "category": "Hardtail",
+      "bike_data": {
+        "id": 1779949256134,
+        "desc": "",
+        "fork": "Rockshox silver tl 35",
+        "stem": "",
+        "type": "Trail",
+        "chain": "Kmc",
+        "grips": "Odi hucker",
+        "image": [
+          "https://cdn.freeridertr.com.tr/uploads/b36949b19a564d7ab18e000c5a8016ff.jpg"
+        ],
+        "model": "Cube acid",
+        "rotor": "180",
+        "shock": "",
+        "tires": "Maxxis ikon 27.5x2.25",
+        "brakes": "Mt5",
+        "pedals": "Shimano PD-GR400",
+        "saddle": "",
+        "weight": "13kg",
+        "cassette": "",
+        "crankset": "Deore m6100",
+        "seatpost": "",
+        "wheelset": "Dt swiss e593",
+        "handlebar": "Xlc",
+        "tire_size": "48pai",
+        "drivetrain": "Singel speed",
+        "original_index": 0
+      },
+      "user_ratings": [
+        {
+          "user": "ikon_rr540",
+          "score": 9.0
+        },
+        {
+          "user": "agony.ht",
+          "score": 1.0
+        },
+        {
+          "user": "poyrasogut",
+          "score": 10.0
+        }
+      ],
+      "avg_rating": 6.7,
+      "final_rank": 0,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
       "id": "58dd36e0-2658-4699-8441-f2d603328e0b",
       "username": "fr_utku07",
       "week_id": "2026-W27",
@@ -85817,9 +85920,337 @@
         {
           "user": "agony.ht",
           "score": 1.0
+        },
+        {
+          "user": "poyrasogut",
+          "score": 6.5
         }
       ],
-      "avg_rating": 5,
+      "avg_rating": 5.5,
+      "final_rank": 0,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "49ad3c87-da7b-4807-b9fe-27f8ff2a69a1",
+      "username": "hardbisan",
+      "week_id": "2026-W23",
+      "category": "Hardtail",
+      "bike_data": {
+        "id": 1781302457529,
+        "desc": "sıfırdan dizildi",
+        "fork": "rockshox 35 silver tk 160m",
+        "stem": "rpt",
+        "type": "Freeride",
+        "chain": "ybn soulchain",
+        "grips": "",
+        "image": [
+          "https://cdn.freeridertr.com.tr/bildirim%20resmi/photo_5825636358775573905_y%20(1).jpg"
+        ],
+        "model": "bisan mtx7400 custom",
+        "rotor": "ön203 arka180",
+        "shock": "",
+        "tires": "ön michelin wild 2.40 arka maxxis dissector 2.40wt",
+        "brakes": "ön tektro 540 arka slx m7120",
+        "pedals": "xlc",
+        "saddle": "",
+        "weight": "",
+        "cassette": "sunrun 42 10",
+        "crankset": "ixf",
+        "seatpost": "",
+        "wheelset": "arka mach1 mad 40 35mm ön mach1 klix",
+        "handlebar": "lunje",
+        "tire_size": "27.5x2.40",
+        "drivetrain": "deore m5100",
+        "original_index": 0
+      },
+      "user_ratings": [
+        {
+          "user": "Aeganfr",
+          "score": 7.0
+        },
+        {
+          "user": "ikon_rr540",
+          "score": 7.0
+        },
+        {
+          "user": "agony.ht",
+          "score": 1.0
+        },
+        {
+          "user": "poyrasogut",
+          "score": 10.0
+        }
+      ],
+      "avg_rating": 6.2,
+      "final_rank": 1,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "85a759d7-7546-4ce3-9123-24da2af5b0bd",
+      "username": "poyrazfr01",
+      "week_id": "2026-W27",
+      "category": "XC",
+      "bike_data": {
+        "id": 1782570985856,
+        "desc": "Türkiyede kadrosu bulunmuyor",
+        "fork": "Manitou",
+        "stem": "",
+        "type": "Freeride",
+        "chain": "",
+        "grips": "",
+        "image": [
+          "https://cdn.freerider.tr/uploads/0fc92e5b96f3492483dd9cdbbc5a5c76.jpg"
+        ],
+        "model": "Sedona c+10",
+        "rotor": "",
+        "shock": "Yok",
+        "tires": "Cst rockhawk",
+        "brakes": "Shimano",
+        "pedals": "",
+        "saddle": "",
+        "weight": "12",
+        "cassette": "",
+        "crankset": "",
+        "seatpost": "",
+        "wheelset": "",
+        "handlebar": "Ritchey",
+        "tire_size": "26",
+        "drivetrain": "Shimano deore",
+        "original_index": 0
+      },
+      "user_ratings": [
+        {
+          "user": "ikon_rr540",
+          "score": 6.0
+        },
+        {
+          "user": "roku_fr",
+          "score": 1.0
+        }
+      ],
+      "avg_rating": 3.5,
+      "final_rank": 0,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "390bc2eb-7960-4b88-908c-d32ec20c6203",
+      "username": "FORCEFE970",
+      "week_id": "2026-W22",
+      "category": "Hardtail",
+      "bike_data": {
+        "id": 1780222464622,
+        "desc": "Süspansiyon:\n Fox 34 Maşa\nJant ve Göbek Kurulumu:\n Spank Spike race 33 Çember\n DT Swiss 370 önGöbek\n Hassns arka Göbek\nGidon ve Kokpit:\nWake Kısa Boğaz\nFren Sistemi:\n Impact ve ovela Rotorlar\nLastikler:\n Michelin wild 2.40 ve Kenda hellkat sports 2.60 Lastik Setleri\nDiğer Ekstralar:\n Evo pedallar\n Çamurluk (Mudguard)\nKırmızı Gidon boğazı vidaları",
+        "fork": "Fox34",
+        "stem": "Wake",
+        "type": "Trail",
+        "chain": "Stock",
+        "grips": "",
+        "image": [
+          "https://cdn.freeridertr.com.tr/uploads/5c5e9f6309d44d4887beac3c98fb7ea5.jpg"
+        ],
+        "model": "Carraro Force 970c",
+        "rotor": "160",
+        "shock": "Yok",
+        "tires": "Ön:kenda hellkar sport 2.60/arka:michelin wild 2.40",
+        "brakes": "Mt200",
+        "pedals": "Evo",
+        "saddle": "Carraro",
+        "weight": "14.5kg",
+        "cassette": "Shimano cuess",
+        "crankset": "Shimano cuess",
+        "seatpost": "Xlc",
+        "wheelset": "Spank spike 33 race",
+        "handlebar": "Xlc",
+        "tire_size": "Ön:29 2.60/arka:29 2.40",
+        "drivetrain": "Shimano cuess",
+        "original_index": 0
+      },
+      "user_ratings": [
+        {
+          "user": "Emirr",
+          "score": 1.0
+        },
+        {
+          "user": "Admin",
+          "score": 8.0
+        },
+        {
+          "user": "Aeganfr",
+          "score": 7.0
+        },
+        {
+          "user": "ikon_rr540",
+          "score": 8.0
+        },
+        {
+          "user": "Emirx",
+          "score": 10.0
+        },
+        {
+          "user": "poyrasogut",
+          "score": 6.5
+        }
+      ],
+      "avg_rating": 6.8,
+      "final_rank": 3,
+      "created_at": "2026-06-02T21:02:52.448017+00:00",
+      "updated_at": "2026-06-03T12:17:47.990259+00:00"
+    },
+    {
+      "id": "5b39b029-f076-4aa4-8935-6accc41b22ad",
+      "username": "Semihhfr",
+      "week_id": "2026-W26",
+      "category": "XC",
+      "bike_data": {
+        "id": 1782676343021,
+        "desc": "",
+        "fork": "RockShok Judy TK",
+        "stem": "Xlc Pro 70mm",
+        "type": "Trail",
+        "chain": "Deore 10s",
+        "grips": "Ovela",
+        "image": [
+          "https://cdn.freerider.tr/bildirim%20resmi/photo_5825636358775573905_y%20(1).jpg"
+        ],
+        "model": "Bianchi M18",
+        "rotor": "Ön arka 180 deore",
+        "shock": "",
+        "tires": "Ön Maxxis Recon Race Exo Tr Arka Forekaster Exo Tr",
+        "brakes": "Ön 401 410 arka slx m7100",
+        "pedals": "Asroya",
+        "saddle": "Cult Bmx",
+        "weight": "16",
+        "cassette": "Sunrun",
+        "crankset": "Sunrun krank zee dişli saint Orta göbek",
+        "seatpost": "Trc",
+        "wheelset": "Ön mach1 arka mavic",
+        "handlebar": "Xlc Pro 780 35mm",
+        "tire_size": "Ön 2.25 arka 2.40",
+        "drivetrain": "Deore XT 10s",
+        "original_index": 0
+      },
+      "user_ratings": [
+        {
+          "user": "ikon_rr540",
+          "score": 6.0
+        },
+        {
+          "user": "roku_fr",
+          "score": 1.0
+        }
+      ],
+      "avg_rating": 3.5,
+      "final_rank": 4,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "5a1e45f8-23fb-4605-905e-b401d484a966",
+      "username": "ofb.em4r",
+      "week_id": "2026-W27",
+      "category": "DH",
+      "bike_data": {
+        "id": 1782765181183,
+        "desc": "tr tek renk sanirm",
+        "fork": "boxxer rc",
+        "stem": "dartmoor",
+        "type": "Downhill",
+        "chain": "shimano deore hg56 sanirm",
+        "grips": "zoid",
+        "image": [
+          "https://cdn.freeridertr.com.tr/bildirim%20resmi/photo_5825636358775573905_y%20(1).jpg"
+        ],
+        "model": "Giant Glory 8.0",
+        "rotor": "203",
+        "shock": "fox dhx rc4",
+        "tires": "high roller 2 cst rock hawk:(",
+        "brakes": "slx 7100 kol xt 8120 kaliper",
+        "pedals": "shimano",
+        "saddle": "specilaized",
+        "weight": "bilmiyom",
+        "cassette": "bifikrimyok",
+        "crankset": "x0 truvativ",
+        "seatpost": "bilmiyorum",
+        "wheelset": "arka on cember gobek sixpack",
+        "handlebar": "ritchey mm bilmiyorm",
+        "tire_size": "2.30 30 35 40 psi kafama gore",
+        "drivetrain": "ss",
+        "original_index": 0
+      },
+      "user_ratings": [
+        {
+          "user": "ikon_rr540",
+          "score": 9.0
+        },
+        {
+          "user": "agony.ht",
+          "score": 1.0
+        },
+        {
+          "user": "poyrasogut",
+          "score": 7.5
+        }
+      ],
+      "avg_rating": 5.8,
+      "final_rank": 0,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "6c8d343f-000d-4d50-b1c9-207e7141ac1f",
+      "username": "crossrider2013",
+      "week_id": "2026-W27",
+      "category": "DH",
+      "bike_data": {
+        "id": 1782762082470,
+        "desc": "",
+        "fork": "Zoom",
+        "stem": "",
+        "type": "Diger",
+        "chain": "",
+        "grips": "",
+        "image": [
+          "https://cdn.freeridertr.com.tr/bildirim%20resmi/photo_5825636358775573905_y%20(1).jpg"
+        ],
+        "model": "Kron XC 150",
+        "rotor": "",
+        "shock": "-",
+        "tires": "Maxxis Crossmark II",
+        "brakes": "SHİMANO MT-200 Hidrolik Disk",
+        "pedals": "Meroca",
+        "saddle": "Mach",
+        "weight": "14,6",
+        "cassette": "",
+        "crankset": "",
+        "seatpost": "",
+        "wheelset": "Zoom",
+        "handlebar": "Zoom",
+        "tire_size": "29x2.25",
+        "drivetrain": "Shimano Altus",
+        "original_index": 0
+      },
+      "user_ratings": [
+        {
+          "user": "ikon_rr540",
+          "score": 7.0
+        },
+        {
+          "user": "ofb.em4r",
+          "score": 1.0
+        },
+        {
+          "user": "agony.ht",
+          "score": 1.0
+        },
+        {
+          "user": "poyrasogut",
+          "score": 4.5
+        }
+      ],
+      "avg_rating": 3.4,
       "final_rank": 0,
       "created_at": null,
       "updated_at": null
@@ -85889,265 +86320,61 @@
         {
           "user": "Admin",
           "score": 9.5
+        },
+        {
+          "user": "poyrasogut",
+          "score": 10.0
         }
       ],
-      "avg_rating": 7.2,
+      "avg_rating": 7.5,
       "final_rank": 2,
       "created_at": "2026-05-31T23:51:50.285852+00:00",
       "updated_at": "2026-06-02T14:39:57.484699+00:00"
     },
     {
-      "id": "60344009-4f4d-4fd9-a2ff-56af9518cf2d",
-      "username": "Aeganfr",
+      "id": "4c7fc52f-281c-4485-851d-ca33150fcf99",
+      "username": "bora.zesty",
       "week_id": "2026-W27",
-      "category": "Hardtail",
-      "bike_data": {
-        "id": 1779949256134,
-        "desc": "",
-        "fork": "Rockshox silver tl 35",
-        "stem": "",
-        "type": "Trail",
-        "chain": "Kmc",
-        "grips": "Odi hucker",
-        "image": [
-          "https://cdn.freeridertr.com.tr/uploads/b36949b19a564d7ab18e000c5a8016ff.jpg"
-        ],
-        "model": "Cube acid",
-        "rotor": "180",
-        "shock": "",
-        "tires": "Maxxis ikon 27.5x2.25",
-        "brakes": "Mt5",
-        "pedals": "Shimano PD-GR400",
-        "saddle": "",
-        "weight": "13kg",
-        "cassette": "",
-        "crankset": "Deore m6100",
-        "seatpost": "",
-        "wheelset": "Dt swiss e593",
-        "handlebar": "Xlc",
-        "tire_size": "48pai",
-        "drivetrain": "Singel speed",
-        "original_index": 0
-      },
-      "user_ratings": [
-        {
-          "user": "ikon_rr540",
-          "score": 9.0
-        },
-        {
-          "user": "agony.ht",
-          "score": 1.0
-        },
-        {
-          "user": "poyrasogut",
-          "score": 9.0
-        }
-      ],
-      "avg_rating": 6.3,
-      "final_rank": 0,
-      "created_at": null,
-      "updated_at": null
-    },
-    {
-      "id": "85a759d7-7546-4ce3-9123-24da2af5b0bd",
-      "username": "poyrazfr01",
-      "week_id": "2026-W27",
-      "category": "XC",
-      "bike_data": {
-        "id": 1782570985856,
-        "desc": "Türkiyede kadrosu bulunmuyor",
-        "fork": "Manitou",
-        "stem": "",
-        "type": "Freeride",
-        "chain": "",
-        "grips": "",
-        "image": [
-          "https://cdn.freerider.tr/uploads/0fc92e5b96f3492483dd9cdbbc5a5c76.jpg"
-        ],
-        "model": "Sedona c+10",
-        "rotor": "",
-        "shock": "Yok",
-        "tires": "Cst rockhawk",
-        "brakes": "Shimano",
-        "pedals": "",
-        "saddle": "",
-        "weight": "12",
-        "cassette": "",
-        "crankset": "",
-        "seatpost": "",
-        "wheelset": "",
-        "handlebar": "Ritchey",
-        "tire_size": "26",
-        "drivetrain": "Shimano deore",
-        "original_index": 0
-      },
-      "user_ratings": [
-        {
-          "user": "ikon_rr540",
-          "score": 6.0
-        },
-        {
-          "user": "roku_fr",
-          "score": 1.0
-        }
-      ],
-      "avg_rating": 3.5,
-      "final_rank": 0,
-      "created_at": null,
-      "updated_at": null
-    },
-    {
-      "id": "5b39b029-f076-4aa4-8935-6accc41b22ad",
-      "username": "Semihhfr",
-      "week_id": "2026-W26",
-      "category": "XC",
-      "bike_data": {
-        "id": 1782676343021,
-        "desc": "",
-        "fork": "RockShok Judy TK",
-        "stem": "Xlc Pro 70mm",
-        "type": "Trail",
-        "chain": "Deore 10s",
-        "grips": "Ovela",
-        "image": [
-          "https://cdn.freerider.tr/bildirim%20resmi/photo_5825636358775573905_y%20(1).jpg"
-        ],
-        "model": "Bianchi M18",
-        "rotor": "Ön arka 180 deore",
-        "shock": "",
-        "tires": "Ön Maxxis Recon Race Exo Tr Arka Forekaster Exo Tr",
-        "brakes": "Ön 401 410 arka slx m7100",
-        "pedals": "Asroya",
-        "saddle": "Cult Bmx",
-        "weight": "16",
-        "cassette": "Sunrun",
-        "crankset": "Sunrun krank zee dişli saint Orta göbek",
-        "seatpost": "Trc",
-        "wheelset": "Ön mach1 arka mavic",
-        "handlebar": "Xlc Pro 780 35mm",
-        "tire_size": "Ön 2.25 arka 2.40",
-        "drivetrain": "Deore XT 10s",
-        "original_index": 0
-      },
-      "user_ratings": [
-        {
-          "user": "ikon_rr540",
-          "score": 6.0
-        },
-        {
-          "user": "roku_fr",
-          "score": 1.0
-        }
-      ],
-      "avg_rating": 3.5,
-      "final_rank": 4,
-      "created_at": null,
-      "updated_at": null
-    },
-    {
-      "id": "1e3c4e9d-4fbc-4caf-944e-7a53a6b0a75f",
-      "username": "eemrelith",
-      "week_id": "2026-W22",
       "category": "Enduro",
       "bike_data": {
-        "id": 1780064385557,
-        "desc": "",
-        "fork": "Rockshox Yarı debon Air rc3 170mm",
-        "stem": "Raceface 40mm",
+        "id": 1782742342736,
+        "desc": "Maşa değişti ve elcik ve pedal",
+        "fork": "Rockshox recon",
+        "stem": "Lapierre Alloy",
         "type": "Enduro",
-        "chain": "Shimano  m7100",
-        "grips": "Pro lock on race",
+        "chain": "KMC X11",
+        "grips": "All mountain style",
         "image": [
-          "https://cdn.freeridertr.com.tr/uploads/22b3eb79573b418e97354d8db8766944.jpg"
+          "https://cdn.freerider.tr/uploads/abd992736267457aa81c87b6d39508ee.jpg"
         ],
-        "model": "Canyon torque al",
-        "rotor": "203",
-        "shock": "Fox float X2 performance 170mm",
-        "tires": "Pirelli Scorpion enduro s",
-        "brakes": "Shimano Saint",
-        "pedals": "Shimano gr400",
-        "saddle": "Fizik",
-        "weight": "",
-        "cassette": "Shimano m7100 10-51",
-        "crankset": "Shimano m6100",
-        "seatpost": "Canyon dropper post",
-        "wheelset": "Shimano mt-601 Boost",
-        "handlebar": "Raceface",
-        "tire_size": "29 jant 2.40",
-        "drivetrain": "Shimano m6100",
+        "model": "Lapierre zesty 3.9",
+        "rotor": "Disk çapı 180 mm",
+        "shock": "Lapierre AF2 Air Trunnion Metric",
+        "tires": "Ön maxxis ardent arka maxxis forkekaster",
+        "brakes": "Shimano mt 401 çift piston",
+        "pedals": "Tanke çivili pedal",
+        "saddle": "Lapierre by Selle Royal",
+        "weight": "15.5",
+        "cassette": "Shimano Deore M5100",
+        "crankset": "Shimano CUES U6001 (32T)",
+        "seatpost": "JD Components (TranzX)",
+        "wheelset": "Rodi Ready 25",
+        "handlebar": "Lapierre 6061 DB (Double Butted) alüminyum gidon.",
+        "tire_size": "2.40 50 ps",
+        "drivetrain": "Shimano deor 11 s",
         "original_index": 0
       },
       "user_ratings": [
         {
-          "user": "Admin",
-          "score": 9.5
-        },
-        {
-          "user": "Emirr",
-          "score": 1.0
-        },
-        {
-          "user": "Aeganfr",
+          "user": "ikon_rr540",
           "score": 8.0
         },
         {
-          "user": "ikon_rr540",
-          "score": 10.0
-        },
-        {
-          "user": "efe.coskunlar26",
-          "score": 1.0
+          "user": "poyrasogut",
+          "score": 8.0
         }
       ],
-      "avg_rating": 5.9,
-      "final_rank": 2,
-      "created_at": "2026-06-02T18:54:30.681611+00:00",
-      "updated_at": "2026-06-02T18:56:02.005253+00:00"
-    },
-    {
-      "id": "5a1e45f8-23fb-4605-905e-b401d484a966",
-      "username": "ofb.em4r",
-      "week_id": "2026-W27",
-      "category": "DH",
-      "bike_data": {
-        "id": 1782765181183,
-        "desc": "tr tek renk sanirm",
-        "fork": "boxxer rc",
-        "stem": "dartmoor",
-        "type": "Downhill",
-        "chain": "shimano deore hg56 sanirm",
-        "grips": "zoid",
-        "image": [
-          "https://cdn.freeridertr.com.tr/bildirim%20resmi/photo_5825636358775573905_y%20(1).jpg"
-        ],
-        "model": "Giant Glory 8.0",
-        "rotor": "203",
-        "shock": "fox dhx rc4",
-        "tires": "high roller 2 cst rock hawk:(",
-        "brakes": "slx 7100 kol xt 8120 kaliper",
-        "pedals": "shimano",
-        "saddle": "specilaized",
-        "weight": "bilmiyom",
-        "cassette": "bifikrimyok",
-        "crankset": "x0 truvativ",
-        "seatpost": "bilmiyorum",
-        "wheelset": "arka on cember gobek sixpack",
-        "handlebar": "ritchey mm bilmiyorm",
-        "tire_size": "2.30 30 35 40 psi kafama gore",
-        "drivetrain": "ss",
-        "original_index": 0
-      },
-      "user_ratings": [
-        {
-          "user": "ikon_rr540",
-          "score": 9.0
-        },
-        {
-          "user": "agony.ht",
-          "score": 1.0
-        }
-      ],
-      "avg_rating": 5,
+      "avg_rating": 8,
       "final_rank": 0,
       "created_at": null,
       "updated_at": null
@@ -86197,145 +86424,57 @@
       "updated_at": null
     },
     {
-      "id": "6c8d343f-000d-4d50-b1c9-207e7141ac1f",
-      "username": "crossrider2013",
+      "id": "39283de0-7d26-442a-83ef-2396776b1c9d",
+      "username": "aksoy_dh4",
       "week_id": "2026-W27",
       "category": "DH",
       "bike_data": {
-        "id": 1782762082470,
+        "id": 1782733764870,
         "desc": "",
-        "fork": "Zoom",
-        "stem": "",
-        "type": "Diger",
-        "chain": "",
-        "grips": "",
+        "fork": "Fox 40 fit 2",
+        "stem": "Raceface chester 50mm",
+        "type": "Downhill",
+        "chain": "No name",
+        "grips": "No name",
         "image": [
-          "https://cdn.freeridertr.com.tr/bildirim%20resmi/photo_5825636358775573905_y%20(1).jpg"
+          "https://cdn.freerider.tr/uploads/723a426d82a248b989d883b92b65ca6f.jpg"
         ],
-        "model": "Kron XC 150",
-        "rotor": "",
-        "shock": "-",
-        "tires": "Maxxis Crossmark II",
-        "brakes": "SHİMANO MT-200 Hidrolik Disk",
-        "pedals": "Meroca",
-        "saddle": "Mach",
-        "weight": "14,6",
-        "cassette": "",
-        "crankset": "",
-        "seatpost": "",
-        "wheelset": "Zoom",
-        "handlebar": "Zoom",
-        "tire_size": "29x2.25",
-        "drivetrain": "Shimano Altus",
+        "model": "Haibike Zone 10 Worldcup",
+        "rotor": "220-203",
+        "shock": "Cane creek air db",
+        "tires": "Scwhalbe nobby nic 27,5 3.0 - scwhalbe magic mary 26 2,60",
+        "brakes": "Sram guide 4 piston",
+        "pedals": "No name",
+        "saddle": "Sele royal explorer",
+        "weight": "17,8 kilo",
+        "cassette": "Motosuv",
+        "crankset": "Raceface chester",
+        "seatpost": "Ritchey",
+        "wheelset": "Alexrims md50 27,5 - mtx 31 26",
+        "handlebar": "Raceface chester 780 35",
+        "tire_size": ".",
+        "drivetrain": "Single speed",
         "original_index": 0
       },
       "user_ratings": [
         {
           "user": "ikon_rr540",
-          "score": 7.0
+          "score": 10.0
         },
         {
-          "user": "ofb.em4r",
-          "score": 1.0
+          "user": "Ruzgar",
+          "score": 5.0
         },
         {
           "user": "agony.ht",
           "score": 1.0
-        }
-      ],
-      "avg_rating": 3,
-      "final_rank": 0,
-      "created_at": null,
-      "updated_at": null
-    },
-    {
-      "id": "4c7fc52f-281c-4485-851d-ca33150fcf99",
-      "username": "bora.zesty",
-      "week_id": "2026-W27",
-      "category": "Enduro",
-      "bike_data": {
-        "id": 1782742342736,
-        "desc": "Maşa değişti ve elcik ve pedal",
-        "fork": "Rockshox recon",
-        "stem": "Lapierre Alloy",
-        "type": "Enduro",
-        "chain": "KMC X11",
-        "grips": "All mountain style",
-        "image": [
-          "https://cdn.freerider.tr/uploads/abd992736267457aa81c87b6d39508ee.jpg"
-        ],
-        "model": "Lapierre zesty 3.9",
-        "rotor": "Disk çapı 180 mm",
-        "shock": "Lapierre AF2 Air Trunnion Metric",
-        "tires": "Ön maxxis ardent arka maxxis forkekaster",
-        "brakes": "Shimano mt 401 çift piston",
-        "pedals": "Tanke çivili pedal",
-        "saddle": "Lapierre by Selle Royal",
-        "weight": "15.5",
-        "cassette": "Shimano Deore M5100",
-        "crankset": "Shimano CUES U6001 (32T)",
-        "seatpost": "JD Components (TranzX)",
-        "wheelset": "Rodi Ready 25",
-        "handlebar": "Lapierre 6061 DB (Double Butted) alüminyum gidon.",
-        "tire_size": "2.40 50 ps",
-        "drivetrain": "Shimano deor 11 s",
-        "original_index": 0
-      },
-      "user_ratings": [
-        {
-          "user": "ikon_rr540",
-          "score": 8.0
-        }
-      ],
-      "avg_rating": 8,
-      "final_rank": 0,
-      "created_at": null,
-      "updated_at": null
-    },
-    {
-      "id": "d4052dcd-5653-45e9-b5af-39f79e9e22a5",
-      "username": "simsek_mcqueenxte",
-      "week_id": "2026-W27",
-      "category": "DH",
-      "bike_data": {
-        "id": 1782731946491,
-        "desc": "",
-        "fork": "Rockshox Zeb ultimate",
-        "stem": "Btwn 35",
-        "type": "Freeride",
-        "chain": "Shimano s10",
-        "grips": "Odi",
-        "image": [
-          "https://cdn.freerider.tr/bildirim%20resmi/photo_5825636358775573905_y%20(1).jpg"
-        ],
-        "model": "Yt tues",
-        "rotor": "220/200",
-        "shock": "Fox Float x2 kashima",
-        "tires": "Maxxis minion dhf",
-        "brakes": "Shigura (shimano saint kol magura mt7 pro kaliper)",
-        "pedals": "Shimano pd-gr400",
-        "saddle": "chromag overture",
-        "weight": "17kg",
-        "cassette": "Shimano ultegra",
-        "crankset": "truvativ descendant 7k",
-        "seatpost": "Stok",
-        "wheelset": "Spank spoon 32",
-        "handlebar": "Chromag f40",
-        "tire_size": "27.5 2.50",
-        "drivetrain": "Shimano saint",
-        "original_index": 0
-      },
-      "user_ratings": [
-        {
-          "user": "ikon_rr540",
-          "score": 9.0
         },
         {
-          "user": "agony.ht",
-          "score": 1.0
+          "user": "poyrasogut",
+          "score": 7.5
         }
       ],
-      "avg_rating": 5,
+      "avg_rating": 5.9,
       "final_rank": 0,
       "created_at": null,
       "updated_at": null
@@ -86561,131 +86700,53 @@
       "updated_at": null
     },
     {
-      "id": "39283de0-7d26-442a-83ef-2396776b1c9d",
-      "username": "aksoy_dh4",
+      "id": "d4052dcd-5653-45e9-b5af-39f79e9e22a5",
+      "username": "simsek_mcqueenxte",
       "week_id": "2026-W27",
       "category": "DH",
       "bike_data": {
-        "id": 1782733764870,
+        "id": 1782731946491,
         "desc": "",
-        "fork": "Fox 40 fit 2",
-        "stem": "Raceface chester 50mm",
-        "type": "Downhill",
-        "chain": "No name",
-        "grips": "No name",
+        "fork": "Rockshox Zeb ultimate",
+        "stem": "Btwn 35",
+        "type": "Freeride",
+        "chain": "Shimano s10",
+        "grips": "Odi",
         "image": [
-          "https://cdn.freerider.tr/uploads/723a426d82a248b989d883b92b65ca6f.jpg"
+          "https://cdn.freerider.tr/bildirim%20resmi/photo_5825636358775573905_y%20(1).jpg"
         ],
-        "model": "Haibike Zone 10 Worldcup",
-        "rotor": "220-203",
-        "shock": "Cane creek air db",
-        "tires": "Scwhalbe nobby nic 27,5 3.0 - scwhalbe magic mary 26 2,60",
-        "brakes": "Sram guide 4 piston",
-        "pedals": "No name",
-        "saddle": "Sele royal explorer",
-        "weight": "17,8 kilo",
-        "cassette": "Motosuv",
-        "crankset": "Raceface chester",
-        "seatpost": "Ritchey",
-        "wheelset": "Alexrims md50 27,5 - mtx 31 26",
-        "handlebar": "Raceface chester 780 35",
-        "tire_size": ".",
-        "drivetrain": "Single speed",
+        "model": "Yt tues",
+        "rotor": "220/200",
+        "shock": "Fox Float x2 kashima",
+        "tires": "Maxxis minion dhf",
+        "brakes": "Shigura (shimano saint kol magura mt7 pro kaliper)",
+        "pedals": "Shimano pd-gr400",
+        "saddle": "chromag overture",
+        "weight": "17kg",
+        "cassette": "Shimano ultegra",
+        "crankset": "truvativ descendant 7k",
+        "seatpost": "Stok",
+        "wheelset": "Spank spoon 32",
+        "handlebar": "Chromag f40",
+        "tire_size": "27.5 2.50",
+        "drivetrain": "Shimano saint",
         "original_index": 0
       },
       "user_ratings": [
         {
           "user": "ikon_rr540",
-          "score": 10.0
-        },
-        {
-          "user": "Ruzgar",
-          "score": 5.0
+          "score": 9.0
         },
         {
           "user": "agony.ht",
           "score": 1.0
+        },
+        {
+          "user": "poyrasogut",
+          "score": 8.0
         }
       ],
-      "avg_rating": 5.3,
-      "final_rank": 0,
-      "created_at": null,
-      "updated_at": null
-    },
-    {
-      "id": "e4e7998f-e261-4110-908e-2a27eebe1a01",
-      "username": "ikon_rr540",
-      "week_id": "2026-W27",
-      "category": "Hardtail",
-      "bike_data": {
-        "id": 1782652874928,
-        "desc": "",
-        "fork": "Rockshox revelation 35",
-        "stem": "Lunje 35mm",
-        "type": "Trail",
-        "chain": "Shimano deore 10s",
-        "grips": "No name",
-        "image": [
-          "https://cdn.freerider.tr/uploads/4ebf91591bf64db48acb10cd5ea785eb.jpg"
-        ],
-        "model": "Rockrider Explorer 540",
-        "rotor": "180mm-180mm",
-        "shock": "",
-        "tires": "Grip 500",
-        "brakes": "Ön-arka deore m6100",
-        "pedals": "Evo",
-        "saddle": "Selle Royal mach1",
-        "weight": "13",
-        "cassette": "Shimano deore m5100 10s",
-        "crankset": "Shimano deore m5100",
-        "seatpost": "No name",
-        "wheelset": "Rockrider",
-        "handlebar": "Lunje 780mm 15rise",
-        "tire_size": "29x2.40",
-        "drivetrain": "Shimano deore 10V",
-        "original_index": 0
-      },
-      "user_ratings": [],
-      "avg_rating": 0,
-      "final_rank": 0,
-      "created_at": null,
-      "updated_at": null
-    },
-    {
-      "id": "c8cfe09a-bb62-4257-aa79-9e718c014f75",
-      "username": "agony.ht",
-      "week_id": "2026-W27",
-      "category": "Hardtail",
-      "bike_data": {
-        "id": 1782427404068,
-        "desc": "",
-        "fork": "Fox 34 factory kashima 2015",
-        "stem": "Lunje gumjs",
-        "type": "Diger",
-        "chain": "9 lu",
-        "grips": "80cm",
-        "image": [
-          "https://cdn.freeridertr.com.tr/uploads/475f7291348c4314bbeb5ad3db6a24cb.jpg"
-        ],
-        "model": "Rockrider btwin 560 ht L",
-        "rotor": "On 180 arka 160",
-        "shock": "",
-        "tires": "On michell 2.60 arka cst rock hawk 2.25 yanakli",
-        "brakes": "On arka xtr 2 piston",
-        "pedals": "Evo siyah",
-        "saddle": "Bandit",
-        "weight": "14kg",
-        "cassette": "",
-        "crankset": "Bolany",
-        "seatpost": "15 rise",
-        "wheelset": "Mach1",
-        "handlebar": "Pro frs",
-        "tire_size": "2.60 2.25",
-        "drivetrain": "Single speed",
-        "original_index": 0
-      },
-      "user_ratings": [],
-      "avg_rating": 0,
+      "avg_rating": 6,
       "final_rank": 0,
       "created_at": null,
       "updated_at": null
@@ -86742,6 +86803,94 @@
         }
       ],
       "avg_rating": 6.2,
+      "final_rank": 0,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "c8cfe09a-bb62-4257-aa79-9e718c014f75",
+      "username": "agony.ht",
+      "week_id": "2026-W27",
+      "category": "Hardtail",
+      "bike_data": {
+        "id": 1782427404068,
+        "desc": "",
+        "fork": "Fox 34 factory kashima 2015",
+        "stem": "Lunje gumjs",
+        "type": "Diger",
+        "chain": "9 lu",
+        "grips": "80cm",
+        "image": [
+          "https://cdn.freeridertr.com.tr/uploads/475f7291348c4314bbeb5ad3db6a24cb.jpg"
+        ],
+        "model": "Rockrider btwin 560 ht L",
+        "rotor": "On 180 arka 160",
+        "shock": "",
+        "tires": "On michell 2.60 arka cst rock hawk 2.25 yanakli",
+        "brakes": "On arka xtr 2 piston",
+        "pedals": "Evo siyah",
+        "saddle": "Bandit",
+        "weight": "14kg",
+        "cassette": "",
+        "crankset": "Bolany",
+        "seatpost": "15 rise",
+        "wheelset": "Mach1",
+        "handlebar": "Pro frs",
+        "tire_size": "2.60 2.25",
+        "drivetrain": "Single speed",
+        "original_index": 0
+      },
+      "user_ratings": [
+        {
+          "user": "poyrasogut",
+          "score": 6.5
+        }
+      ],
+      "avg_rating": 6.5,
+      "final_rank": 0,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "e4e7998f-e261-4110-908e-2a27eebe1a01",
+      "username": "ikon_rr540",
+      "week_id": "2026-W27",
+      "category": "Hardtail",
+      "bike_data": {
+        "id": 1782652874928,
+        "desc": "",
+        "fork": "Rockshox revelation 35",
+        "stem": "Lunje 35mm",
+        "type": "Trail",
+        "chain": "Shimano deore 10s",
+        "grips": "No name",
+        "image": [
+          "https://cdn.freerider.tr/uploads/4ebf91591bf64db48acb10cd5ea785eb.jpg"
+        ],
+        "model": "Rockrider Explorer 540",
+        "rotor": "180mm-180mm",
+        "shock": "",
+        "tires": "Grip 500",
+        "brakes": "Ön-arka deore m6100",
+        "pedals": "Evo",
+        "saddle": "Selle Royal mach1",
+        "weight": "13",
+        "cassette": "Shimano deore m5100 10s",
+        "crankset": "Shimano deore m5100",
+        "seatpost": "No name",
+        "wheelset": "Rockrider",
+        "handlebar": "Lunje 780mm 15rise",
+        "tire_size": "29x2.40",
+        "drivetrain": "Shimano deore 10V",
+        "original_index": 0
+      },
+      "user_ratings": [
+        {
+          "user": "poyrasogut",
+          "score": 7.0
+        }
+      ],
+      "avg_rating": 7,
       "final_rank": 0,
       "created_at": null,
       "updated_at": null
