@@ -1,6 +1,6 @@
 {
   "_metadata": {
-    "timestamp": "2026-07-01T03:30:03.418710",
+    "timestamp": "2026-07-01T03:40:03.746455",
     "description": "Supabase Auto-Backup"
   },
   "users": [
@@ -55114,7 +55114,7 @@
         "spin_count": 1,
         "votes_cast": 7,
         "current_week": "2026-06-29",
-        "last_seen_ts": 1782865739,
+        "last_seen_ts": 1782866076,
         "login_streak": 10,
         "premium_tier": 3,
         "riding_until": 0,
@@ -55146,7 +55146,7 @@
           "om3r.em1n",
           "freeridertr1"
         ],
-        "total_messages": 361,
+        "total_messages": 362,
         "weekly_missions": {
           "week": "2026-06-29"
         },
@@ -55163,7 +55163,7 @@
       },
       "is_banned": false,
       "created_at": "2026-05-23T18:51:36.395619+00:00",
-      "updated_at": "2026-07-01T00:28:59.423396+00:00",
+      "updated_at": "2026-07-01T00:34:36.91269+00:00",
       "xp": 139069,
       "level": 1,
       "password": "pbkdf2:sha256:600000",
