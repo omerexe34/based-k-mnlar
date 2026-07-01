@@ -1,6 +1,6 @@
 {
   "_metadata": {
-    "timestamp": "2026-07-02T02:10:03.531030",
+    "timestamp": "2026-07-02T02:20:04.019444",
     "description": "Supabase Auto-Backup"
   },
   "users": [
@@ -7223,19 +7223,21 @@
         "is_trial": false,
         "missions": {
           "m1": true,
-          "m8": true
+          "m5": true,
+          "m8": true,
+          "m9": true
         },
         "ref_code": "BRL121120",
         "expiry_ts": 1785518983,
         "ref_count": 0,
         "ref_month": "2026-07",
-        "weekly_xp": 1220,
+        "weekly_xp": 2780,
         "last_login": "2026-07-02",
-        "monthly_xp": 1220,
+        "monthly_xp": 2780,
         "onboarding": true,
         "spin_count": 2,
         "current_week": "2026-06-29",
-        "last_seen_ts": 1782947347,
+        "last_seen_ts": 1782947900,
         "login_streak": 2,
         "premium_tier": 2,
         "ai_usage_date": "",
@@ -7264,13 +7266,13 @@
       },
       "is_banned": false,
       "created_at": "2026-07-01T16:59:23.621042+00:00",
-      "updated_at": "2026-07-01T23:09:07.996896+00:00",
-      "xp": 4420,
+      "updated_at": "2026-07-01T23:18:20.224054+00:00",
+      "xp": 5980,
       "level": 1,
       "password": "pbkdf2:sha256:600000$DRmuaz8Qp5NnVRQI$935047256018de8194d1c043b963a8b59e1ceaebb12e6cce9a13cfd814b9d738",
       "accepted_chat_rules": true,
-      "weekly_score": 1220,
-      "monthly_score": 1220,
+      "weekly_score": 2780,
+      "monthly_score": 2780,
       "membership_type": "deluxe",
       "membership_expires_at": "2026-07-31T00:00:00+00:00",
       "badges": []
@@ -65471,7 +65473,7 @@
         "spin_count": 1,
         "reset_token": "2f97b26eaaa54533a5ea70c3a3cb63af",
         "current_week": "2026-06-29",
-        "last_seen_ts": 1782947323,
+        "last_seen_ts": 1782947980,
         "login_streak": 3,
         "premium_tier": 0,
         "riding_until": 0,
@@ -65488,7 +65490,7 @@
         "reset_code_ts": 1782418966,
         "session_token": "7944a0c3-10d8-4dea-9bcf-9e93b24d6ec8",
         "ai_reset_token": null,
-        "ai_usage_count": 3,
+        "ai_usage_count": 4,
         "claimable_refs": 0,
         "daily_missions": {
           "date": "2026-07-02",
@@ -65526,7 +65528,7 @@
       },
       "is_banned": false,
       "created_at": "2026-05-23T18:51:36.395619+00:00",
-      "updated_at": "2026-07-01T23:08:43.431452+00:00",
+      "updated_at": "2026-07-01T23:19:40.508222+00:00",
       "xp": 8010,
       "level": 1,
       "password": "pbkdf2:sha256:600000$hzSfcvCBv5paDUqX$ff95eb3141a407e75e7b6415d0b22b065d50b206ef21bad169f6b8db20812314",
