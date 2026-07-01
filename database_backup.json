@@ -1,6 +1,6 @@
 {
   "_metadata": {
-    "timestamp": "2026-07-01T15:50:03.661815",
+    "timestamp": "2026-07-01T16:00:03.720984",
     "description": "Supabase Auto-Backup"
   },
   "users": [
@@ -61287,16 +61287,18 @@
         "market": 0,
         "markers": 0,
         "is_trial": false,
-        "missions": {},
+        "missions": {
+          "m1": true
+        },
         "ref_code": "TUN552920",
         "ref_count": 0,
         "ref_month": "2026-07",
-        "weekly_xp": 100,
+        "weekly_xp": 350,
         "last_login": "2026-07-01",
-        "monthly_xp": 100,
+        "monthly_xp": 350,
         "onboarding": true,
         "current_week": "2026-06-29",
-        "last_seen_ts": 1782909912,
+        "last_seen_ts": 1782910736,
         "login_streak": 1,
         "premium_tier": 0,
         "ai_usage_date": "",
@@ -61307,7 +61309,11 @@
         "session_token": "2fda605b-7558-47d4-88af-6c45b1747071",
         "ai_usage_count": 0,
         "claimable_refs": 0,
-        "daily_missions": {},
+        "daily_missions": {
+          "date": "2026-07-01",
+          "done_d1": true,
+          "daily_login": 1
+        },
         "email_verified": false,
         "total_messages": 0,
         "trial_notified": false,
@@ -61318,13 +61324,13 @@
       },
       "is_banned": false,
       "created_at": "2026-07-01T12:42:42.186649+00:00",
-      "updated_at": "2026-07-01T12:45:58.438789+00:00",
-      "xp": 100,
+      "updated_at": "2026-07-01T12:59:03.610091+00:00",
+      "xp": 350,
       "level": 1,
       "password": "pbkdf2:sha256:600000$zX9r1WdNYE8ws9H5$fc5dda8f0c092eca9f4156c6ef787adc20588de54cff0126ffc6c64a0700232f",
       "accepted_chat_rules": false,
-      "weekly_score": 0,
-      "monthly_score": 0,
+      "weekly_score": 350,
+      "monthly_score": 350,
       "membership_type": "free",
       "membership_expires_at": null,
       "badges": []
