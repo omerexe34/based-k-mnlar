@@ -1,6 +1,6 @@
 {
   "_metadata": {
-    "timestamp": "2026-07-01T18:30:03.635776",
+    "timestamp": "2026-07-01T18:40:03.453867",
     "description": "Supabase Auto-Backup"
   },
   "users": [
@@ -54792,7 +54792,7 @@
       "youtube": null,
       "role": "Admin",
       "stats": {
-        "email": "omerytoyundad@gmail.com",
+        "email": "omerytoyundad@hotmail.com",
         "events": 102,
         "garage": [],
         "market": 107,
@@ -54815,16 +54815,16 @@
         },
         "expiry_ts": 1787469803,
         "fcm_token": "djQbTSayTCqg8c8PQSsy3j:APA91bFNS1zP_9K1GVQBK1Myge0h638zvk927klAZ2hIBkgoEoz26ZGmYNNtWTSjJrSxMtk3gofViYLml3bivVMwQeWdDh1pLkhMTa2RkPnS846RI-iKuLs",
-        "weekly_xp": 360,
+        "weekly_xp": 460,
         "last_login": "2026-07-01",
-        "monthly_xp": 120,
+        "monthly_xp": 220,
         "onboarding": true,
         "riding_lat": 39.5385345,
         "riding_lng": 26.9443277,
         "spin_count": 1,
         "votes_cast": 7,
         "current_week": "2026-06-29",
-        "last_seen_ts": 1782919788,
+        "last_seen_ts": 1782920307,
         "login_streak": 10,
         "premium_tier": 3,
         "riding_until": 0,
@@ -54849,8 +54849,9 @@
           "done_d1": true,
           "daily_login": 1
         },
-        "email_verified": true,
+        "email_verified": false,
         "last_device_id": "d3db3477-1153-48ac-9d33-af77fd9fdf85",
+        "last_spin_date": "2026-07-01",
         "social_rewards": [
           "om3r_10fr",
           "om3r.em1n",
@@ -54866,6 +54867,7 @@
         "gp_purchase_token": "fjpgcpmloghpggeohljjmdng.AO-J1OzJ2UTesiu2UYEMhG0XaRqkOTd1GdS_hROLkwdomsm1B57oeESkmPjj1FPuknkItsQXUZM7uza-w1znBMKR8qbycRns2A",
         "mod_warning_count": 18,
         "reel_upload_count": 2,
+        "verification_code": "199231",
         "last_miss_notif_ts": 1782724131,
         "last_mod_warning_ts": 1782382183,
         "onboarding_completed": true,
@@ -54873,8 +54875,8 @@
       },
       "is_banned": false,
       "created_at": "2026-05-23T18:51:36.395619+00:00",
-      "updated_at": "2026-07-01T15:29:48.698978+00:00",
-      "xp": 139669,
+      "updated_at": "2026-07-01T15:38:27.535071+00:00",
+      "xp": 139769,
       "level": 1,
       "password": "pbkdf2:sha256:600000",
       "accepted_chat_rules": true,
@@ -85603,25 +85605,6 @@
       "xp_awarded": false
     },
     {
-      "id": "1780517327201",
-      "owner": null,
-      "creator": "Aeganfr",
-      "title": "Haftasonu sürüş",
-      "description": null,
-      "date": null,
-      "time": null,
-      "lat": 40.8032388735827,
-      "lng": 29.4354718923569,
-      "participants": [],
-      "created_at": "2026-06-03T20:08:48.587211+00:00",
-      "desc": null,
-      "datetime": null,
-      "location": null,
-      "attendees": [],
-      "max": 0,
-      "xp_awarded": false
-    },
-    {
       "id": "1782739196070",
       "owner": null,
       "creator": "babahiro31",
@@ -85661,6 +85644,27 @@
         "crossrider2013"
       ],
       "max": 10,
+      "xp_awarded": false
+    },
+    {
+      "id": "1780517327201",
+      "owner": null,
+      "creator": "Aeganfr",
+      "title": "Haftasonu sürüş",
+      "description": null,
+      "date": null,
+      "time": null,
+      "lat": 40.8032388735827,
+      "lng": 29.4354718923569,
+      "participants": [],
+      "created_at": "2026-06-03T20:08:48.587211+00:00",
+      "desc": null,
+      "datetime": null,
+      "location": null,
+      "attendees": [
+        "Admin"
+      ],
+      "max": 0,
       "xp_awarded": false
     }
   ],
