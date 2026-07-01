@@ -1,6 +1,6 @@
 {
   "_metadata": {
-    "timestamp": "2026-07-01T18:20:03.477038",
+    "timestamp": "2026-07-01T18:30:03.635776",
     "description": "Supabase Auto-Backup"
   },
   "users": [
@@ -54824,7 +54824,7 @@
         "spin_count": 1,
         "votes_cast": 7,
         "current_week": "2026-06-29",
-        "last_seen_ts": 1782919181,
+        "last_seen_ts": 1782919788,
         "login_streak": 10,
         "premium_tier": 3,
         "riding_until": 0,
@@ -54873,7 +54873,7 @@
       },
       "is_banned": false,
       "created_at": "2026-05-23T18:51:36.395619+00:00",
-      "updated_at": "2026-07-01T15:19:41.853065+00:00",
+      "updated_at": "2026-07-01T15:29:48.698978+00:00",
       "xp": 139669,
       "level": 1,
       "password": "pbkdf2:sha256:600000",
@@ -62764,7 +62764,7 @@
         "onboarding": true,
         "spin_count": 1,
         "current_week": "2026-06-29",
-        "last_seen_ts": 1782919154,
+        "last_seen_ts": 1782919394,
         "login_streak": 2,
         "premium_tier": 0,
         "ai_usage_date": "",
@@ -62792,7 +62792,7 @@
       },
       "is_banned": false,
       "created_at": "2026-06-30T12:17:11.884289+00:00",
-      "updated_at": "2026-07-01T15:19:19.913971+00:00",
+      "updated_at": "2026-07-01T15:23:14.779249+00:00",
       "xp": 760,
       "level": 1,
       "password": "pbkdf2:sha256:600000$yIaCwv1Yr2X00lhZ$76894bfacaf32c76caa0a28b4c4437cdcf2a40a9b031268d6bbf315867d6f2d6",
@@ -85898,6 +85898,45 @@
         }
       ],
       "avg_rating": 7,
+      "final_rank": 0,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "ebf8762a-0af5-4391-844b-bf1906263c60",
+      "username": "cagans.fr",
+      "week_id": "2026-W26",
+      "category": "Enduro",
+      "bike_data": {
+        "id": 1782852794304,
+        "desc": "",
+        "fork": "Rockshox Lyrik RCT3 Debonair",
+        "stem": "Truvativ hussefelt",
+        "type": "Freeride",
+        "chain": "Kmc",
+        "grips": "No name",
+        "image": [
+          "https://cdn.freeridertr.com.tr/bildirim%20resmi/photo_5825636358775573905_y%20(1).jpg"
+        ],
+        "model": "SCOTT Voltage Fr710",
+        "rotor": "160/180",
+        "shock": "Fox Dhx RC2",
+        "tires": "Maxxis dhr",
+        "brakes": "Deore m4100 4 piston",
+        "pedals": "Nukeproof",
+        "saddle": "No name",
+        "weight": "15-16",
+        "cassette": "Saint",
+        "crankset": "Saint",
+        "seatpost": "Syncross",
+        "wheelset": "Dt swiss fr 1950",
+        "handlebar": "Chromah fu40",
+        "tire_size": "2.40",
+        "drivetrain": "Shimano SLX 11V",
+        "original_index": 0
+      },
+      "user_ratings": [],
+      "avg_rating": 0,
       "final_rank": 0,
       "created_at": null,
       "updated_at": null
