@@ -1,6 +1,6 @@
 {
   "_metadata": {
-    "timestamp": "2026-07-02T04:50:03.604579",
+    "timestamp": "2026-07-02T05:00:03.569919",
     "description": "Supabase Auto-Backup"
   },
   "users": [
@@ -32849,13 +32849,13 @@
         "weekly_missions": {},
         "marketing_opt_in": true,
         "verification_code": "",
-        "last_miss_notif_ts": 1782683183,
+        "last_miss_notif_ts": 1782957077,
         "onesignal_player_id": "ebb636b8-4858-40da-aa13-5c06942b1fb5",
         "onboarding_completed": true
       },
       "is_banned": false,
       "created_at": "2026-06-28T10:17:37.167679+00:00",
-      "updated_at": "2026-07-01T15:49:19.292902+00:00",
+      "updated_at": "2026-07-02T01:51:18.137291+00:00",
       "xp": 4530,
       "level": 1,
       "password": "pbkdf2:sha256:600000$Fur7TaYQawERicau$19b6b6e8b3894387435271c863441c14d47d4ec7ffecf225649857161b7a9dd0",
